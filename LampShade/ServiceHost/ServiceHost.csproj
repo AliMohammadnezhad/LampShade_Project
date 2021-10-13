@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\AdminTheme\assets\plugins\jstree\themes\default\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.bootstrap.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.html5.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.print.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.bootstrap.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.buttons.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.fixedHeader.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.keyTable.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.responsive.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\dataTables.scroller.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\jquery.dataTables.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\jszip.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\pdfmake.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\responsive.bootstrap.min.js" />
+    <None Include="wwwroot\AdminTheme\assets\plugins\datatables\vfs_fonts.js" />
+  </ItemGroup>
+
+</Project>
