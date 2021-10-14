@@ -37,7 +37,7 @@ namespace ShopManagement.Application
             var productCategory = _productCategoryRepository.Get(command.Id);
 
             if (productCategory == null)
-                return operation.Failed("رکوردی با اطلاعات وارد شده یافت شده .");
+                return operation.Failed("رکوردی با اطلاعات وارد شده یافت نشد .");
             if (_productCategoryRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed("امکان ثبت رکورد تکرار وجود ندارد لطفا مجددا تلاش فرمایید.");
 
@@ -57,6 +57,11 @@ namespace ShopManagement.Application
         public List<ProductCategorySearchViewModel> Search(ProductCategorySearchModel searchModel)
         {
             return _productCategoryRepository.Search(searchModel);
+        }
+
+        public List<ProductCategorySearchViewModel> Search()
+        {
+            return _productCategoryRepository.Search();
         }
     }
 }

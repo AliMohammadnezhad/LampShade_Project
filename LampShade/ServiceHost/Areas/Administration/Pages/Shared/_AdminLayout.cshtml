@@ -22,7 +22,7 @@
     <link href="~/AdminTheme/assets/css/menu.css" rel="stylesheet" type="text/css" />
     <link href="~/AdminTheme/assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="~/AdminTheme/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/AdminTheme/assets/plugins/toastr/toastr.css" rel="stylesheet" />
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -126,111 +126,25 @@
                 <div id="sidebar-menu">
                     <ul>
                         <li class="text-muted menu-title">دسته بندی ها</li>
-
                         <li>
-                            <a href="index.html" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> داشبورد </span> </a>
+                            <a asp-page="/Index"><i class="zmdi zmdi-calendar"></i><span> داشبورد </span></a>
                         </li>
-
-                        <li>
-                            <a href="typography.html" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> نوشته ها </span> </a>
-                        </li>
-
                         <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> رابط کاربی </span> <span class="menu-arrow"></span></a>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> فروشگاه  </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="ui-buttons.html">دکمه ها</a></li>
-                                <li><a href="ui-cards.html">کارد</a></li>
-                                <li><a href="ui-draggable-cards.html">کارت های جابه جا شونده</a></li>
-                                <li><a href="ui-checkbox-radio.html">چک باکس ها</a></li>
-                                <li><a href="ui-material-icons.html">آیکون های طراحی متریال</a></li>
-                                <li><a href="ui-font-awesome-icons.html">فونت آسوم</a></li>
-                                <li><a href="ui-themify-icons.html">تم فی آیکون</a></li>
-                                <li><a href="ui-modals.html">مدل ها</a></li>
-                                <li><a href="ui-notification.html">اطلاعات</a></li>
-                                <li><a href="ui-range-slider.html">نوار تغیرات</a></li>
-                                <li><a href="ui-components.html">اجزا</a>
-                                <li><a href="ui-sweetalert.html">هشدار ها</a>
-                                <li><a href="ui-treeview.html">نمایش درختی</a>
-                                <li><a href="ui-widgets.html">ویجت ها</a></li>
+                                <li><a href="ui-buttons.html"> اسلایدر</a></li>
+                                <li><a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a></li>
+                                <li><a href="ui-draggable-cards.html">محصولات</a></li>
+                                <li><a href="ui-checkbox-radio.html">تصاویر محصولات</a></li>
+
                             </ul>
                         </li>
 
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-collection-text"></i><span class="label label-warning pull-right">7</span><span> فرم ها </span> </a>
-                            <ul class="list-unstyled">
-                                <li><a href="form-elements.html">فرم های عمومی</a></li>
-                                <li><a href="form-advanced.html">فرم های پیشرفته</a></li>
-                                <li><a href="form-validation.html">فرم ولیدشن</a></li>
-                                <li><a href="form-wizard.html">فرم پیشفرض</a></li>
-                                <li><a href="form-fileupload.html">فرم آپلود</a></li>
-                                <li><a href="form-wysiwig.html">ادیتور 1</a></li>
-                                <li><a href="form-xeditable.html">ادیتور 2</a></li>
-                            </ul>
-                        </li>
 
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> جدول ها </span> <span class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="tables-basic.html">جدول پیشفرض</a></li>
-                                <li><a href="tables-datatable.html">جدول داده ها</a></li>
-                                <li><a href="tables-responsive.html">جدول واکنش گرا</a></li>
-                                <li><a href="tables-editable.html">جدول تغیرات</a></li>
-                            </ul>
-                        </li>
 
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect "><i class="zmdi zmdi-chart"></i><span> چارت ها </span> <span class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="chart-flot.html">چارت شماره 1</a></li>
-                                <li><a href="chart-morris.html">چارت شماره 2</a></li>
-                                <li><a href="chart-chartist.html">چارت شماره 3</a></li>
-                                <li><a href="chart-chartjs.html">چارت شماره 4</a></li>
-                                <li><a href="chart-other.html">چارت شماره 5</a></li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="calendar.html"><i class="zmdi zmdi-calendar"></i><span> تقویم </span></a>
-                        </li>
 
-                        <li>
-                            <a href="inbox.html" class="waves-effect"><i class="zmdi zmdi-email"></i><span class="label label-purple pull-right">جدید</span><span> ایمیل </span></a>
-                        </li>
 
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-collection-item"></i><span> برگه ها </span> <span class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="page-starter.html">برگه خالی</a></li>
-                                <li><a href="page-login.html">ورود</a></li>
-                                <li><a href="page-register.html">ثبت نام</a></li>
-                                <li><a href="page-recoverpw.html">فراموشی رمز</a></li>
-                                <li><a href="page-lock-screen.html">قفل صفحه</a></li>
-                                <li><a href="page-confirm-mail.html">تنظیمات ایمیل</a></li>
-                                <li><a href="page-404.html">خطای 404</a></li>
-                                <li><a href="page-500.html">خطای 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect "><i class="zmdi zmdi-layers"></i><span>دیگر صفحات </span> <span class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="extras-projects.html">پروژ ه ها</a></li>
-                                <li><a href="extras-tour.html">تور آزمایشی</a></li>
-                                <li><a href="extras-taskboard.html">مدیرها</a></li>
-                                <li><a href="extras-taskdetail.html">جزئیات</a></li>
-                                <li><a href="extras-profile.html">پروفایل </a></li>
-                                <li><a href="extras-maps.html">نقشه</a></li>
-                                <li><a href="extras-contact.html">لیست تماس</a></li>
-                                <li><a href="extras-pricing.html">فروش</a></li>
-                                <li><a href="extras-timeline.html">خط زمان</a></li>
-                                <li><a href="extras-invoice.html">صورت حساب</a></li>
-                                <li><a href="extras-faq.html">سوال و جواب</a></li>
-                                <li><a href="extras-gallery.html">گالری</a></li>
-                                <li><a href="extras-email-template.html">تم های ایمیل</a></li>
-                                <li><a href="extras-maintenance.html">تعمیرات</a></li>
-                                <li><a href="extras-comingsoon.html">به زودی</a></li>
-                            </ul>
-                        </li>
 
                     </ul>
                     <div class="clearfix"></div>
@@ -264,87 +178,52 @@
         </div>
 
 
-        <!-- ============================================================== -->
-        <!-- End Right content here -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <div class="side-bar right-bar">
-            <a href="javascript:void(0);" class="right-bar-toggle">
-                <i class="zmdi zmdi-close-circle-o"></i>
-            </a>
-            <h4 class="">اعلانات</h4>
-            <div class="notification-list nicescroll">
-                <ul class="list-group list-no-border user-list">
-                    <li class="list-group-item">
-                        <a href="#" class="user-list-item">
-                            <div class="avatar">
-                                <img src="~/AdminTheme/assets/images/users/avatar-2.jpg" alt="">
-                            </div>
-                            <div class="user-desc">
-                                <span class="name">کاربر شماره یک</span>
-                                <span class="desc">متن کاربر شماره یک</span>
-                                <span class="time">2 ساعت قبل</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="user-list-item">
-                            <div class="icon bg-info">
-                                <i class="zmdi zmdi-account"></i>
-                            </div>
-                            <div class="user-desc">
-                                <span class="name">ثبت نام جدید</span>
-                                <span class="desc">کاربری جدید در سایت ثبت نام کرده است</span>
-                                <span class="time">5 ساعت قبل</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="user-list-item">
-                            <div class="icon bg-pink">
-                                <i class="zmdi zmdi-comment"></i>
-                            </div>
-                            <div class="user-desc">
-                                <span class="name">پیام جدید</span>
-                                <span class="desc">متن پیام جدید از کاریی جدید</span>
-                                <span class="time">1 روز قبل</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item active">
-                        <a href="#" class="user-list-item">
-                            <div class="avatar">
-                                <img src="~/AdminTheme/assets/images/users/avatar-3.jpg" alt="">
-                            </div>
-                            <div class="user-desc">
-                                <span class="name">کاربر شماره 2</span>
-                                <span class="desc">با سلام من یک متن کاملا آزمایشی هستم</span>
-                                <span class="time">2 روز قبل</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item active">
-                        <a href="#" class="user-list-item">
-                            <div class="icon bg-warning">
-                                <i class="zmdi zmdi-settings"></i>
-                            </div>
-                            <div class="user-desc">
-                                <span class="name">تنظیمات</span>
-                                <span class="desc">تنظیمات جدید برای دسترسی و راحتی شما موجود است</span>
-                                <span class="time">1 روز قبل</span>
-                            </div>
-                        </a>
-                    </li>
 
-                </ul>
-            </div>
-        </div>
-        <!-- /Right-bar -->
 
     </div>
-    <!-- END wrapper -->
+    <div class="control-group" id="toastTypeGroup">
+        <div class="controls">
+            <label>نوع پیغام</label>
+            <div class="radio radio-success">
+                <input type="radio" name="radio" id="radio1" value="success"
+                       >
+                <label for="radio1">
+                    قبول
+                </label>
+            </div>
+
+            <div class="radio radio-info">
+                <input type="radio" name="radio" id="radio2" value="info">
+                <label for="radio2">
+                    اعلان
+                </label>
+            </div>
+
+            <div class="radio radio-warning">
+                <input type="radio" name="radio" id="radio3" value="warning">
+                <label for="radio3">
+                    توجه
+                </label>
+            </div>
+
+            <div class="radio radio-danger">
+                <input type="radio" name="radio" id="radio4" value="error">
+                <label for="radio4">
+                    خظا
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content" id="ModalContent">
 
 
+
+            </div>
+        </div>
+    </div>
 
     <script>
         var resizefunc = [];
@@ -375,9 +254,12 @@
     <script src="~/AdminTheme/assets/pages/jquery.dashboard.js"></script>
 
     <!-- App js -->
+    <script src="~/AdminTheme/assets/js/jquery.validate.min.js"></script>
+    <script src="~/AdminTheme/assets/js/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/AdminTheme/assets/js/jquery.core.js"></script>
     <script src="~/AdminTheme/assets/js/jquery.app.js"></script>
-
-    @RenderSection("Scripts",false)
+    <script src="~/AdminTheme/assets/plugins/toastr/toastr.min.js"></script>
+    <script src="~/AdminTheme/assets/js/site.js"></script>
+    @RenderSection("Scripts", false)
 </body>
 </html>

@@ -162,3 +162,5 @@ F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admi
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\_ViewStart.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductCategories\Index.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductCategories\Create.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductCategories\Edit.cshtml.g.cs

@@ -1,4 +1,5 @@
-﻿using _0_FrameWork.Domain;
+﻿using System;
+using _0_FrameWork.Domain;
 
 namespace ShopManagement.Domain.ProductCategoryAgg
 {
@@ -15,6 +16,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
             Keywords = keywords;
             MetaDescription = metaDescription;
             Slug = slug;
+            CreationDate = DateTime.Now;
         }
 
         public string Name { get; private set; }

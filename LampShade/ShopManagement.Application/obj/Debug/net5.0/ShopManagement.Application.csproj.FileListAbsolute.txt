@@ -13,7 +13,7 @@ F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\S
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfoInputs.cache
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfo.cs
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CoreCompileInputs.cache
-F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CopyComplete
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ref\ShopManagement.Application.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CopyComplete

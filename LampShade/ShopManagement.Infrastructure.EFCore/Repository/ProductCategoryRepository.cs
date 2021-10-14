@@ -41,7 +41,25 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Name = x.Name,
                 Picture = x.Picture
             });
-            if (!string.IsNullOrWhiteSpace(searchModel.Name)) query.Where(x => x.Name.Contains(searchModel.Name));
+
+
+
+
+            query = query.Where(x => x.Name.Contains(searchModel.Name));
+            return query.ToList();
+        }
+
+        public List<ProductCategorySearchViewModel> Search()
+        {
+            var query = _context.ProductCategories.Select(x => new ProductCategorySearchViewModel
+            {
+                Id = x.Id,
+                CreationDate = x.CreationDate.ToString(),
+                Description = x.Description,
+                Name = x.Name,
+                Picture = x.Picture
+            });
+            
             return query.ToList();
         }
     }
