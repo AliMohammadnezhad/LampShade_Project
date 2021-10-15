@@ -1,0 +1,69 @@
+﻿<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+
+        <!-- User -->
+        <div class="user-box">
+            <div class="user-img">
+                <img src="~/AdminTheme/assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+                <div class="user-status offline">
+                    <i class="zmdi zmdi-dot-circle"></i>
+                </div>
+            </div>
+            <h5>
+                <a href="#">علی یدالهی</a>
+            </h5>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">
+                        <i class="zmdi zmdi-settings"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="text-custom">
+                        <i class="zmdi zmdi-power"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End User -->
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <ul>
+                <li class="text-muted menu-title">دسته بندی ها</li>
+                <li>
+                    <a asp-page="/Index">
+                        <i class="zmdi zmdi-calendar"></i><span> داشبورد </span>
+                    </a>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="zmdi zmdi-invert-colors"></i> <span> فروشگاه </span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a asp-page="/Shop/Slides/Index"> اسلایدر</a>
+                        </li>
+                        <li>
+                            <a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a>
+                        </li>
+                        <li>
+                            <a asp-page="/Shop/Products/Index">محصولات</a>
+                        </li>
+                        <li>
+                            <a asp-page="/Shop/ProductPictures/Index">تصاویر محصولات</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -->
+        <div class="clearfix"></div>
+
+    </div>
+
+</div>

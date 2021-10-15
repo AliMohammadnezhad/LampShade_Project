@@ -4,17 +4,17 @@
  ----------------------------
  */
 .custombox-open,
-.custombox-open body {
-    overflow: hidden;
-}
+.custombox-open body { overflow: hidden; }
+
 .custombox-perspective,
-.custombox-perspective body  {
-    perspective: 600px;
+.custombox-perspective body {
     height: 100%;
+    perspective: 600px;
 }
+
 .custombox-overlay-open {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
 }
 
 /*
@@ -22,49 +22,56 @@
  Defaults
  ----------------------------
  */
+
 .custombox-overlay {
-    top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
     position: fixed;
-    transition-delay: 0s;
-}
-.custombox-overlay-default {
-    transition-timing-function: linear;
-    transition-property: opacity;
-    opacity: 0;
-}
-.custombox-modal-wrapper {
     right: 0;
     top: 0;
+    transition-delay: 0s;
+}
+
+.custombox-overlay-default {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: linear;
+}
+
+.custombox-modal-wrapper {
     bottom: 0;
     left: 0;
     outline: 0 none;
     overflow: auto;
     position: fixed;
+    right: 0;
     text-align: center;
+    top: 0;
 }
+
 .custombox-modal-container {
     margin: 0 auto;
     position: relative;
 }
+
 .custombox-modal img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
 }
+
 .custombox-scrollbar {
+    height: 50px;
+    overflow: scroll;
     position: absolute;
     top: -9999px;
     width: 50px;
-    height: 50px;
-    overflow: scroll;
 }
+
 .custombox-loading {
-    position: fixed;
-    transform: translateY(-50%) translateX(-50%);
-    top: 50%;
     left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 
 /*
@@ -72,17 +79,19 @@
  Overlay: Letmein
  ----------------------------
  */
+
 .custombox-overlay-letmein {
     transition-property: all;
     transition-timing-function: ease;
     visibility: hidden;
 }
+
 .custombox-overlay-open.custombox-overlay-letmein {
+    opacity: 1;
     transform: rotateX(-2deg);
     transform-origin: 50% 0;
     transform-style: preserve-3d;
     visibility: visible;
-    opacity: 1;
 }
 
 /*
@@ -90,6 +99,7 @@
  Overlay: Slide together
  ----------------------------
  */
+
 .custombox-overlay-slidetogether {
     transform: translateY(-100%);
     transition-property: transform ease-in-out;
@@ -105,10 +115,12 @@
  Overlay: Corner
  ----------------------------
  */
+
 .custombox-overlay-corner {
     transform: translateY(150px) translateX(150px);
     transition-property: opacity, transform, visibility;
 }
+
 .custombox-overlay-open.custombox-overlay-corner {
     transform: translateY(0);
     transition-property: opacity, transform;
@@ -119,10 +131,12 @@
  Overlay: Scale
  ----------------------------
  */
+
 .custombox-overlay-scale {
     transform: scale(0.9);
     transition-property: transform;
 }
+
 .custombox-overlay-open.custombox-overlay-scale {
     transform: scale(1);
     transition-property: transform;
@@ -133,17 +147,19 @@
  Overlay: Door
  ----------------------------
  */
+
 .custombox-overlay-door {
-    visibility: hidden;
-    width: 0;
     left: 50%;
     transform: translateX(-50%);
     transition-property: width ease-in-out;
+    visibility: hidden;
+    width: 0;
 }
+
 .custombox-overlay-open.custombox-overlay-door {
+    transition-property: width ease-in-out;
     visibility: visible;
     width: 100%;
-    transition-property: width ease-in-out;
 }
 
 /*
@@ -151,18 +167,20 @@
  Overlay: Push
  ----------------------------
  */
+
 .custombox-container-push {
     overflow-x: hidden;
     transition-property: transform;
 }
-.custombox-container-open.custombox-container-push {
-    transform: translateX(100%);
-}
+
+.custombox-container-open.custombox-container-push { transform: translateX(100%); }
+
 .custombox-overlay-push {
     backface-visibility: hidden;
     transform: translateX(-100%);
     transition-property: transform ease-in-out;
 }
+
 .custombox-overlay-open.custombox-overlay-push {
     transform: translateX(0);
     transition-property: transform ease-in-out;
@@ -173,21 +191,22 @@
  Overlay: Content Scale
  ----------------------------
  */
-.custombox-open-contentscale body {
-    background-color: #DDD;
-}
+
+.custombox-open-contentscale body { background-color: #DDD; }
+
 .custombox-container-contentscale {
-    transition: transform 0.5s;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
+    transition: transform 0.5s;
 }
-.custombox-container-open.custombox-container-contentscale {
-    transform: scale(0.8);
-}
+
+.custombox-container-open.custombox-container-contentscale { transform: scale(0.8); }
+
 .custombox-overlay-contentscale {
     transform: translateY(100%);
     transition-property: transform ease-in-out;
 }
+
 .custombox-overlay-open.custombox-overlay-contentscale {
     transform: translateY(0);
     transition-property: transform ease-in-out;
@@ -198,27 +217,28 @@
  Overlay: Makeway
  ----------------------------
  */
+
 .custombox-container-open.custombox-container-makeway {
     height: 100%;
     overflow: hidden;
 }
-.custombox-overlay-open.custombox-overlay-makeway {
-    transition-property: all;
-}
+
+.custombox-overlay-open.custombox-overlay-makeway { transition-property: all; }
+
 .custombox-overlay-open.custombox-overlay-makeway,
 .custombox-container-open.custombox-container-makeway {
-    transform-style: preserve-3d;
-    transform-origin: 0 50%;
     animation: rotateRightSideFirst 0.5s forwards ease-in;
+    transform-origin: 0 50%;
+    transform-style: preserve-3d;
 }
+
 @keyframes rotateRightSideFirst {
     50% {
-        transform: translateZ(-50px) rotateY(5deg);
         animation-timing-function: ease-out;
+        transform: translateZ(-50px) rotateY(5deg);
     }
-    100% {
-        transform: translateZ(-200px);
-    }
+
+    100% { transform: translateZ(-200px); }
 }
 
 /*
@@ -226,19 +246,20 @@
  Overlay: Slip
  ----------------------------
  */
-.custombox-overlay-open.custombox-overlay-slip {
-    transition-property: all;
-}
+
+.custombox-overlay-open.custombox-overlay-slip { transition-property: all; }
+
 .custombox-overlay-open.custombox-overlay-slip,
 .custombox-container-open.custombox-container-slip {
-    transform-style: preserve-3d;
-    transform-origin: 50% 100%;
     animation: OpenTop 0.5s forwards ease-in-out;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
 }
+
 @keyframes OpenTop {
     50% {
-        transform: rotateX(10deg);
         animation-timing-function: ease-out;
+        transform: rotateX(10deg);
     }
 }
 
@@ -247,15 +268,17 @@
  Modal: Fadein
  ----------------------------
  */
+
 .custombox-modal-fadein {
+    opacity: 0;
     transform: scale(0.7);
     transition-property: all;
-    opacity: 0;
     visibility: hidden;
 }
+
 .custombox-modal-open .custombox-modal-fadein {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
     visibility: visible;
 }
 
@@ -264,81 +287,74 @@
  Modal: Slide
  ----------------------------
  */
+
 .custombox-modal-container-slide > div,
 .custombox-modal-container-slidetogether > div {
-    opacity: 0;
     float: left;
+    opacity: 0;
 }
+
 .custombox-modal-open > .custombox-modal-container-slide > div,
-.custombox-modal-open > .custombox-modal-container-slidetogether > div {
-    opacity: 1;
-}
+.custombox-modal-open > .custombox-modal-container-slidetogether > div { opacity: 1; }
 
 /*
  ----------------------------
  Modal: Slide from top
  ----------------------------
  */
-.custombox-modal-slide-top {
-    transform: translateY(-300%);
-}
-.custombox-modal-open .custombox-modal-slide-top {
-    transform: translateY(0);
-}
+
+.custombox-modal-slide-top { transform: translateY(-300%); }
+
+.custombox-modal-open .custombox-modal-slide-top { transform: translateY(0); }
 
 /*
  ----------------------------
  Modal: Slide from left
  ----------------------------
  */
-.custombox-modal-slide-left {
-    transform: translateX(-300%);
-}
-.custombox-modal-open .custombox-modal-slide-left {
-    transform: translateX(0);
-}
+
+.custombox-modal-slide-left { transform: translateX(-300%); }
+
+.custombox-modal-open .custombox-modal-slide-left { transform: translateX(0); }
 
 /*
  ----------------------------
  Modal: Slide from right
  ----------------------------
  */
-.custombox-modal-slide-right {
-    transform: translateX(300%);
-}
-.custombox-modal-open .custombox-modal-slide-right {
-    transform: translateX(0);
-}
+
+.custombox-modal-slide-right { transform: translateX(300%); }
+
+.custombox-modal-open .custombox-modal-slide-right { transform: translateX(0); }
 
 /*
  ----------------------------
  Modal: Slide from bottom
  ----------------------------
  */
-.custombox-modal-slide-bottom {
-    transform: translateY(300%);
-}
-.custombox-modal-open .custombox-modal-slide-bottom {
-    transform: translateY(0);
-}
+
+.custombox-modal-slide-bottom { transform: translateY(300%); }
+
+.custombox-modal-open .custombox-modal-slide-bottom { transform: translateY(0); }
 
 /*
  ----------------------------
  Modal: Newspaper
  ----------------------------
  */
+
 .custombox-modal-newspaper {
-    transform: scale(0) rotate(720deg);
     opacity: 0;
-    transition-property: all;
     position: absolute;
-}
-.custombox-overlay-newspaper {
+    transform: scale(0) rotate(720deg);
     transition-property: all;
 }
+
+.custombox-overlay-newspaper { transition-property: all; }
+
 .custombox-modal-open .custombox-modal-newspaper {
-    transform: scale(1) rotate(0deg);
     opacity: 1;
+    transform: scale(1) rotate(0deg);
 }
 
 /*
@@ -346,19 +362,20 @@
  Modal: Fall
  ----------------------------
  */
-.custombox-modal-container-fall {
-    perspective: 1300px;
-}
+
+.custombox-modal-container-fall { perspective: 1300px; }
+
 .custombox-modal-fall {
-    transform-style: preserve-3d;
-    transform: translateZ(600px) rotateX(20deg);
     opacity: 0;
+    transform: translateZ(600px) rotateX(20deg);
+    transform-style: preserve-3d;
 }
+
 .custombox-modal-open .custombox-modal-fall {
-    transition-timing-function: ease-in;
-    transition-property: all;
-    transform: translateZ(0) rotateX(0deg);
     opacity: 1;
+    transform: translateZ(0) rotateX(0deg);
+    transition-property: all;
+    transition-timing-function: ease-in;
 }
 
 /*
@@ -366,22 +383,22 @@
  Modal: Sideball
  ----------------------------
  */
-.custombox-modal-container-sidefall {
-    perspective: 1300px;
-}
-.custombox-modal-wrapper-sidefall {
-    overflow-x: hidden;
-}
+
+.custombox-modal-container-sidefall { perspective: 1300px; }
+
+.custombox-modal-wrapper-sidefall { overflow-x: hidden; }
+
 .custombox-modal-sidefall {
-    transform-style: preserve-3d;
-    transform: translate(30%) translateZ(600px) rotate(10deg);
     opacity: 0;
+    transform: translate(30%) translateZ(600px) rotate(10deg);
+    transform-style: preserve-3d;
 }
+
 .custombox-modal-open .custombox-modal-sidefall {
-    transition-timing-function: ease-in;
-    transition-property: all;
-    transform: translate(0) translateZ(0) rotate(0deg);
     opacity: 1;
+    transform: translate(0) translateZ(0) rotate(0deg);
+    transition-property: all;
+    transition-timing-function: ease-in;
 }
 
 /*
@@ -389,29 +406,30 @@
  Modal: Blur
  ----------------------------
  */
-.custombox-open-blur .custombox-container-blur {
-    filter: blur(3px);
-}
+
+.custombox-open-blur .custombox-container-blur { filter: blur(3px); }
+
 @media all and (-ms-high-contrast: none) {
     .custombox-open-blur .custombox-container-blur {
-        text-shadow: 0 0 8px #000;
-        color: rgba(255,255,255,0);
+        color: rgba(255, 255, 255, 0);
         filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+        text-shadow: 0 0 8px #000;
         zoom: 1;
     }
 }
+
 .custombox-modal-blur {
-    transform: translateY(-5%);
     opacity: 0;
     position: absolute;
+    transform: translateY(-5%);
 }
+
 .custombox-overlay-blur,
-.custombox-modal-container-blur {
-    transition-property: all;
-}
+.custombox-modal-container-blur { transition-property: all; }
+
 .custombox-modal-open .custombox-modal-blur {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
 }
 
 /*
@@ -419,25 +437,26 @@
  Modal: 3D Flip generic
  ----------------------------
  */
-.custombox-modal-container-flip {
-    perspective: 1300px;
-}
+
+.custombox-modal-container-flip { perspective: 1300px; }
 
 /*
  ----------------------------
  Modal: 3D Flip horizontal
  ----------------------------
  */
+
 .custombox-modal-flip-horizontal {
-    position: absolute;
-    transform-style: preserve-3d;
-    transform: rotateY(-70deg);
-    transition-property: all;
     opacity: 0;
+    position: absolute;
+    transform: rotateY(-70deg);
+    transform-style: preserve-3d;
+    transition-property: all;
 }
+
 .custombox-modal-open .custombox-modal-flip-horizontal {
-    transform: rotateY(0deg);
     opacity: 1;
+    transform: rotateY(0deg);
 }
 
 /*
@@ -445,16 +464,18 @@
  Modal: 3D Flip vertical
  ----------------------------
  */
+
 .custombox-modal-flip-vertical {
-    position: absolute;
-    transform-style: preserve-3d;
-    transform: rotateX(-70deg);
-    transition-property: all;
     opacity: 0;
+    position: absolute;
+    transform: rotateX(-70deg);
+    transform-style: preserve-3d;
+    transition-property: all;
 }
+
 .custombox-modal-open .custombox-modal-flip-vertical {
-    transform: rotateX(0deg);
     opacity: 1;
+    transform: rotateX(0deg);
 }
 
 /*
@@ -462,19 +483,20 @@
  Modal: 3D Sign
  ----------------------------
  */
-.custombox-modal-container-sign {
-    perspective: 1300px;
-}
+
+.custombox-modal-container-sign { perspective: 1300px; }
+
 .custombox-modal-sign {
-    transform-style: preserve-3d;
+    opacity: 0;
     transform: rotateX(-60deg);
     transform-origin: 50% 0;
-    opacity: 0;
+    transform-style: preserve-3d;
     transition-property: all;
 }
+
 .custombox-modal-open .custombox-modal-sign {
-    transform: rotateX(0deg);
     opacity: 1;
+    transform: rotateX(0deg);
 }
 
 /*
@@ -482,15 +504,17 @@
  Modal: Superscaled
  ----------------------------
  */
+
 .custombox-modal-superscaled {
-    transform: scale(2);
     opacity: 0;
-    transition-property: all;
     position: absolute;
+    transform: scale(2);
+    transition-property: all;
 }
+
 .custombox-modal-open .custombox-modal-superscaled {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
 }
 
 /*
@@ -498,26 +522,27 @@
  Modal: 3D Slit
  ----------------------------
  */
-.custombox-modal-container-slit {
-    perspective: 1300px;
-}
+
+.custombox-modal-container-slit { perspective: 1300px; }
+
 .custombox-modal-slit {
-    transform-style: preserve-3d;
-    transform: translateZ(-3000px) rotateY(90deg);
     opacity: 0;
+    transform: translateZ(-3000px) rotateY(90deg);
+    transform-style: preserve-3d;
 }
-.custombox-modal-open .custombox-modal-slit {
-    animation: slit .7s forwards ease-out;
-}
+
+.custombox-modal-open .custombox-modal-slit { animation: slit .7s forwards ease-out; }
+
 @keyframes slit {
     50% {
-        transform: translateZ(-250px) rotateY(89deg);
-        opacity: 1;
         animation-timing-function: ease-out;
-    }
-    100% {
-        transform: translateZ(0) rotateY(0deg);
         opacity: 1;
+        transform: translateZ(-250px) rotateY(89deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateZ(0) rotateY(0deg);
     }
 }
 
@@ -526,27 +551,28 @@
  Modal: 3D Rotate generic
  ----------------------------
  */
-.custombox-modal-container-rotate {
-    perspective: 1300px;
-}
+
+.custombox-modal-container-rotate { perspective: 1300px; }
 
 /*
  ----------------------------
  Modal: 3D Rotate from bottom
  ----------------------------
  */
+
 .custombox-modal-rotate-bottom {
-    transform-style: preserve-3d;
+    opacity: 0;
+    position: absolute;
     transform: translateY(100%) rotateX(90deg);
     transform-origin: 0 100%;
-    opacity: 0;
-    transition-timing-function: ease-out;
+    transform-style: preserve-3d;
     transition-property: all;
-    position: absolute;
+    transition-timing-function: ease-out;
 }
+
 .custombox-modal-open .custombox-modal-rotate-bottom {
-    transform: translateY(0) rotateX(0deg);
     opacity: 1;
+    transform: translateY(0) rotateX(0deg);
 }
 
 /*
@@ -554,17 +580,19 @@
  Modal: 3D Rotate from left
  ----------------------------
  */
+
 .custombox-modal-rotate-left {
-    transform-style: preserve-3d;
+    opacity: 0;
+    position: absolute;
     transform: translateZ(100px) translateX(-30%) rotateY(90deg);
     transform-origin: 0 100%;
-    opacity: 0;
+    transform-style: preserve-3d;
     transition-property: all;
-    position: absolute;
 }
+
 .custombox-modal-open .custombox-modal-rotate-left {
-    transform: translateZ(0) translateX(0) rotateY(0deg);
     opacity: 1;
+    transform: translateZ(0) translateX(0) rotateY(0deg);
 }
 
 /*
@@ -572,21 +600,24 @@
  Modal: Letmein
  ----------------------------
  */
+
 .custombox-modal-container-letmein {
-    transition-property: transform;
+    opacity: 1;
     transform: rotateX(-2deg);
     transform-origin: 50% 0;
     transform-style: preserve-3d;
-    opacity: 1;
+    transition-property: transform;
 }
+
 .custombox-modal-letmein {
+    float: left;
     opacity: 0;
     transform: translateY(300%);
-    float: left;
 }
+
 .custombox-modal-open .custombox-modal-letmein {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
     transition-property: all;
 }
 
@@ -595,27 +626,28 @@
  Modal: Makeway
  ----------------------------
  */
+
 .custombox-modal-makeway {
-    transform: translateX(200%);
-    opacity: 0;
     float: left;
+    opacity: 0;
+    transform: translateX(200%);
 }
+
 .custombox-modal-open .custombox-modal-makeway {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateX(0);
 }
-.custombox-modal-wrapper-makeway {
-    overflow: hidden;
-}
+
+.custombox-modal-wrapper-makeway { overflow: hidden; }
 
 /*
  ----------------------------
  Modal: Slip
  ----------------------------
  */
-.custombox-modal-slip {
-    transform: translateY(-350%);
-}
+
+.custombox-modal-slip { transform: translateY(-350%); }
+
 .custombox-modal-open .custombox-modal-slip {
     transform: translateY(0);
     transition-property: all;
@@ -626,14 +658,16 @@
  Modal: Corner
  ----------------------------
  */
+
 .custombox-modal-corner {
     opacity: 0;
     transform: translateY(150px) translateX(150px);
     transition-property: opacity, transform, visibility;
 }
+
 .custombox-modal-open .custombox-modal-corner {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
     transition-property: opacity, transform;
 }
 
@@ -642,28 +676,27 @@
  Modal: Slide together
  ----------------------------
  */
-.custombox-modal-slidetogether {
-    transform: translateY(-600%);
 
-}
-.custombox-modal-open .custombox-modal-slidetogether {
-    transform: translateY(0);
-}
+.custombox-modal-slidetogether { transform: translateY(-600%); }
+
+.custombox-modal-open .custombox-modal-slidetogether { transform: translateY(0); }
 
 /*
  ----------------------------
  Modal: Scale
  ----------------------------
  */
+
 .custombox-modal-scale {
+    opacity: 0;
     transform: scale(0.9);
     transition: transform;
-    opacity: 0;
 }
+
 .custombox-modal-open .custombox-modal-scale {
+    opacity: 1;
     transform: scale(1);
     transition: transform;
-    opacity: 1;
 }
 
 /*
@@ -671,10 +704,12 @@
  Modal: Door
  ----------------------------
  */
+
 .custombox-modal-door {
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
+
 .custombox-modal-open .custombox-modal-door {
     opacity: 1;
     visibility: visible;
@@ -685,64 +720,68 @@
  Modal: Push
  ----------------------------
  */
-.custombox-modal-push {
-    transform: translateX(-300%);
-}
-.custombox-modal-open .custombox-modal-push {
-    transform: translateX(0);
-}
+
+.custombox-modal-push { transform: translateX(-300%); }
+
+.custombox-modal-open .custombox-modal-push { transform: translateX(0); }
 
 /*
  ----------------------------
  Modal: Content Scale
  ----------------------------
  */
+
 .custombox-modal-contentscale {
+    position: absolute;
     transform: translateY(600%);
     transition-property: transform ease-in-out;
-    position: absolute;
 }
-.custombox-modal-open .custombox-modal-contentscale {
-    transform: translateY(0);
-}
+
+.custombox-modal-open .custombox-modal-contentscale { transform: translateY(0); }
 
 /*
  ----------------------------
  Modal: Val
  ----------------------------
  */
+
 .custombox-modal-swell {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
     animation-name: swell-close;
+    animation-timing-function: ease-out;
 }
-.custombox-modal-open .custombox-modal-swell {
-    animation-name: swell-open;
-}
+
+.custombox-modal-open .custombox-modal-swell { animation-name: swell-open; }
+
 @keyframes swell-open {
     0% {
         opacity: 0;
         transform: translate3d(calc(-100vw - 50%), 0, 0);
     }
+
     50% {
         opacity: 1;
         transform: translate3d(100px, 0, 0);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
+
 @keyframes swell-close {
     0% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+
     50% {
         opacity: 1;
         transform: translate3d(-100px, 0, 0) scale3d(1.1, 1.1, 1);
     }
+
     100% {
         opacity: 0;
         transform: translate3d(calc(100vw + 50%), 0, 0)
@@ -754,48 +793,54 @@
  Modal: Rotate down
  ----------------------------
  */
+
 .custombox-modal-rotatedown {
     animation-duration: 0.4s;
-    animation-timing-function: cubic-bezier(0.7,0,0.3,1);
     animation-fill-mode: forwards;
-    transform-origin: -150% 50%;
     animation-name: rotatedown-close;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     overflow: hidden;
+    transform-origin: -150% 50%;
 }
-.custombox-modal-open .custombox-modal-rotatedown {
-    animation-name: rotatedown-open;
-}
+
+.custombox-modal-open .custombox-modal-rotatedown { animation-name: rotatedown-open; }
+
 .custombox-modal-open .custombox-modal-rotatedown div > * {
     animation: rotatedown-elem 0.4s both;
-    transform-origin: -50% 50%;
-    animation-timing-function: cubic-bezier(0.7,0,0.3,1);
     animation-delay: 0.15s;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transform-origin: -50% 50%;
 }
+
 @keyframes rotatedown-open {
     0% {
         opacity: 0;
         transform: rotate3d(0, 0, 1, -45deg);
     }
+
     100% {
         opacity: 1;
         transform: rotate3d(0, 0, 1, 0deg);
     }
 }
+
 @keyframes rotatedown-close {
-    0% {
-        opacity: 1;
-    }
+    0% { opacity: 1; }
+
     100% {
         opacity: 0;
         transform: rotate3d(0, 0, 1, 45deg);
     }
 }
+
 @keyframes rotatedown-elem {
     0% {
         opacity: 0;
         transform: translate3d(0, -150px, 0) rotate3d(0, 0, 1, -20deg);
     }
-    100% { opacity: 1;
+
+    100% {
+        opacity: 1;
         transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
     }
 }
@@ -805,66 +850,74 @@
  Modal: Flash
  ----------------------------
  */
+
 .custombox-modal-flash {
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.7,0,0.3,1);
     animation-name: flash-close;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     overflow: hidden;
 }
-.custombox-modal-open .custombox-modal-flash {
-    animation-name: flash-open;
-}
-.custombox-modal-open .custombox-modal-flash div > * {
-    animation: flash-elem-open 0.4s cubic-bezier(0.7,0,0.3,1) both;
-}
-.custombox-modal-flash div > * {
-    animation: flash-elem-close 0.4s cubic-bezier(0.7,0,0.3,1) both;
-}
+
+.custombox-modal-open .custombox-modal-flash { animation-name: flash-open; }
+
+.custombox-modal-open .custombox-modal-flash div > * { animation: flash-elem-open 0.4s cubic-bezier(0.7, 0, 0.3, 1) both; }
+
+.custombox-modal-flash div > * { animation: flash-elem-close 0.4s cubic-bezier(0.7, 0, 0.3, 1) both; }
+
 @keyframes flash-open {
     0% {
         opacity: 0;
         transform: translate3d(-400px, 0, 0)
-        scale3d(1.4, 0, 1);
+                   scale3d(1.4, 0, 1);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     }
 }
+
 @keyframes flash-close {
     0% {
         opacity: 1;
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     }
+
     20% {
         opacity: 1;
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     }
+
     100% {
         opacity: 0;
         transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
     }
 }
+
 @keyframes flash-elem-open {
     0% {
         opacity: 0;
         transform: translate3d(-100px, 0, 0);
     }
+
     20% {
         opacity: 0;
         transform: translate3d(-100px, 0, 0);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
+
 @keyframes flash-elem-close {
     0% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+
     100% {
         opacity: 0;
         transform: translate3d(-100px, 0, 0);

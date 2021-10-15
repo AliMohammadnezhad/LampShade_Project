@@ -19,9 +19,7 @@ hgroup,
 main,
 nav,
 section,
-summary {
-    display: block;
-}
+summary { display: block; }
 
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
@@ -50,9 +48,7 @@ audio:not([controls]) {
  * Known issue: no IE 6 support.
  */
 
-[hidden] {
-    display: none;
-}
+[hidden] { display: none; }
 
 /* ==========================================================================
    Base
@@ -70,11 +66,11 @@ audio:not([controls]) {
  */
 
 html {
+    -ms-text-size-adjust: 100%; /* 4 */
+    -webkit-text-size-adjust: 100%; /* 4 */
     background: #fff; /* 1 */
     color: #000; /* 2 */
     font-size: 100%; /* 3 */
-    -webkit-text-size-adjust: 100%; /* 4 */
-    -ms-text-size-adjust: 100%; /* 4 */
 }
 
 /**
@@ -86,17 +82,13 @@ html,
 button,
 input,
 select,
-textarea {
-    font-family: sans-serif;
-}
+textarea { font-family: sans-serif; }
 
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
 
-body {
-    margin: 0;
-}
+body { margin: 0; }
 
 /* ==========================================================================
    Links
@@ -106,18 +98,14 @@ body {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
-a:focus {
-    outline: thin dotted;
-}
+a:focus { outline: thin dotted; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
 a:active,
-a:hover {
-    outline: 0;
-}
+a:hover { outline: 0; }
 
 /* ==========================================================================
    Typography
@@ -163,30 +151,22 @@ h6 {
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
 
-abbr[title] {
-    border-bottom: 1px dotted;
-}
+abbr[title] { border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
 
 b,
-strong {
-    font-weight: bold;
-}
+strong { font-weight: bold; }
 
-blockquote {
-    margin: 1em 40px;
-}
+blockquote { margin: 1em 40px; }
 
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
 
-dfn {
-    font-style: italic;
-}
+dfn { font-style: italic; }
 
 /**
  * Address differences between Firefox and other browsers.
@@ -213,9 +193,7 @@ mark {
  */
 
 p,
-pre {
-    margin: 1em 0;
-}
+pre { margin: 1em 0; }
 
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
@@ -226,8 +204,8 @@ kbd,
 pre,
 samp {
     font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
     font-size: 1em;
+    _font-family: 'courier new', monospace;
 }
 
 /**
@@ -244,9 +222,7 @@ pre {
  * Address CSS quotes not supported in IE 6/7.
  */
 
-q {
-    quotes: none;
-}
+q { quotes: none; }
 
 /**
  * Address `quotes` property not supported in Safari 4.
@@ -262,9 +238,7 @@ q:after {
  * Address inconsistent and variable font size in all browsers.
  */
 
-small {
-    font-size: 80%;
-}
+small { font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -278,13 +252,9 @@ sup {
     vertical-align: baseline;
 }
 
-sup {
-    top: -0.5em;
-}
+sup { top: -0.5em; }
 
-sub {
-    bottom: -0.25em;
-}
+sub { bottom: -0.25em; }
 
 /* ==========================================================================
    Lists
@@ -297,13 +267,9 @@ sub {
 dl,
 menu,
 ol,
-ul {
-    margin: 1em 0;
-}
+ul { margin: 1em 0; }
 
-dd {
-    margin: 0 0 0 40px;
-}
+dd { margin: 0 0 0 40px; }
 
 /**
  * Address paddings set differently in IE 6/7.
@@ -311,9 +277,7 @@ dd {
 
 menu,
 ol,
-ul {
-    padding: 0 0 0 40px;
-}
+ul { padding: 0 0 0 40px; }
 
 /**
  * Correct list images handled incorrectly in IE 7.
@@ -335,17 +299,15 @@ nav ol {
  */
 
 img {
-    border: 0; /* 1 */
     -ms-interpolation-mode: bicubic; /* 2 */
+    border: 0; /* 1 */
 }
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
 
-svg:not(:root) {
-    overflow: hidden;
-}
+svg:not(:root) { overflow: hidden; }
 
 /* ==========================================================================
    Figures
@@ -355,9 +317,7 @@ svg:not(:root) {
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
 
-figure {
-    margin: 0;
-}
+figure { margin: 0; }
 
 /* ==========================================================================
    Forms
@@ -367,9 +327,7 @@ figure {
  * Correct margin displayed oddly in IE 6/7.
  */
 
-form {
-    margin: 0;
-}
+form { margin: 0; }
 
 /**
  * Define consistent border, margin, and padding.
@@ -389,9 +347,9 @@ fieldset {
 
 legend {
     border: 0; /* 1 */
+    *margin-left: -7px; /* 3 */
     padding: 0;
     white-space: normal; /* 2 */
-    *margin-left: -7px; /* 3 */
 }
 
 /**
@@ -417,9 +375,7 @@ textarea {
  */
 
 button,
-input {
-    line-height: normal;
-}
+input { line-height: normal; }
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -429,9 +385,7 @@ input {
  */
 
 button,
-select {
-    text-transform: none;
-}
+select { text-transform: none; }
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -449,7 +403,7 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+    *overflow: visible; /* 4 */
 }
 
 /**
@@ -457,9 +411,7 @@ input[type="submit"] {
  */
 
 button[disabled],
-html input[disabled] {
-    cursor: default;
-}
+html input[disabled] { cursor: default; }
 
 /**
  * 1. Address box sizing set to content-box in IE 8/9.
@@ -471,8 +423,8 @@ html input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
     *height: 13px; /* 3 */
+    padding: 0; /* 2 */
     *width: 13px; /* 3 */
 }
 
@@ -483,8 +435,8 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
     -moz-box-sizing: content-box;
+    -webkit-appearance: textfield; /* 1 */
     -webkit-box-sizing: content-box; /* 2 */
     box-sizing: content-box;
 }
@@ -495,9 +447,7 @@ input[type="search"] {
  */
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
 /**
  * Remove inner padding and border in Firefox 3+.

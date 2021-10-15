@@ -249,4 +249,42 @@ function ShowToast(parameters) {
 
 }
 
+$(document).ready(function () {
+    $("#Stock").click(function () {
+        var StockVal = $(this).attr('data-Stock');
+        var Action = $(this).attr('data-Action');
+        if (StockVal === 'NotInStock') {
+            var urlData = Action;
+            $.ajax({
+                url: urlData,
+                type: "Get",
+                dataType: "json",
+                success: function (data) {
+                    CallBackHandler(data, "Refresh", null);
+                },
+                error: function (data) {
+                    alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+                }
+                /*more code*/
+            });
+        } else if (StockVal === "InStock") {
+            var urlData = Action;
+            $.ajax({
+                url: urlData,
+                type: "Get",
+                dataType: "json",
+                success: function (data) {
+                    CallBackHandler(data, "Refresh", null);
+                },
+                error: function (data) {
+                    alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+                }
+                /*more code*/
+            });
+        }
+
+    });
+});
+
+
 

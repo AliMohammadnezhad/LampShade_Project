@@ -1,102 +1,122 @@
 @-webkit-keyframes flip {
-  0% {
-    -webkit-transform: perspective(400px) rotateY(0);
-    -webkit-animation-timing-function: ease-out;
-  }
-  40% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
-    -webkit-animation-timing-function: ease-out;
-  }
-  50% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    -webkit-animation-timing-function: ease-in;
-  }
-  80% {
-    -webkit-transform: perspective(400px) rotateY(360deg) scale(0.95);
-    -webkit-animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: perspective(400px) scale(1);
-    -webkit-animation-timing-function: ease-in;
-  }
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        -webkit-transform: perspective(400px) rotateY(0);
+    }
+
+    40% {
+        -webkit-animation-timing-function: ease-out;
+        -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    }
+
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    }
+
+    80% {
+        -webkit-animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) rotateY(360deg) scale(0.95);
+    }
+
+    100% {
+        -webkit-animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) scale(1);
+    }
 }
+
 @-moz-keyframes flip {
-  0% {
-    -moz-transform: perspective(400px) rotateY(0);
-    -moz-animation-timing-function: ease-out;
-  }
-  40% {
-    -moz-transform: perspective(400px) translateZ(150px) rotateY(170deg);
-    -moz-animation-timing-function: ease-out;
-  }
-  50% {
-    -moz-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    -moz-animation-timing-function: ease-in;
-  }
-  80% {
-    -moz-transform: perspective(400px) rotateY(360deg) scale(0.95);
-    -moz-animation-timing-function: ease-in;
-  }
-  100% {
-    -moz-transform: perspective(400px) scale(1);
-    -moz-animation-timing-function: ease-in;
-  }
+    0% {
+        -moz-animation-timing-function: ease-out;
+        -moz-transform: perspective(400px) rotateY(0);
+    }
+
+    40% {
+        -moz-animation-timing-function: ease-out;
+        -moz-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    }
+
+    50% {
+        -moz-animation-timing-function: ease-in;
+        -moz-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    }
+
+    80% {
+        -moz-animation-timing-function: ease-in;
+        -moz-transform: perspective(400px) rotateY(360deg) scale(0.95);
+    }
+
+    100% {
+        -moz-animation-timing-function: ease-in;
+        -moz-transform: perspective(400px) scale(1);
+    }
 }
+
 @-o-keyframes flip {
-  0% {
-    -o-transform: perspective(400px) rotateY(0);
-    -o-animation-timing-function: ease-out;
-  }
-  40% {
-    -o-transform: perspective(400px) translateZ(150px) rotateY(170deg);
-    -o-animation-timing-function: ease-out;
-  }
-  50% {
-    -o-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    -o-animation-timing-function: ease-in;
-  }
-  80% {
-    -o-transform: perspective(400px) rotateY(360deg) scale(0.95);
-    -o-animation-timing-function: ease-in;
-  }
-  100% {
-    -o-transform: perspective(400px) scale(1);
-    -o-animation-timing-function: ease-in;
-  }
+    0% {
+        -o-animation-timing-function: ease-out;
+        -o-transform: perspective(400px) rotateY(0);
+    }
+
+    40% {
+        -o-animation-timing-function: ease-out;
+        -o-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    }
+
+    50% {
+        -o-animation-timing-function: ease-in;
+        -o-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    }
+
+    80% {
+        -o-animation-timing-function: ease-in;
+        -o-transform: perspective(400px) rotateY(360deg) scale(0.95);
+    }
+
+    100% {
+        -o-animation-timing-function: ease-in;
+        -o-transform: perspective(400px) scale(1);
+    }
 }
+
 @keyframes flip {
-  0% {
-    transform: perspective(400px) rotateY(0);
-    animation-timing-function: ease-out;
-  }
-  40% {
-    transform: perspective(400px) translateZ(150px) rotateY(170deg);
-    animation-timing-function: ease-out;
-  }
-  50% {
-    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
-    animation-timing-function: ease-in;
-  }
-  80% {
-    transform: perspective(400px) rotateY(360deg) scale(0.95);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: perspective(400px) scale(1);
-    animation-timing-function: ease-in;
-  }
+    0% {
+        animation-timing-function: ease-out;
+        transform: perspective(400px) rotateY(0);
+    }
+
+    40% {
+        animation-timing-function: ease-out;
+        transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    }
+
+    50% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    }
+
+    80% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) rotateY(360deg) scale(0.95);
+    }
+
+    100% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) scale(1);
+    }
 }
+
 .flip {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: visible !important;
-  -webkit-animation-name: flip;
-  -moz-backface-visibility: visible !important;
-  -moz-animation-name: flip;
-  -o-backface-visibility: visible !important;
-  -o-animation-name: flip;
-  backface-visibility: visible !important;
-  animation-name: flip;
+    -moz-animation-name: flip;
+    -moz-backface-visibility: visible !important;
+    -moz-transform-style: preserve-3d;
+    -o-animation-name: flip;
+    -o-backface-visibility: visible !important;
+    -o-transform-style: preserve-3d;
+    -webkit-animation-name: flip;
+    -webkit-backface-visibility: visible !important;
+    -webkit-transform-style: preserve-3d;
+    animation-name: flip;
+    backface-visibility: visible !important;
+    transform-style: preserve-3d;
 }
