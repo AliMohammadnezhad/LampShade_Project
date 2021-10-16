@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ServiceHost/1.0.0": {
         "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "ShopManagement.Configuration": "1.0.0",
@@ -1795,6 +1796,19 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "01_LampShadeQueries/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Domain": "1.0.0",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "01_LampShadeQueries.dll": {}
+        },
+        "compile": {
+          "01_LampShadeQueries.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.11"
@@ -1831,6 +1845,7 @@
       },
       "ShopManagement.Configuration/1.0.0": {
         "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
@@ -4422,6 +4437,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "01_LampShadeQueries/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "0_FrameWork/1.0.0": {
       "type": "project",

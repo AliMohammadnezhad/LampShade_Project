@@ -1999,6 +1999,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_LampShadeQueries/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Domain": "1.0.0",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_LampShadeQueries.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_LampShadeQueries.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2043,6 +2058,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
@@ -7188,6 +7204,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "01_LampShadeQueries/1.0.0": {
+      "type": "project",
+      "path": "../01_LampShadeQueries/01_LampShadeQueries.csproj",
+      "msbuildProject": "../01_LampShadeQueries/01_LampShadeQueries.csproj"
+    },
     "0_FrameWork/1.0.0": {
       "type": "project",
       "path": "../0_FrameWork/0_FrameWork.csproj",
@@ -7221,6 +7242,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "01_LampShadeQueries >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "ShopManagement.Configuration >= 1.0.0"
@@ -7258,6 +7280,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj"
+            },
             "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"
             }

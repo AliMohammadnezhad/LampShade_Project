@@ -30,6 +30,8 @@ namespace ShopManagement.Configuration
             services.AddTransient<ISlideApplication, SlideApplication>();
             services.AddTransient<ISlideRepository, SlideRepository>();
 
+            services.AddTransient<_01_LampShadeQueries.Contracts.Slide.ISlideRepository, _01_LampShadeQueries.Queries.SlideRepository>();
+
     
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }

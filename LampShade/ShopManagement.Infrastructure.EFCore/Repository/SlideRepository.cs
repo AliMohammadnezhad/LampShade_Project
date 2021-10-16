@@ -40,7 +40,10 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 PictureTitle = x.PictureTitle,
                 BtnText = x.BtnText,
                 PictureAlt = x.PictureAlt,
-                Text = x.Text
+                Text = x.Text,
+                Link = x.Link
+                
+                
             }).FirstOrDefault(x => x.Id == id);
         }
     }
