@@ -49,6 +49,30 @@ namespace ShopManagement.Application
             return operation.Succeed();
         }
 
+        public OperationResult Remove(long id)
+        {
+            var operationResult = new OperationResult();
+            var productCategory = _productCategoryRepository.Get(id);
+            if (productCategory == null)
+                return operationResult.Failed(ApplicationMessages.RecordNotFound);
+
+            productCategory.Remove();
+            _productCategoryRepository.SaveChange();
+            return operationResult.Succeed();
+
+        }
+
+        public OperationResult Restore(long id)
+        {
+            var operationResult = new OperationResult();
+            var productCategory = _productCategoryRepository.Get(id);
+            if (productCategory == null)
+                return operationResult.Failed(ApplicationMessages.RecordNotFound);
+            productCategory.Restore();
+            _productCategoryRepository.SaveChange();
+            return operationResult.Succeed();
+        }
+
         public EditProductCategory GetDetails(long id)
         {
             return _productCategoryRepository.GetDetails(id);

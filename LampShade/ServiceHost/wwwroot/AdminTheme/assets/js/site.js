@@ -37,7 +37,8 @@ $(document).ready(function () {
             window.location.hash = "##";
             $('.persianDateInput').persianDatepicker({
                 format: 'YYYY/MM/DD',
-                autoClose: true
+                autoClose: true,
+                initialValue: false
             });
         });
 
@@ -249,39 +250,45 @@ function ShowToast(parameters) {
 
 }
 
+function Request(request,action) {
+    console.log(action);
+    var StockVal = request;
+    var Action = action;
+    if (StockVal === 'NotInStock') {
+        var urlData = Action;
+        $.ajax({
+            url: urlData,
+            type: "Get",
+            dataType: "json",
+            success: function (data) {
+                CallBackHandler(data, "Refresh", null);
+            },
+            error: function (data) {
+                alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+            }
+            /*more code*/
+        });
+    } else if (StockVal === "InStock") {
+        var urlData = Action;
+        $.ajax({
+            url: urlData,
+            type: "Get",
+            dataType: "json",
+            success: function (data) {
+                CallBackHandler(data, "Refresh", null);
+            },
+            error: function (data) {
+                alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+            }
+            /*more code*/
+        });
+    }
+}
+
 $(document).ready(function () {
     $("#Stock").click(function () {
-        var StockVal = $(this).attr('data-Stock');
-        var Action = $(this).attr('data-Action');
-        if (StockVal === 'NotInStock') {
-            var urlData = Action;
-            $.ajax({
-                url: urlData,
-                type: "Get",
-                dataType: "json",
-                success: function (data) {
-                    CallBackHandler(data, "Refresh", null);
-                },
-                error: function (data) {
-                    alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
-                }
-                /*more code*/
-            });
-        } else if (StockVal === "InStock") {
-            var urlData = Action;
-            $.ajax({
-                url: urlData,
-                type: "Get",
-                dataType: "json",
-                success: function (data) {
-                    CallBackHandler(data, "Refresh", null);
-                },
-                error: function (data) {
-                    alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
-                }
-                /*more code*/
-            });
-        }
+        
+        
 
     });
 });

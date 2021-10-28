@@ -40,12 +40,24 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
         public IActionResult OnGetEdit(long id)
         {
             var productCategory = _productCategoryApplication.GetDetails(id);
-            return Partial("EditSlide", productCategory);
+            return Partial("Edit", productCategory);
         }
 
         public JsonResult OnPostEdit(EditProductCategory command)
         {
             var operationResult = _productCategoryApplication.Edit(command);
+            return new JsonResult(operationResult);
+        }
+
+        public JsonResult OnGetRemove(long id)
+        {
+            var operationResult = _productCategoryApplication.Remove(id);
+            return new JsonResult(operationResult);
+        }
+
+        public JsonResult OnGetRestore(long id)
+        {
+            var operationResult = _productCategoryApplication.Restore(id);
             return new JsonResult(operationResult);
         }
     }

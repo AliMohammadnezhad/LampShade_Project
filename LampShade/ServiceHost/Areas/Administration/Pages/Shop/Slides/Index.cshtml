@@ -61,10 +61,10 @@
                                             </a>
                                             @if (!item.IsRemoved)
                                             {
-                                                <button class="btn btn-danger waves-effect waves-light btn-sm m-b-5" data-Stock="NotInStock" data-Action="@Url.Page("./Index", "Remove",new {id = item.Id})" id="Stock">غیرفعال سازی</button> }
+                                                <button class="btn btn-danger waves-effect waves-light btn m-b-5"   onclick="Request('NotInStock','@Url.Page("./Index","Remove",new {id = item.Id})')">غیرفعال </button> }
                                             else
                                             {
-                                                <button class="btn btn-success waves-effect waves-light btn-sm m-b-5" data-Stock="InStock" data-Action="@Url.Page("./Index", "Restore",new {id = item.Id})" id="Stock">فعال سازی</button>
+                                                <button class="btn btn-success waves-effect waves-light btn m-b-5"  onclick="Request('InStock','@Url.Page("./Index","Restore",new {id = item.Id})')">فعال سازی </button>
                                             }
                                         </td>
                                     </tr>

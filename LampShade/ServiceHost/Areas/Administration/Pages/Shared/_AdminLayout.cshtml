@@ -12,7 +12,7 @@
 
     <!--Morris Chart CSS -->
     <link rel="stylesheet" href="~/AdminTheme/assets/plugins/morris/morris.css">
-
+    <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
     <!-- App css -->
     <link href="~/AdminTheme/assets/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="~/AdminTheme/assets/css/core.css" rel="stylesheet" type="text/css"/>
@@ -198,5 +198,14 @@
 <script src="~/AdminTheme/assets/plugins/toastr/toastr.min.js"></script>
 <script src="~/AdminTheme/assets/js/site.js"></script>
 @RenderSection("Scripts", false)
+<script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
+<script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
+<script type="text/javascript">
+    $('.persianDateInput').persianDatepicker({
+        format: 'YYYY/MM/DD',
+        autoClose: true,
+        initialValue: false
+    });
+</script>
 </body>
 </html>

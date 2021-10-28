@@ -14,10 +14,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\01_LampShadeQueries\01_LampShadeQueries.csproj" />
+    <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Components\ProductCategory\" />
     <Folder Include="wwwroot\AdminTheme\assets\plugins\jstree\themes\default\" />
   </ItemGroup>
 

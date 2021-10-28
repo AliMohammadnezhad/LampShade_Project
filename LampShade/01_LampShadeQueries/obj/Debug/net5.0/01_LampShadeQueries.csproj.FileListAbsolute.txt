@@ -15,7 +15,7 @@ F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampS
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.AssemblyInfoInputs.cache
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.AssemblyInfo.cs
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.csproj.CoreCompileInputs.cache
-F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.csproj.CopyComplete
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.dll
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\ref\01_LampShadeQueries.dll
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.csproj.CopyComplete

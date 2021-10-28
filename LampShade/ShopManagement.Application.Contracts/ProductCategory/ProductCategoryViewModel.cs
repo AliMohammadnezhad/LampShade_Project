@@ -7,6 +7,7 @@
         public string Description { get; set; }
         public string Picture { get; set; }
         public string CreationDate { get; set; }
+        public bool IsRemoved { get; set; }
         public long ProductsCount { get; set; }
     }
 }

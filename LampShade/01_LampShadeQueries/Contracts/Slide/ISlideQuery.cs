@@ -2,8 +2,8 @@
 
 namespace _01_LampShadeQueries.Contracts.Slide
 {
-    public  interface ISlideRepository
+    public  interface ISlideQuery
     {
-        List<SlideViewModel> GetSlides();
+        List<SlideQueryModel> GetSlides();
     }
 }

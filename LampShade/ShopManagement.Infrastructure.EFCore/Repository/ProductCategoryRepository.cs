@@ -39,7 +39,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 CreationDate = x.CreationDate.ToString(),
                 Description = x.Description,
                 Name = x.Name,
-                Picture = x.Picture
+                Picture = x.Picture,
+                IsRemoved = x.IsRemoved 
             });
 
 
@@ -55,7 +56,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 CreationDate = x.CreationDate.ToString(),
                 Description = x.Description,
                 Name = x.Name,
-                Picture = x.Picture
+                Picture = x.Picture,
+                IsRemoved = x.IsRemoved
             });
 
             return query.ToList();

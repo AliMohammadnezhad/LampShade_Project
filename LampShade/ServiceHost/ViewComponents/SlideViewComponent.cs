@@ -6,15 +6,15 @@ namespace ServiceHost.ViewComponents
 {
     public class SlideViewComponent:ViewComponent
     {
-        private readonly ISlideRepository _slideRepository;
+        private readonly ISlideQuery _slideQuery;
 
-        public SlideViewComponent(ISlideRepository slideRepository)
+        public SlideViewComponent(ISlideQuery slideQuery)
         {
-            _slideRepository = slideRepository;
+            _slideQuery = slideQuery;
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var slides = _slideRepository.GetSlides();
+            var slides = _slideQuery.GetSlides();
             return await Task.FromResult(View(slides));
         }
     }

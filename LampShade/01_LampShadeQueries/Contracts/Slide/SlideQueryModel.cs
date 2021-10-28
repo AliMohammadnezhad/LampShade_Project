@@ -1,6 +1,6 @@
 ﻿namespace _01_LampShadeQueries.Contracts.Slide
 {
-    public class SlideViewModel
+    public class SlideQueryModel
     {
         public string Picture { get; set; }
         public string PictureAlt { get; set; }
