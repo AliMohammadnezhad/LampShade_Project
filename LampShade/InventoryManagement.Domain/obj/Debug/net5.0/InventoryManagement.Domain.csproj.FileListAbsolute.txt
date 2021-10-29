@@ -1,0 +1,16 @@
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\InventoryManagement.Domain.deps.json
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\InventoryManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\ref\InventoryManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\ref\InventoryManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.pdb

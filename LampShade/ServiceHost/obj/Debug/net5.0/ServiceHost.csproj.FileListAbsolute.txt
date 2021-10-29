@@ -194,3 +194,11 @@ F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admi
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscounts\Create.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscounts\Edit.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscounts\Index.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Configuration.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Configuration.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.pdb
