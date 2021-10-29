@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_FrameWork.Infrastructure;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
@@ -36,7 +37,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             var query = _context.ProductCategories.Select(x => new ProductCategoryViewModel
             {
                 Id = x.Id,
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Description = x.Description,
                 Name = x.Name,
                 Picture = x.Picture,
@@ -45,7 +46,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
 
             query = query.Where(x => x.Name.Contains(searchModel.Name));
-            return query.ToList();
+            return query.OrderByDescending(x => x.Id).ToList();
         }
 
         public List<ProductCategoryViewModel> Search()
@@ -53,14 +54,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             var query = _context.ProductCategories.Select(x => new ProductCategoryViewModel
             {
                 Id = x.Id,
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Description = x.Description,
                 Name = x.Name,
                 Picture = x.Picture,
                 IsRemoved = x.IsRemoved
             });
 
-            return query.ToList();
+            return query.OrderByDescending(x => x.Id).ToList();
         }
 
         public List<ProductCategoryViewModel> GetProductCategories()

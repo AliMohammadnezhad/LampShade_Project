@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_FrameWork.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.ProductPicture;
@@ -32,26 +33,26 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         {
             return _context.ProductPictures.Include(x => x.Product).Select(x => new ProductPictureViewModel
             {
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Id = x.Id,
                 Picture = x.Picture,
                 Product = x.Product.Name,
                 ProductId = x.Product.Id,
                 IsRemoved = x.IsRemoved
-            }).ToList();
+            }).OrderByDescending(x => x.Id).ToList();
         }
 
         public List<ProductPictureViewModel> Search(ProductPictureSearchModel searchModel)
         {
             return _context.ProductPictures.Include(x => x.Product).Select(x => new ProductPictureViewModel
             {
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Id = x.Id,
                 Picture = x.Picture,
                 Product = x.Product.Name,
                 ProductId = x.ProductId,
                 IsRemoved = x.IsRemoved
-            }).Where(x => x.ProductId == searchModel.ProductId).ToList();
+            }).Where(x => x.ProductId == searchModel.ProductId).OrderByDescending(x => x.Id).ToList();
         }
     }
 }

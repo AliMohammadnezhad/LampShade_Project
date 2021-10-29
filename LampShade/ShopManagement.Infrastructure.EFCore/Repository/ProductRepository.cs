@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_FrameWork.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.Product;
@@ -49,9 +50,9 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Code = x.Code,
                     Id = x.Id,
                     Picture = x.Picture,
-                    CreationDate = x.CreationDate.ToString(),
+                    CreationDate = x.CreationDate.ToFarsi(),
                     StockStatus = x.IsInStock
-                }).ToList();
+                }).OrderByDescending(x=>x.Id).ToList();
         }
 
         public List<ProductViewModel> Search()
@@ -65,9 +66,9 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Code = x.Code,
                     Id = x.Id,
                     Picture = x.Picture,
-                    CreationDate = x.CreationDate.ToString(),
+                    CreationDate = x.CreationDate.ToFarsi(),
                     StockStatus = x.IsInStock
-                }).ToList();
+                }).OrderByDescending(x => x.Id).ToList();
         }
 
         public List<ProductViewModel> GetProducts()

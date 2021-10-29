@@ -43,7 +43,7 @@ namespace DiscountManagement.infrastructure.EFCore.Repository
                 EndDate = x.EndDate.ToFarsi(),
                 Id = x.Id,
                 CreationDate = x.CreationDate.ToFarsi()
-            }).ToList();
+            }).OrderByDescending(x => x.Id).ToList();
 
             customerDiscountViewModels.ForEach(discount=> discount.Product = products.FirstOrDefault(x=>x.Id == discount.ProductId)?.Name);
             return customerDiscountViewModels;
@@ -61,7 +61,7 @@ namespace DiscountManagement.infrastructure.EFCore.Repository
                 StartDate = x.StartDate.ToFarsi(),
                 Id = x.Id,
                 CreationDate = x.CreationDate.ToFarsi()
-            }).ToList();
+            }).OrderByDescending(x => x.Id).ToList();
 
             customerDiscountViewModel = customerDiscountViewModel.Where(x =>
                 x.ProductId == searchModel.ProductId ||
