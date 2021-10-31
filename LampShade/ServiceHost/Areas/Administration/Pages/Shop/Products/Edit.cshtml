@@ -7,7 +7,7 @@
     <h4 class="modal-title">ویرایش محصول: @Model.Name</h4>
 </div>
 
-<form asp-page="./Index" asp-page-handler="EditSlide"
+<form asp-page="./Index" asp-page-handler="Edit"
       method="post"
       data-ajax="true"
       data-callback=""
@@ -43,20 +43,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Picture" class="control-label">عکس</label>
-                    <input type="text" class="form-control" asp-for="Picture">
+                    <input type="file" class="form-control" asp-for="Picture" accept=".png,.jpg,.jpeg">
                     <span asp-validation-for="Picture" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="UnitPrice" class="control-label">قیمت</label>
-                    <input type="text" class="form-control" asp-for="UnitPrice">
-                    <span asp-validation-for="UnitPrice" class="error"></span>
-                </div>
-            </div>
+
         </div>
         <div class="row">
             <div class="col-md-6">

@@ -16,3 +16,4 @@ F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\S
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ref\ShopManagement.Application.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CopyComplete

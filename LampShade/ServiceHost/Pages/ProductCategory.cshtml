@@ -1,0 +1,143 @@
+﻿@page
+@model ServiceHost.Pages.ProductCategoryModel
+@{
+    ViewData["Title"] = $"گروه محصولی {Model.CategoryQueryModel.Name}";
+
+}
+
+
+<div class="breadcrumb-area section-space--half">
+    <div class="container wide">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-wrapper breadcrumb-bg">
+                    <div class="breadcrumb-content">
+                        <h1 class="breadcrumb-content__title h1">@Model.CategoryQueryModel.Name</h1>
+                        <ul class="breadcrumb-content__page-map h4">
+                            <li><a asp-page="./Index">صفحه اصلی</a></li>
+                            <li class="active">@Model.CategoryQueryModel.Name</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!--=======  shop page wrapper  =======-->
+                <div class="page-wrapper">
+                    <div class="page-content-wrapper">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--=======  shop page header  =======-->
+                                <div class="shop-header">
+                                    <div class="shop-header__left">
+                                        <div class="shop-header__left__message">
+                                            تعداد محصول در گروه {@Model.CategoryQueryModel.Name} به تعداد {@Model.CategoryQueryModel.Products.Count} می باشد 
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                <!--=======  End of shop page header  =======-->
+                            </div>
+
+                            <div class="col-lg-12">
+                                <!--=======  shop page content  =======-->
+                                <div class="shop-page-content">
+
+                                    <div class="row shop-product-wrap grid three-column">
+                                        @foreach (var item in Model.CategoryQueryModel.Products)
+                                        {
+                                            <div class="col-12 col-lg-4 col-md-4 col-sm-6">
+                                                <!--=======  product grid view  =======-->
+                                                <div class="single-grid-product grid-view-product">
+                                                    <div class="single-grid-product__image">
+                                                        @if (item.HasDiscount)
+                                                        {
+                                                            <div class="single-grid-product__label">
+                                                                <span class="sale">-@item.DiscountRate%</span>
+                                                            </div>
+                                                        }
+                                                        <a href="single-product.html">
+                                                            <img src="@item.Picture" class="img-fluid"
+                                                                 alt="@item.PictureAlt">
+                                                           
+                                                        </a>
+                                                    </div>
+                                                    <div class="single-grid-product__content">
+                                                        <div class="single-grid-product__category-rating">
+                                                            <span class="category">
+                                                                <a href="shop-left-sidebar.html">@item.Category</a>
+                                                            </span>
+                                                            <span class="rating">
+                                                                <i class="ion-android-star active"></i>
+                                                                <i class="ion-android-star active"></i>
+                                                                <i class="ion-android-star active"></i>
+                                                                <i class="ion-android-star active"></i>
+                                                                <i class="ion-android-star-outline"></i>
+                                                            </span>
+                                                        </div>
+
+                                                        <h3 class="single-grid-product__title">
+                                                            <a asp-page="/ProductDetails">
+                                                                @item.Name
+                                                            </a>
+                                                        </h3>
+                                                        <p class="single-grid-product__price">
+                                                            @if (item.HasDiscount)
+                                                            {
+                                                                <span class="discounted-price">@item.PriceWithDiscount تومان</span>
+                                                                <span class="main-price discounted">@item.Price</span>
+                                                                <div class="product-countdown" data-countdown="@item.EndDate"></div>
+
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="main-price ">@item.Price</span>
+
+                                                            }
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!--=======  End of product grid view  =======-->
+
+                                            </div>
+
+                                        }
+
+
+                                    </div>
+
+                                </div>
+
+                                <!--=======  pagination area =======-->
+                                <div class="pagination-area">
+                                    <div class="pagination-area__left">
+                                        Showing 1 to 9 of 11 (2 Pages)
+                                    </div>
+                                    <div class="pagination-area__right">
+                                        <ul class="pagination-section">
+                                            <li>
+                                                <a class="active" href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--=======  End of pagination area  =======-->
+                                <!--=======  End of shop page content  =======-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=======  End of shop page wrapper  =======-->
+            </div>
+        </div>
+    </div>
+</div>

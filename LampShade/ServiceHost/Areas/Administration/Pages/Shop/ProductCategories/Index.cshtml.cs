@@ -1,5 +1,6 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using _0_FrameWork.Application;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ShopManagement.Application.Contracts.ProductCategory;
@@ -45,6 +46,8 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
 
         public JsonResult OnPostEdit(EditProductCategory command)
         {
+            if (!ModelState.IsValid)
+                return new JsonResult(new OperationResult().Failed("لظفا مقادیر ورودی را بررسی نمایید"));
             var operationResult = _productCategoryApplication.Edit(command);
             return new JsonResult(operationResult);
         }

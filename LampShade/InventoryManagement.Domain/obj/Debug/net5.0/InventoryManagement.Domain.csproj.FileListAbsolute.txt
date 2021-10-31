@@ -14,3 +14,6 @@ F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\I
 F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\ref\InventoryManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Domain\obj\Debug\net5.0\InventoryManagement.Domain.csproj.CopyComplete

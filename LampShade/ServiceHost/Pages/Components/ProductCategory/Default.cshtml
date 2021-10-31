@@ -3,18 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <!--=======  category wrapper  =======-->
                 <div class="category-wrapper">
                     <div class="row row-10 masonry-category-layout">
                         @foreach (var item in Model.Take(4))
                         {
-                            <div class="col-lg-4 col-sm-6 grid-item">
-                                <!--=======  single category item  =======-->
-
-                                <div class="single-category-item">
+                            <div class="col-lg-4 col-sm-6 grid-item " >
+                                <div class="single-category-item" >
                                     <div class="single-category-item__image">
                                         <a asp-page="/ProductCategory" asp-route-id="@item.Slug">
-                                            <img src="@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle">
+                                            <img  src="~/UploadedFile/Pictures/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle">
                                         </a>
                                     </div>
                                     <div class="single-category-item__content">
@@ -24,13 +21,10 @@
                                         </a>
                                     </div>
                                 </div>
-
-                                <!--=======  End of single category item  =======-->
                             </div>
                         }
                     </div>
                 </div>
-                <!--=======  End of category wrapper  =======-->
             </div>
         </div>
     </div>

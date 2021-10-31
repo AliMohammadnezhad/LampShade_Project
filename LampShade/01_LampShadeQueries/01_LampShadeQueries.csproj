@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\0_FrameWork\0_FrameWork.csproj" />
+    <ProjectReference Include="..\DiscountManagement.infrastructure.EFCore\DiscountManagement.infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\InvenrotyManagment.Infrastructure.EfCore\InventoryManagement.Infrastructure.EfCore.csproj" />
     <ProjectReference Include="..\ShopManagement.Domain\ShopManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopManagement.Infrastructure.EFCore\ShopManagement.Infrastructure.EFCore.csproj" />
   </ItemGroup>

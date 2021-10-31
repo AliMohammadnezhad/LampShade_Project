@@ -27,11 +27,11 @@
                 <form class="form-inline" role="form" method="get">
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.StartDate"></label>
-                        <input class="form-control persianDateInput" asp-for="SearchModel.StartDate" placeholder="انتخاب تاریخ شروع">
+                        <input class="form-control persianDateInput" asp-for="SearchModel.StartDate">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.EndDate"></label>
-                        <input class="form-control persianDateInput" asp-for="SearchModel.EndDate" placeholder="انتخاب تاریخ پایان">
+                        <input class="form-control persianDateInput" asp-for="SearchModel.EndDate">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.ProductId"></label>
@@ -98,8 +98,8 @@
 </div>
 
 @section Scripts {
-    <script src="~/adminTheme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/adminTheme/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/adminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminTheme/assets/datatables/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {

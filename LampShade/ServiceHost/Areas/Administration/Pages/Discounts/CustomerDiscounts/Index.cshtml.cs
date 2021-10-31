@@ -4,13 +4,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ShopManagement.Application.Contracts.Product;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 
 namespace ServiceHost.Areas.Administration.Pages.Discounts.CustomerDiscounts
 {
-
     public class IndexModel : PageModel
     {
-
+        [TempData]
+        public string Message { get; set; }
         public CustomerDiscountSearchModel SearchModel;
         public List<CustomerDiscountViewModel> CustomerDiscounts;
         public SelectList Products;
@@ -18,9 +19,9 @@ namespace ServiceHost.Areas.Administration.Pages.Discounts.CustomerDiscounts
         private readonly IProductApplication _productApplication;
         private readonly ICustomerDiscountApplication _customerDiscountApplication;
 
-        public IndexModel(IProductApplication productApplication, ICustomerDiscountApplication customerDiscountApplication)
+        public IndexModel(IProductApplication ProductApplication, ICustomerDiscountApplication customerDiscountApplication)
         {
-            _productApplication = productApplication;
+            _productApplication = ProductApplication;
             _customerDiscountApplication = customerDiscountApplication;
         }
 
@@ -39,6 +40,7 @@ namespace ServiceHost.Areas.Administration.Pages.Discounts.CustomerDiscounts
             return Partial("./Create", command);
         }
 
+  
         public JsonResult OnPostCreate(DefineCustomerDiscount command)
         {
             var result = _customerDiscountApplication.Define(command);

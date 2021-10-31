@@ -28,13 +28,17 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 KeyWords = x.KeyWords,
                 MetaDescription = x.MetaDescription,
                 Name = x.Name,
-                Picture = x.Picture,
                 ShortDescription = x.ShortDescription,
                 Slug = x.Slug,
                 PictureTitle = x.PictureTitle,
                 PictureAlt = x.PictureAlt,
-                UnitPrice = x.UnitPrice
+
             }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public Product GetProductWithCategoryBy(long id)
+        {
+            return _context.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
         }
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
@@ -44,14 +48,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                                                      x.CategoryId == searchModel.CategoryId)
                 .OrderByDescending(x => x.CreationDate).Select(x => new ProductViewModel
                 {
-                    UnitPrice = x.UnitPrice,
+
                     Category = x.Category.Name,
                     Name = x.Name,
                     Code = x.Code,
                     Id = x.Id,
                     Picture = x.Picture,
                     CreationDate = x.CreationDate.ToFarsi(),
-                    StockStatus = x.IsInStock
+        
                 }).OrderByDescending(x=>x.Id).ToList();
         }
 
@@ -60,14 +64,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.Products.Include(p => p.Category).OrderByDescending(x => x.CreationDate).Select(x =>
                 new ProductViewModel
                 {
-                    UnitPrice = x.UnitPrice,
+           
                     Category = x.Category.Name,
                     Name = x.Name,
                     Code = x.Code,
                     Id = x.Id,
                     Picture = x.Picture,
                     CreationDate = x.CreationDate.ToFarsi(),
-                    StockStatus = x.IsInStock
+                
                 }).OrderByDescending(x => x.Id).ToList();
         }
 

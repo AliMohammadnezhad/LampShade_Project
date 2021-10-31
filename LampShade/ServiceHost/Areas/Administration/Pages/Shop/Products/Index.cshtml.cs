@@ -48,7 +48,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
         {
             var product = _productApplication.GetDetails(id);
             product.ProductCategories = _productCategoryApplication.GetProductCategories();
-            return Partial("EditSlide", product);
+            return Partial("Edit", product);
         }
 
         public JsonResult OnPostEdit(EditProduct command)
@@ -57,16 +57,6 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             return new JsonResult(operationResult);
         }
 
-        public JsonResult OnGetIsInStock(long id)
-        {
-            var isInStock = _productApplication.IsInStock(id);
-            return isInStock.IsSucceed ? new JsonResult(isInStock.Succeed()) : new JsonResult(isInStock);
-        }
 
-        public JsonResult OnGetNotInStock(long id)
-        {
-            var notInStock = _productApplication.NotInStock(id);
-            return notInStock.IsSucceed ? new JsonResult(notInStock.Succeed()) : new JsonResult(notInStock);
-        }
     }
 }

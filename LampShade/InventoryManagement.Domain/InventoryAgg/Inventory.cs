@@ -29,7 +29,7 @@ namespace InventoryManagement.Domain.InventoryAgg
         public long CalculateCurrentStock()
         {
             var plus = Operations.Where(x => x.Operation).Sum(x => x.Count);
-            var minus = Operations.Where(x => x.Operation).Sum(x => x.Count);
+            var minus = Operations.Where(x => !x.Operation).Sum(x => x.Count);
             return plus - minus;
         }
 

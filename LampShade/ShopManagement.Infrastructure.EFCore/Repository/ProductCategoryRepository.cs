@@ -21,7 +21,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.ProductCategories.Select(x => new EditProductCategory
             {
                 Name = x.Name,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 Description = x.Description,
                 PictureTitle = x.PictureTitle,
                 Keywords = x.Keywords,
@@ -30,6 +30,11 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 PictureAlt = x.PictureAlt,
                 Id = x.Id
             }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public string GetSlugBy(long id)
+        {
+            return _context.ProductCategories.FirstOrDefault(x => x.Id == id)?.Slug;
         }
 
         public List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel)
@@ -66,7 +71,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
         public List<ProductCategoryViewModel> GetProductCategories()
         {
-            return _context.ProductCategories.Select(x => new ProductCategoryViewModel
+            return _context.ProductCategories.Where(x => x.IsRemoved != true).Select(x => new ProductCategoryViewModel
             {
                 Name = x.Name,
                 Id = x.Id

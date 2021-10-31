@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using _0_Framework.Application;
+using _0_FrameWork.Application;
+using Microsoft.AspNetCore.Http;
 
 namespace ShopManagement.Application.Contracts.ProductCategory
 {
@@ -12,8 +14,9 @@ namespace ShopManagement.Application.Contracts.ProductCategory
         [MaxLength(1000, ErrorMessage = ValidationMessages.MaxLength)]
         public string Description { get; set; }
 
-        public string Picture { get; set; }
-
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
+        [FileExtensionLimitation(new[]{".jpg",".png",".jpeg"},ErrorMessage = ValidationMessages.InvalidFileFormat)]
+        public IFormFile Picture { get; set; }
         [MaxLength(450, ErrorMessage = ValidationMessages.MaxLength)]
         public string PictureAlt { get; set; }
 
