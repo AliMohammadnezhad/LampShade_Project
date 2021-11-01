@@ -2114,6 +2114,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "0_FrameWork": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.Infrastructure.EfCore": "1.0.0",
           "DiscountManagement.infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EfCore": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
@@ -2139,6 +2141,80 @@
         },
         "runtime": {
           "bin/placeholder/0_FrameWork.dll": {}
+        }
+      },
+      "CommentManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application.Contract": "1.0.0",
+          "CommentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        }
+      },
+      "CommentManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        }
+      },
+      "CommentManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
+          "CommentManagement.Application": "1.0.0",
+          "CommentManagement.Application.Contract": "1.0.0",
+          "CommentManagement.Infrastructure.EfCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Configuration.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "CommentManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.Infrastructure.EfCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastructure.EfCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastructure.EfCore.dll": {}
         }
       },
       "DiscountManagement.Application/1.0.0": {
@@ -7610,6 +7686,31 @@
       "path": "../0_FrameWork/0_FrameWork.csproj",
       "msbuildProject": "../0_FrameWork/0_FrameWork.csproj"
     },
+    "CommentManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
+      "msbuildProject": "../CommentManagement.Application/CommentManagement.Application.csproj"
+    },
+    "CommentManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj"
+    },
+    "CommentManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Configuration/CommentManagement.Configuration.csproj",
+      "msbuildProject": "../CommentManagement.Configuration/CommentManagement.Configuration.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.Infrastructure.EfCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastructure.EfCore/CommentManagement.Infrastructure.EfCore.csproj",
+      "msbuildProject": "../CommentManagement.Infrastructure.EfCore/CommentManagement.Infrastructure.EfCore.csproj"
+    },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DiscountMangement.Application/DiscountManagement.Application.csproj",
@@ -7689,6 +7790,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "01_LampShadeQueries >= 1.0.0",
+      "CommentManagement.Configuration >= 1.0.0",
       "DiscountManagement.Configuration >= 1.0.0",
       "InventoryManagement.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
@@ -7730,6 +7832,9 @@
           "projectReferences": {
             "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj"
+            },
+            "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj"
             },
             "F:\\New Shop Project\\Code\\LampShade\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj"

@@ -30,4 +30,9 @@ F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\Discount
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\DiscountManagement.infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\DiscountManagement.Domain.pdb
-F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.csproj.CopyComplete
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Infrastructure.EfCore.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Infrastructure.EfCore.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb

@@ -21,6 +21,10 @@ body {
     font-family: 'Aviny'
 }
 
+.input-text-size {
+    font-size:16px !important;
+}
+
 .hero-slider-content {
     text-align: right;
 }

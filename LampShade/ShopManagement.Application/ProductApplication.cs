@@ -78,6 +78,5 @@ namespace ShopManagement.Application
             return _productRepository.GetProducts();
         }
 
-
     }
 }

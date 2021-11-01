@@ -61,8 +61,7 @@ $(document).ready(function () {
                     });
             } else {
                 var formData = new FormData(this);
-                console.log(url);
-                console.log(formData);
+     
                 $.ajax({
                     url: url,
                     type: "post",

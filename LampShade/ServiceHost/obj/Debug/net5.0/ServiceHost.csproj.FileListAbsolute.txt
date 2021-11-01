@@ -217,3 +217,15 @@ F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Comp
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Components\FooterArea\Default.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EfCore.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EfCore.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comments\Index.cshtml.g.cs

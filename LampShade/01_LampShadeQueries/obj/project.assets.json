@@ -1616,6 +1616,49 @@
           "bin/placeholder/0_FrameWork.dll": {}
         }
       },
+      "CommentManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "CommentManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.Infrastructure.EfCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastructure.EfCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastructure.EfCore.dll": {}
+        }
+      },
       "DiscountManagement.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6116,6 +6159,21 @@
       "path": "../0_FrameWork/0_FrameWork.csproj",
       "msbuildProject": "../0_FrameWork/0_FrameWork.csproj"
     },
+    "CommentManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.Infrastructure.EfCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastructure.EfCore/CommentManagement.Infrastructure.EfCore.csproj",
+      "msbuildProject": "../CommentManagement.Infrastructure.EfCore/CommentManagement.Infrastructure.EfCore.csproj"
+    },
     "DiscountManagement.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj",
@@ -6165,6 +6223,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "0_FrameWork >= 1.0.0",
+      "CommentManagement.Domain >= 1.0.0",
+      "CommentManagement.Infrastructure.EfCore >= 1.0.0",
       "DiscountManagement.infrastructure.EFCore >= 1.0.0",
       "InventoryManagement.Infrastructure.EfCore >= 1.0.0",
       "ShopManagement.Domain >= 1.0.0",
@@ -6205,6 +6265,12 @@
           "projectReferences": {
             "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj"
+            },
+            "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj"
+            },
+            "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Infrastructure.EfCore\\CommentManagement.Infrastructure.EfCore.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Infrastructure.EfCore\\CommentManagement.Infrastructure.EfCore.csproj"
             },
             "F:\\New Shop Project\\Code\\LampShade\\DiscountManagement.infrastructure.EFCore\\DiscountManagement.infrastructure.EFCore.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\DiscountManagement.infrastructure.EFCore\\DiscountManagement.infrastructure.EFCore.csproj"

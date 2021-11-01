@@ -62,7 +62,7 @@
                                                                 <span class="sale">-@item.DiscountRate%</span>
                                                             </div>
                                                         }
-                                                        <a href="single-product.html">
+                                                        <a asp-page="./Product" asp-route-id="@item.Slug">
                                                             <img src="~/UploadedFile/Pictures/@item.Picture" class="img-fluid"
                                                                  alt="@item.PictureAlt">
                                                            
