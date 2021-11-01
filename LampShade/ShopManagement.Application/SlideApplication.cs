@@ -9,16 +9,19 @@ namespace ShopManagement.Application
     public class SlideApplication : ISlideApplication
     {
         private readonly ISlideRepository _slideRepository;
-
-        public SlideApplication(ISlideRepository context)
+        private readonly IFileUploader _fileUploader;
+        public SlideApplication(ISlideRepository context, IFileUploader fileUploader)
         {
             _slideRepository = context;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateSlide command)
         {
             var operationResult = new OperationResult();
-            var slide = new Slide(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading,
+            var path = "SlidesPicture";
+            var picturePath = _fileUploader.UploadFile(command.Picture, path);
+            var slide = new Slide(picturePath, command.PictureAlt, command.PictureTitle, command.Heading,
                 command.Title, command.Text, command.BtnText,command.Link);
             _slideRepository.Create(slide);
             _slideRepository.SaveChange();
@@ -30,7 +33,9 @@ namespace ShopManagement.Application
             var operationResult = new OperationResult();
             var slide = _slideRepository.Get(command.Id);
             if (slide == null) return operationResult.Failed(ApplicationMessages.RecordNotFound);
-            slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title,
+            var path = "SlidesPicture";
+            var picturePath = _fileUploader.UploadFile(command.Picture, path);
+            slide.Edit(picturePath, command.PictureAlt, command.PictureTitle, command.Heading, command.Title,
                 command.Text, command.BtnText,command.Link);
             _slideRepository.SaveChange();
             return operationResult.Succeed();

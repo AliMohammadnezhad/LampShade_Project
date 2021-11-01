@@ -47,7 +47,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
         {
             var product = _productPictureApplication.GetDetails(id);
             product.Products = _productApplication.GetProducts();
-            return Partial("EditSlide", product);
+            return Partial("Edit", product);
         }
 
         public JsonResult OnPostEdit(EditProductPicture command)

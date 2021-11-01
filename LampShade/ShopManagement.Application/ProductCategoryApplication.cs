@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using _0_Framework.Application;
 using _0_FrameWork.Application;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using ShopManagement.Application.Contracts.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
 
@@ -24,8 +23,9 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
+            var pictureFileName = _fileUploader.UploadFile(command.Picture, command.Slug);
 
-            var productCategory = new ProductCategory(command.Name, command.Description, "command.Picture",
+            var productCategory = new ProductCategory(command.Name, command.Description, pictureFileName,
                 command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug);
 
             _productCategoryRepository.Create(productCategory);

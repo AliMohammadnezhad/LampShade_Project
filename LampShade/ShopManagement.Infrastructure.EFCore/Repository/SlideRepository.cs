@@ -34,7 +34,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.Slides.Select(x => new EditSlide
             {
                 Title = x.Title,
-                Picture = x.Picture,
                 Id = x.Id,
                 Heading = x.Heading,
                 PictureTitle = x.PictureTitle,

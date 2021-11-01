@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id}"
 @model ServiceHost.Pages.ProductCategoryModel
 @{
     ViewData["Title"] = $"گروه محصولی {Model.CategoryQueryModel.Name}";
@@ -63,7 +63,7 @@
                                                             </div>
                                                         }
                                                         <a href="single-product.html">
-                                                            <img src="@item.Picture" class="img-fluid"
+                                                            <img src="~/UploadedFile/Pictures/@item.Picture" class="img-fluid"
                                                                  alt="@item.PictureAlt">
                                                            
                                                         </a>

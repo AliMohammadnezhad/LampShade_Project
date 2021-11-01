@@ -6,7 +6,7 @@
     <h4 class="modal-title">ویرایش عکس محصول: @Model.PictureAlt</h4>
 </div>
 
-<form asp-page="./Index" asp-page-handler="EditSlide"
+<form asp-page="./Index" asp-page-handler="Edit"
       method="post"
       data-ajax="true"
       data-callback=""
@@ -29,7 +29,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Picture" class="control-label">عکس</label>
-                    <input type="text" class="form-control" asp-for="Picture" >
+                    <input type="file" class="form-control" asp-for="Picture" accept=".png,.jpg,.jpeg">
                     <span asp-validation-for="Picture" class="error"></span>
                 </div>
             </div>
