@@ -1,5 +1,6 @@
 ﻿using System;
 using _0_FrameWork.Domain;
+using AccountManagement.Domain.RoleAgg;
 
 namespace AccountManagement.Domain.AccountAgg
 {
@@ -9,10 +10,11 @@ namespace AccountManagement.Domain.AccountAgg
         public string Username { get; private set; }
         public string Password { get; private set; }
         public string Mobile { get; private set; }
-        public int RoleId { get; private set; }
+        public long RoleId { get; private set; }
+        public Role Role { get; private set; }
         public string ProfilePhoto { get; private set; }
 
-        public Account(string fullName, string username, string password, string mobile, int roleId, string profilePhoto)
+        public Account(string fullName, string username, string password, string mobile, long roleId, string profilePhoto)
         {
             FullName = fullName;
             Username = username;
@@ -23,7 +25,7 @@ namespace AccountManagement.Domain.AccountAgg
             CreationDate = DateTime.Now;
         }
 
-        public void Edit(string fullName, string mobile, int roleId, string profilePhoto)
+        public void Edit(string fullName, string mobile, long roleId, string profilePhoto)
         {
 
             FullName = fullName;

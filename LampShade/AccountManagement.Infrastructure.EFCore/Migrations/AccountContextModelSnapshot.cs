@@ -47,8 +47,8 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
+                    b.Property<long>("RoleId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -57,7 +57,45 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.Account", b =>
+                {
+                    b.HasOne("AccountManagement.Domain.RoleAgg.Role", "Role")
+                        .WithMany("Accounts")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
+                {
+                    b.Navigation("Accounts");
                 });
 #pragma warning restore 612, 618
         }
