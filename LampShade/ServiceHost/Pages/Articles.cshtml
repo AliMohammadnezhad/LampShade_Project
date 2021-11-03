@@ -1,0 +1,181 @@
+﻿@page "{id?}"
+@model ServiceHost.Pages.ArticlesModel
+@{
+    if (!string.IsNullOrWhiteSpace(Model.Category))
+    {
+        ViewData["Title"] = Model.Category;
+
+    }
+    else
+    {
+        ViewData["Title"] = "وبلاگ";
+    }
+
+
+}
+<div class="breadcrumb-area section-space--half">
+    <div class="container wide">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-wrapper breadcrumb-bg">
+                    <div class="breadcrumb-content">
+                        <h1 class="breadcrumb-content__title">وبلاگ</h1>
+                        <ul class="breadcrumb-content__page-map">
+                            <li>
+                                <a asp-page="./Index">صفحه اصلی</a>
+                            </li>
+                            @if (!string.IsNullOrWhiteSpace(Model.Category))
+                            {
+                                <li>
+                                    <a asp-page="./Articles" asp-route-id="">وبلاگ</a>
+                                </li>
+                                <li>
+                                    <a asp-page="./Articles" asp-route-id="@Model.CategorySlug">@Model.Category</a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-wrapper">
+                    <div class="page-content-wrapper">
+                        <div class="row">
+                            <div class="col-lg-9 order-1 order-lg-1">
+                                <div class="blog-page-content">
+                                    <div class="row">
+                                        @foreach (var item in Model.Articles)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-blog-post">
+                                                    <div class="single-blog-post__image">
+                                                        <a href="">
+                                                            <img src="~/UploadedFile/Pictures/@item.Picture"
+                                                                 class="img-fluid" alt="@item.PictureAlt">
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="single-blog-post__content">
+                                                        <h3 class="title">
+                                                            <a asp-page="./Article" asp-route-id="@item.Slug">
+                                                                @item.Title
+                                                            </a>
+                                                        </h3>
+                                                        <p class="post-meta">
+                                                            <span class="date">@item.PublishDate</span>
+                                                            <span class="separator">|</span> متعلق به گروه <a asp-page="./Articles" asp-route-id="@item.CategorySlug">@item.Category</a>
+                                                        </p>
+                                                        <p class="short-desc">
+                                                            @item.ShortDescription
+                                                        </p>
+                                                        <a asp-page="./Article" asp-route-id="@item.Slug"
+                                                           class="blog-post-link">ادامه مطلب</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="pagination-area">
+                                    <div class="pagination-area__left">
+                                        Showing 1 to 9 of 11 (2 Pages)
+                                    </div>
+                                    <div class="pagination-area__right">
+                                        <ul class="pagination-section">
+                                            <li>
+                                                <a class="active" href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">></a>
+                                            </li>
+                                            <li>
+                                                <a href="#">>|</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 order-2 order-lg-2">
+                                <div class="page-sidebar-wrapper">
+                                    <div class="single-sidebar-widget">
+
+                                        <h4 class="single-sidebar-widget__title">دسته بندی ها</h4>
+                                        <ul class="single-sidebar-widget__category-list">
+                                            <li class="has-children">
+                                                <a href="#" class="active">
+                                                    همه دسته بندی ها <span class="counter">@Model.Categories.Count</span>
+                                                </a>
+                                                <ul>
+                                                    @foreach (var item in Model.Categories)
+                                                    {
+                                                        <li>
+                                                            <a asp-page="./Articles" asp-route-id="@item.Slug">@item.Name <span class="counter">@item.ArticleCount</span></a>
+                                                        </li>
+                                                    }
+                                                  
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="single-sidebar-widget">
+
+                                        <h4 class="single-sidebar-widget__title">آخرین مقالات</h4>
+                                        <div class="block-container">
+                                            @foreach (var item in Model.LatestArticles)
+                                            {
+                                                <div class="single-block d-flex">
+                                                    <div class="image">
+                                                        <a asp-page="./Article" asp-route-id="@item.Slug">
+                                                            <img src="~/UploadedFile/Pictures/@item.Picture"
+                                                                 class="img-fluid" alt="@item.PictureAlt">
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <p>
+                                                            <a asp-page="./Article" asp-route-id="@item.Slug">
+                                                                @item.Title
+                                                            </a> <span>@item.StableDate</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            }
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="single-sidebar-widget">
+                                        <h4 class="single-sidebar-widget__title">تگ های گروه خبری</h4>
+                                        <ul class="single-sidebar-widget__tag-list">
+                                            @foreach (var item in Model.Categories)
+                                            {
+                                                @foreach (var tags in item.KeyWords.Split(","))
+                                                {
+                                                    <li>
+                                                        <a href="#">@tags</a>
+                                                    </li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

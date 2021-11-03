@@ -47,12 +47,36 @@ namespace CommentManagement.Infrastructure.EfCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<long>("ProductId")
+                    b.Property<long>("OwnerRecordId")
                         .HasColumnType("bigint");
+
+                    b.Property<long>("ParentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ParentId");
+
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("CommentManagement.Domain.CommentAgg.Comment", b =>
+                {
+                    b.HasOne("CommentManagement.Domain.CommentAgg.Comment", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Parent");
+                });
+
+            modelBuilder.Entity("CommentManagement.Domain.CommentAgg.Comment", b =>
+                {
+                    b.Navigation("Children");
                 });
 #pragma warning restore 612, 618
         }

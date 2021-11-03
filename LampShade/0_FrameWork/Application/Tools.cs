@@ -26,6 +26,24 @@ namespace _0_Framework.Application
             return "";
         }
 
+        public static string GetFarsiMothName(this DateTime date)
+        {
+            if (date == new DateTime()) return "";
+            var pc = new PersianCalendar();
+            var month = int.Parse($"{pc.GetMonth(date):00}") + 1;
+            if (month == 13)
+                month = 1;
+            return MonthNames[month];
+        }
+
+        public static string GetFarsiDay(this DateTime date)
+        {
+            if (date == new DateTime()) return "";
+            var pc = new PersianCalendar();
+    
+            return $"{pc.GetDayOfMonth(date):00}";
+        }
+
         public static string ToFarsi(this DateTime date)
         {
             if (date == new DateTime()) return "";

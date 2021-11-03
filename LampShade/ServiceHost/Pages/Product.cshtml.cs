@@ -1,4 +1,3 @@
-using System.Xml.Schema;
 using _01_LampShadeQueries.Contracts.Comment;
 using _01_LampShadeQueries.Contracts.Product;
 using CommentManagement.Application.Contract.Comment;
@@ -26,10 +25,11 @@ namespace ServiceHost.Pages
 
         }
 
-        public IActionResult OnPost(AddComment command,string ProductSlug)
+        public IActionResult OnPost(AddComment command,string productSlug)
         {
+            command.Type = CommentsType.Product ;
             _commentApplication.Add(command);
-            return RedirectToPage("./Product", new { Id = ProductSlug });
+            return RedirectToPage("./Product", new { Id = productSlug });
         }
     }
 }

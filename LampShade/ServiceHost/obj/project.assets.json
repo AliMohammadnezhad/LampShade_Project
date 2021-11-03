@@ -2114,6 +2114,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "0_FrameWork": "1.0.0",
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "CommentManagement.Infrastructure.EfCore": "1.0.0",
           "DiscountManagement.infrastructure.EFCore": "1.0.0",
@@ -2143,12 +2144,87 @@
           "bin/placeholder/0_FrameWork.dll": {}
         }
       },
+      "BloggingManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BloggingManagement.Application.Contract": "1.0.0",
+          "BloggingManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Application.dll": {}
+        }
+      },
+      "BloggingManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Application.Contract.dll": {}
+        }
+      },
+      "BloggingManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
+          "BloggingManagement.Application": "1.0.0",
+          "BloggingManagement.Application.Contract": "1.0.0",
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Configuration.dll": {}
+        }
+      },
+      "BloggingManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "BloggingManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Domain.dll": {}
+        }
+      },
+      "BloggingManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BloggingManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "CommentManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "CommentManagement.Application.Contract": "1.0.0",
-          "CommentManagement.Domain": "1.0.0"
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.Infrastructure.EfCore": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CommentManagement.Application.dll": {}
@@ -2205,6 +2281,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
@@ -7686,6 +7763,31 @@
       "path": "../0_FrameWork/0_FrameWork.csproj",
       "msbuildProject": "../0_FrameWork/0_FrameWork.csproj"
     },
+    "BloggingManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Application/BloggingManagement.Application.csproj",
+      "msbuildProject": "../BloggingManagement.Application/BloggingManagement.Application.csproj"
+    },
+    "BloggingManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Application.Contract/BloggingManagement.Application.Contract.csproj",
+      "msbuildProject": "../BloggingManagement.Application.Contract/BloggingManagement.Application.Contract.csproj"
+    },
+    "BloggingManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Configuration/BloggingManagement.Configuration.csproj",
+      "msbuildProject": "../BloggingManagement.Configuration/BloggingManagement.Configuration.csproj"
+    },
+    "BloggingManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Domain/BloggingManagement.Domain.csproj",
+      "msbuildProject": "../BloggingManagement.Domain/BloggingManagement.Domain.csproj"
+    },
+    "BloggingManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Infrastructure.EFCore/BloggingManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BloggingManagement.Infrastructure.EFCore/BloggingManagement.Infrastructure.EFCore.csproj"
+    },
     "CommentManagement.Application/1.0.0": {
       "type": "project",
       "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
@@ -7790,6 +7892,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "01_LampShadeQueries >= 1.0.0",
+      "BloggingManagement.Configuration >= 1.0.0",
       "CommentManagement.Configuration >= 1.0.0",
       "DiscountManagement.Configuration >= 1.0.0",
       "InventoryManagement.Configuration >= 1.0.0",
@@ -7832,6 +7935,9 @@
           "projectReferences": {
             "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj"
+            },
+            "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Configuration\\BloggingManagement.Configuration.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Configuration\\BloggingManagement.Configuration.csproj"
             },
             "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj"

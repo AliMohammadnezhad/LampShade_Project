@@ -1,7 +1,5 @@
 ﻿<div class="left side-menu">
     <div class="sidebar-inner slimscrollleft">
-
-        <!-- User -->
         <div class="user-box">
             <div class="user-img">
                 <img src="~/AdminTheme/assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
@@ -26,8 +24,6 @@
                 </li>
             </ul>
         </div>
-        <!-- End User -->
-        <!--- Sidemenu -->
         <div id="sidebar-menu">
             <ul>
                 <li class="text-muted menu-title">دسته بندی ها</li>
@@ -56,16 +52,13 @@
 
                     </ul>
                 </li>
-                <li>
-                    <a asp-page="/Comments/Index">
-                        <i class="fa fa-shopping-bag"></i><span> مدیریت نظرات </span>
-                    </a>
-                </li>
+     
                 <li>
                     <a asp-page="/Inventory/Index">
                         <i class="fa fa-shopping-bag"></i><span> سیستم انبارداری </span>
                     </a>
                 </li>
+           
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span> بخش تخفیفات </span> <span class="menu-arrow"></span>
@@ -79,11 +72,36 @@
 
                     </ul>
                 </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="zmdi zmdi-invert-colors"></i> <span> بخش مقالات </span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a asp-page="/Blog/ArticleCategories/Index"> گروه مقالات</a>
+                            <a asp-page="/Blog/Articles/Index"> مقالات</a>
+                        </li>
+       
+
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="zmdi zmdi-invert-colors"></i> <span> مدیریت نظرات </span> <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a asp-page="/Comments/ArticlesComment/Index"> نظرات وبلاگ</a>
+                            <a asp-page="/Comments/ProductsComment/Index"> نظرات فروشگاه</a>
+                        </li>
+       
+
+                    </ul>
+                </li>
 
             </ul>
             <div class="clearfix"></div>
         </div>
-        <!-- Sidebar -->
         <div class="clearfix"></div>
 
     </div>

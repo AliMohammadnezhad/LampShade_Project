@@ -36,3 +36,9 @@ F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentM
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Infrastructure.EfCore.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\BloggingManagement.Domain.pdb

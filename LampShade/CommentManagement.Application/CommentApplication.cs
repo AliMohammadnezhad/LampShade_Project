@@ -6,7 +6,7 @@ using CommentManagement.Domain.CommentAgg;
 
 namespace CommentManagement.Application
 {
-    public class CommentApplication:ICommentApplication
+    public class CommentApplication : ICommentApplication
     {
         private readonly ICommentRepository _commentRepository;
 
@@ -18,7 +18,7 @@ namespace CommentManagement.Application
         public OperationResult Add(AddComment command)
         {
             var operationResult = new OperationResult();
-            var comment = new Comment(command.Name, command.Email, command.CommentText, command.ProductId);
+            var comment = new Comment(command.Name, command.Email, command.CommentText, command.OwnerRecordId, command.Type, command.ParentId);
             _commentRepository.Create(comment);
             _commentRepository.SaveChange();
             return operationResult.Succeed();
@@ -26,10 +26,21 @@ namespace CommentManagement.Application
 
         public List<CommentViewModel> Search(CommentSearchModel searchModel)
         {
-            if(searchModel.IsConfirmed || searchModel.ProductId > 0 || !string.IsNullOrWhiteSpace(searchModel.Email))
-                return _commentRepository.Search(searchModel);
-            return _commentRepository.Search();
+            if (searchModel.CommentsType == CommentsType.Product)
+            {
+                if (searchModel.IsConfirmed || searchModel.OwnerRecordId > 0 || !string.IsNullOrWhiteSpace(searchModel.Email))
+                    return _commentRepository.SearchProducts(searchModel);
+                return _commentRepository.SearchProducts();
+            }
+            else
+            {
+                if (searchModel.IsConfirmed || searchModel.OwnerRecordId > 0 || !string.IsNullOrWhiteSpace(searchModel.Email))
+                    return _commentRepository.SearchArticles(searchModel);
+                return _commentRepository.SearchArticles();
+            }
         }
+
+
 
         public OperationResult Confirm(long id)
         {

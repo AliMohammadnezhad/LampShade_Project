@@ -104,6 +104,17 @@ namespace _01_LampShadeQueries.Queries
             return categories;
         }
 
+        public List<ProductCategoryQueryModel> GetProductCategories()
+        {
+            return _context.ProductCategories.Where(x => !x.IsRemoved).Select(x => new ProductCategoryQueryModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Slug = x.Slug
+
+            }).OrderByDescending(x => x.Id).ToList();
+        }
+
         private static List<ProductQueryModel> MapProducts(IEnumerable<Product> xProducts)
         {
             return xProducts.Select(product => new ProductQueryModel

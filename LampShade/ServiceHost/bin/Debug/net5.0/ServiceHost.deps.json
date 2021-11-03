@@ -34,6 +34,7 @@
       "ServiceHost/1.0.0": {
         "dependencies": {
           "01_LampShadeQueries": "1.0.0",
+          "BloggingManagement.Configuration": "1.0.0",
           "CommentManagement.Configuration": "1.0.0",
           "DiscountManagement.Configuration": "1.0.0",
           "InventoryManagement.Configuration": "1.0.0",
@@ -1847,6 +1848,7 @@
       "01_LampShadeQueries/1.0.0": {
         "dependencies": {
           "0_FrameWork": "1.0.0",
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "CommentManagement.Infrastructure.EfCore": "1.0.0",
           "DiscountManagement.infrastructure.EFCore": "1.0.0",
@@ -1874,10 +1876,75 @@
           "0_FrameWork.dll": {}
         }
       },
+      "BloggingManagement.Application/1.0.0": {
+        "dependencies": {
+          "BloggingManagement.Application.Contract": "1.0.0",
+          "BloggingManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BloggingManagement.Application.dll": {}
+        },
+        "compile": {
+          "BloggingManagement.Application.dll": {}
+        }
+      },
+      "BloggingManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "runtime": {
+          "BloggingManagement.Application.Contract.dll": {}
+        },
+        "compile": {
+          "BloggingManagement.Application.Contract.dll": {}
+        }
+      },
+      "BloggingManagement.Configuration/1.0.0": {
+        "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
+          "BloggingManagement.Application": "1.0.0",
+          "BloggingManagement.Application.Contract": "1.0.0",
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "BloggingManagement.Configuration.dll": {}
+        },
+        "compile": {
+          "BloggingManagement.Configuration.dll": {}
+        }
+      },
+      "BloggingManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "BloggingManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "BloggingManagement.Domain.dll": {}
+        },
+        "compile": {
+          "BloggingManagement.Domain.dll": {}
+        }
+      },
+      "BloggingManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "BloggingManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11"
+        },
+        "runtime": {
+          "BloggingManagement.Infrastructure.EFCore.dll": {}
+        },
+        "compile": {
+          "BloggingManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "CommentManagement.Application/1.0.0": {
         "dependencies": {
           "CommentManagement.Application.Contract": "1.0.0",
-          "CommentManagement.Domain": "1.0.0"
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.Infrastructure.EfCore": "1.0.0"
         },
         "runtime": {
           "CommentManagement.Application.dll": {}
@@ -1926,6 +1993,7 @@
       },
       "CommentManagement.Infrastructure.EfCore/1.0.0": {
         "dependencies": {
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
@@ -4754,6 +4822,31 @@
       "sha512": ""
     },
     "0_FrameWork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BloggingManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BloggingManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BloggingManagement.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BloggingManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BloggingManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

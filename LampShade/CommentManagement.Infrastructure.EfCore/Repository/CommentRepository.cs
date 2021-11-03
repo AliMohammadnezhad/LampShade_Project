@@ -2,9 +2,9 @@
 using System.Linq;
 using _0_Framework.Application;
 using _0_FrameWork.Infrastructure;
+using BloggingManagement.Infrastructure.EFCore;
 using CommentManagement.Application.Contract.Comment;
 using CommentManagement.Domain.CommentAgg;
-using Microsoft.EntityFrameworkCore;
 using ShopManagement.Infrastructure.EFCore;
 
 namespace CommentManagement.Infrastructure.EfCore.Repository
@@ -13,50 +13,87 @@ namespace CommentManagement.Infrastructure.EfCore.Repository
     {
         private readonly CommentContext _context;
         private readonly ShopContext _shopContext;
-        public CommentRepository(CommentContext context, ShopContext shopContext) : base(context)
+        private readonly BloggingContext _bloggingContext;
+        public CommentRepository(CommentContext context, ShopContext shopContext, BloggingContext bloggingContext) : base(context)
         {
             _context = context;
             _shopContext = shopContext;
+            _bloggingContext = bloggingContext;
         }
 
-        public List<CommentViewModel> Search()
+        public List<CommentViewModel> SearchProducts()
         {
-            var products = _shopContext.Products.Select(x => new {x.Name, x.Id}).ToList();
-            var comments = _context.Comments.Select(x => new CommentViewModel
+            var products = _shopContext.Products.Select(x => new { x.Name, x.Id }).ToList();
+            var comments = _context.Comments.Where(x => x.Type == CommentsType.Product).Select(x => new CommentViewModel
             {
-                
-                ProductId = x.ProductId,
                 Name = x.Name,
                 CommentId = x.Id,
                 CommentText = x.CommentText,
                 CreateDate = x.CreationDate.ToFarsi(),
                 Email = x.Email,
                 IsConfirmed = x.IsConfirmed,
-                
+                OwnerRecordId = x.OwnerRecordId,
 
             }).OrderByDescending(x=>x.CommentId).ToList();
 
-            comments.ForEach(comment=> comment.Product = products.FirstOrDefault(x=>x.Id == comment.ProductId)?.Name);
-
+            comments.ForEach(comment=>comment.OwnerRecordName = products.FirstOrDefault(x=>x.Id == comment.OwnerRecordId)?.Name);
             return comments;
         }
 
-        public List<CommentViewModel> Search(CommentSearchModel searchModel)
+        public List<CommentViewModel> SearchProducts(CommentSearchModel searchModel)
         {
             var products = _shopContext.Products.Select(x => new { x.Name, x.Id }).ToList();
-            var comments = _context.Comments.Select(x => new CommentViewModel
+            var comments = _context.Comments.Where(x => x.Type == CommentsType.Product).Select(x => new CommentViewModel
             {
-                ProductId = x.ProductId,
+                OwnerRecordId = x.OwnerRecordId,
+
                 Name = x.Name,
                 CommentId = x.Id,
                 CommentText = x.CommentText,
                 CreateDate = x.CreationDate.ToFarsi(),
                 Email = x.Email,
                 IsConfirmed = x.IsConfirmed
-            }).Where(x=> (searchModel.IsConfirmed)? x.IsConfirmed == false : x.IsConfirmed == null || x.ProductId == searchModel.ProductId||x.Email == searchModel.Email).ToList();
+            }).Where(x=> (searchModel.IsConfirmed)? x.IsConfirmed == false : x.IsConfirmed == null || x.OwnerRecordId == searchModel.OwnerRecordId||x.Email == searchModel.Email).ToList();
+            comments.ForEach(comment => comment.OwnerRecordName = products.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Name);
 
-            comments.ForEach(comment => comment.Product = products.FirstOrDefault(x => x.Id == comment.ProductId)?.Name);
+            return comments;
+        }
 
+        public List<CommentViewModel> SearchArticles()
+        {
+            var articles = _bloggingContext.Articles.Select(x => new { x.Title, x.Id }).ToList();
+            var comments = _context.Comments.Where(x=>x.Type == CommentsType.Article).Select(x => new CommentViewModel
+            {
+                Name = x.Name,
+                CommentId = x.Id,
+                CommentText = x.CommentText,
+                CreateDate = x.CreationDate.ToFarsi(),
+                Email = x.Email,
+                IsConfirmed = x.IsConfirmed,
+                OwnerRecordId = x.OwnerRecordId,
+                
+            }).OrderByDescending(x => x.CommentId).ToList();
+
+            comments.ForEach(comment => comment.OwnerRecordName = articles.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Title);
+            return comments;
+        }
+
+        public List<CommentViewModel> SearchArticles(CommentSearchModel searchModel)
+        {
+            var articles = _bloggingContext.Articles.Select(x => new { x.Title, x.Id }).ToList();
+            var comments = _context.Comments.Where(x => x.Type == CommentsType.Article).Select(x => new CommentViewModel
+            {
+                Name = x.Name,
+                CommentId = x.Id,
+                CommentText = x.CommentText,
+                CreateDate = x.CreationDate.ToFarsi(),
+                Email = x.Email,
+                IsConfirmed = x.IsConfirmed,
+                OwnerRecordId = x.OwnerRecordId,
+
+            }).Where(x => (searchModel.IsConfirmed) ? x.IsConfirmed == false : x.IsConfirmed == null || x.OwnerRecordId == searchModel.OwnerRecordId || x.Email == searchModel.Email).OrderByDescending(x => x.CommentId).ToList();
+
+            comments.ForEach(comment => comment.OwnerRecordName = articles.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Title);
             return comments;
         }
     }

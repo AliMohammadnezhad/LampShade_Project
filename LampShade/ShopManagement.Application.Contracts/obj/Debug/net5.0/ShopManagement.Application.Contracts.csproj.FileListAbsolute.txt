@@ -12,3 +12,4 @@ F:\New Shop Project\Code\LampShade\ShopManagement.Application.Contracts\obj\Debu
 F:\New Shop Project\Code\LampShade\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application.Contracts\obj\Debug\net5.0\ref\ShopManagement.Application.Contracts.dll
 F:\New Shop Project\Code\LampShade\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.csproj.CopyComplete

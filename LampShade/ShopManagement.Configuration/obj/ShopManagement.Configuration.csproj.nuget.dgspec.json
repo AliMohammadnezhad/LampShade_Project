@@ -35,6 +35,9 @@
               "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj"
               },
+              "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj"
+              },
               "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj"
               },
@@ -133,6 +136,217 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\BloggingManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\BloggingManagement.Application.Contract.csproj",
+        "projectName": "BloggingManagement.Application.Contract",
+        "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\BloggingManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\alimo\\.nuget\\packages\\",
+        "outputPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\alimo\\Downloads\\nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\BloggingManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\BloggingManagement.Domain.csproj",
+        "projectName": "BloggingManagement.Domain",
+        "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\BloggingManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\alimo\\.nuget\\packages\\",
+        "outputPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\alimo\\Downloads\\nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\0_FrameWork\\0_FrameWork.csproj"
+              },
+              "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\BloggingManagement.Application.Contract.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Application.Contract\\BloggingManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj",
+        "projectName": "BloggingManagement.Infrastructure.EFCore",
+        "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\alimo\\.nuget\\packages\\",
+        "outputPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\alimo\\Downloads\\nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\BloggingManagement.Domain.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Domain\\BloggingManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.11, )"
             }
@@ -311,6 +525,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\BloggingManagement.Infrastructure.EFCore\\BloggingManagement.Infrastructure.EFCore.csproj"
+              },
               "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\CommentManagement.Domain\\CommentManagement.Domain.csproj"
               },

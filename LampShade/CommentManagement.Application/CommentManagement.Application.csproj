@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CommentManagement.Application.Contract\CommentManagement.Application.Contract.csproj" />
     <ProjectReference Include="..\CommentManagement.Domain\CommentManagement.Domain.csproj" />
+    <ProjectReference Include="..\CommentManagement.Infrastructure.EfCore\CommentManagement.Infrastructure.EfCore.csproj" />
   </ItemGroup>
 
 </Project>

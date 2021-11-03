@@ -1606,6 +1606,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "0_FrameWork": "1.0.0",
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "CommentManagement.Infrastructure.EfCore": "1.0.0",
           "DiscountManagement.infrastructure.EFCore": "1.0.0",
@@ -1633,6 +1634,49 @@
         },
         "runtime": {
           "bin/placeholder/0_FrameWork.dll": {}
+        }
+      },
+      "BloggingManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Application.Contract.dll": {}
+        }
+      },
+      "BloggingManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "BloggingManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Domain.dll": {}
+        }
+      },
+      "BloggingManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BloggingManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11"
+        },
+        "compile": {
+          "bin/placeholder/BloggingManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloggingManagement.Infrastructure.EFCore.dll": {}
         }
       },
       "CommentManagement.Application.Contract/1.0.0": {
@@ -1666,6 +1710,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "BloggingManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
@@ -6196,6 +6241,21 @@
       "type": "project",
       "path": "../0_FrameWork/0_FrameWork.csproj",
       "msbuildProject": "../0_FrameWork/0_FrameWork.csproj"
+    },
+    "BloggingManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Application.Contract/BloggingManagement.Application.Contract.csproj",
+      "msbuildProject": "../BloggingManagement.Application.Contract/BloggingManagement.Application.Contract.csproj"
+    },
+    "BloggingManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Domain/BloggingManagement.Domain.csproj",
+      "msbuildProject": "../BloggingManagement.Domain/BloggingManagement.Domain.csproj"
+    },
+    "BloggingManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BloggingManagement.Infrastructure.EFCore/BloggingManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BloggingManagement.Infrastructure.EFCore/BloggingManagement.Infrastructure.EFCore.csproj"
     },
     "CommentManagement.Application.Contract/1.0.0": {
       "type": "project",

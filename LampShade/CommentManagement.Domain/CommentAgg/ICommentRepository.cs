@@ -6,7 +6,9 @@ namespace CommentManagement.Domain.CommentAgg
 {
     public interface ICommentRepository : IRepository<long, Comment>
     {
-        List<CommentViewModel> Search();
-        List<CommentViewModel> Search(CommentSearchModel searchModel);
+        List<CommentViewModel> SearchProducts();
+        List<CommentViewModel> SearchProducts(CommentSearchModel searchModel);
+        List<CommentViewModel> SearchArticles();
+        List<CommentViewModel> SearchArticles(CommentSearchModel searchModel);
     }
 }

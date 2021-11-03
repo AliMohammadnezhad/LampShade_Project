@@ -25,3 +25,9 @@ F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\obj\D
 F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\obj\Debug\net5.0\ref\CommentManagement.Infrastructure.EfCore.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\obj\Debug\net5.0\CommentManagement.Infrastructure.EfCore.pdb
 F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\obj\Debug\net5.0\CommentManagement.Infrastructure.EfCore.genruntimeconfig.cache
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.pdb
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\CommentManagement.Infrastructure.EfCore\bin\Debug\net5.0\BloggingManagement.Domain.pdb

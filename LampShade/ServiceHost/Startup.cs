@@ -1,4 +1,7 @@
 using _0_FrameWork.Application;
+using _01_LampShadeQueries.Contracts.Menu;
+using _01_LampShadeQueries.Queries;
+using BloggingManagement.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Configuration;
@@ -19,8 +22,6 @@ namespace ServiceHost
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("LampShadeDb");
@@ -28,13 +29,12 @@ namespace ServiceHost
             DiscountManagementBootstrapper.Configure(services,connectionString);
             InventoryManagementBootstrapper.Configure(services,connectionString);
             CommentManagementBootstrapper.Configure(services,connectionString);
+            BloggingManagementBootstrapper.Configure(services,connectionString);
 
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -44,7 +44,6 @@ namespace ServiceHost
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 

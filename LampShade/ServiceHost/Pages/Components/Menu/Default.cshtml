@@ -1,11 +1,9 @@
-﻿@model dynamic
+﻿@model _01_LampShadeQueries.Contracts.Menu.MenuQueryModel
 <div class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <!--=======  header wrapper  =======-->
                 <div class="header-wrapper d-none d-lg-flex">
-                    <!-- logo -->
                     <div class="logo">
                         <a asp-page="./Index">
                             <img src="~/Theme/assets/img/logo.png" class="img-fluid" alt="">
@@ -18,33 +16,42 @@
                                     <a asp-page="./Index">صفحه اصلی</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html" class="h6">محصولات</a>
+                                    <a class="h6">گروه محصولات</a>
                                     <ul class="sub-menu">
+                                        @foreach (var item in Model.ProductCategories.Take(5))
+                                        {
 
+                                            <li>
+                                                <a asp-page="./ProductCategory" asp-route-id="@item.Slug">@item.Name</a>
+                                            </li>
 
-                                        <li>
-                                            <a href="blog-post-left-sidebar.html">محصول 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post-left-sidebar.html">محصول 2</a>
-                                        </li>
+                                        }
+
                                     </ul>
                                 </li>
-
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html" class="h6">وبلاگ</a>
+                                    <a class="h6" asp-page="./Articles">وبلاگ</a>
                                     <ul class="sub-menu">
+                                        @foreach (var item in Model.ArticleCategories.Take(5))
+                                        {
+                                            <li class="menu-item-has-children">
+                                                <a asp-page="./Articles" asp-route-id="@item.Slug">@item.Name</a>
+                                                <ul class="sub-menu">
+                                                    @foreach (var article in item.Articles.Take(3))
+                                                    {
+                                                        <li>
+                                                            <a asp-page="./Article" asp-route-id="@article.Slug">@article.Title</a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </li>
+                                        }
+                                        
+                                 
 
-
-                                        <li>
-                                            <a href="blog-post-audio-format.html">مطلب 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post-video-format.html">مطلب 2</a>
-                                        </li>
                                     </ul>
                                 </li>
-
+                                
                                 <li>
                                     <a href="contact.html" class="h6">ارتباط با ما</a>
                                 </li>

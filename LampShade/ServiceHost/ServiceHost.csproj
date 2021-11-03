@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\01_LampShadeQueries\01_LampShadeQueries.csproj" />
+    <ProjectReference Include="..\BloggingManagement.Configuration\BloggingManagement.Configuration.csproj" />
     <ProjectReference Include="..\CommentManagement.Configuration\CommentManagement.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.Configuration\InventoryManagement.Configuration.csproj" />
@@ -34,6 +35,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Administration\Pages\Blog\ArticleCategories\Create.cshtml" />
+    <None Include="Areas\Administration\Pages\Blog\ArticleCategories\Edit.cshtml" />
+    <None Include="Areas\Administration\Pages\Blog\ArticleCategories\Index.cshtml" />
+    <None Include="Areas\Administration\Pages\Blog\Articles\Edit.cshtml" />
+    <None Include="Areas\Administration\Pages\Blog\Articles\Index.cshtml" />
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Create.cshtml" />
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Edit.cshtml" />
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Index.cshtml" />
