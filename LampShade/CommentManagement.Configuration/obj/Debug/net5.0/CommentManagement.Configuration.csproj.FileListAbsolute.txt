@@ -46,4 +46,3 @@ F:\New Shop Project\Code\LampShade\CommentManagement.Configuration\bin\Debug\net
 F:\New Shop Project\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\BloggingManagement.Application.Contract.pdb
 F:\New Shop Project\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\BloggingManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\CommentManagement.Configuration\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.pdb
-F:\New Shop Project\Code\LampShade\CommentManagement.Configuration\obj\Debug\net5.0\CommentManagement.Configuration.csproj.CopyComplete

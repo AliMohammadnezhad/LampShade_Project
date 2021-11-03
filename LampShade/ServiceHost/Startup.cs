@@ -1,6 +1,6 @@
+using _0_Framework.Application;
 using _0_FrameWork.Application;
-using _01_LampShadeQueries.Contracts.Menu;
-using _01_LampShadeQueries.Queries;
+using AccountManagement.Configuration;
 using BloggingManagement.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
@@ -30,9 +30,10 @@ namespace ServiceHost
             InventoryManagementBootstrapper.Configure(services,connectionString);
             CommentManagementBootstrapper.Configure(services,connectionString);
             BloggingManagementBootstrapper.Configure(services,connectionString);
-
+            AccountManagementBootstrapper.Configure(services,connectionString);
 
             services.AddTransient<IFileUploader, FileUploader>();
+            services.AddSingleton<IPasswordHasher,PasswordHasher>();
             services.AddRazorPages();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

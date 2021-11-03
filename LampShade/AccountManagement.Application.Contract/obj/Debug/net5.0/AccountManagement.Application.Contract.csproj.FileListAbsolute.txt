@@ -1,0 +1,14 @@
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.deps.json
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\ref\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\ref\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.pdb

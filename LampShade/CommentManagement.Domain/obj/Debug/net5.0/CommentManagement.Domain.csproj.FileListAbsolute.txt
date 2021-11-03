@@ -14,4 +14,3 @@ F:\New Shop Project\Code\LampShade\CommentManagement.Domain\obj\Debug\net5.0\Com
 F:\New Shop Project\Code\LampShade\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Domain\obj\Debug\net5.0\ref\CommentManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.pdb
-F:\New Shop Project\Code\LampShade\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.csproj.CopyComplete

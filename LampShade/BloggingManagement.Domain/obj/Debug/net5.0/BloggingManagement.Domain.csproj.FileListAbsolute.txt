@@ -14,4 +14,3 @@ F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Debug\net5.0\re
 F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Debug\net5.0\BloggingManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Debug\net5.0\BloggingManagement.Application.Contract.dll
 F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Debug\net5.0\BloggingManagement.Application.Contract.pdb
-F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Debug\net5.0\BloggingManagement.Domain.csproj.CopyComplete

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\01_LampShadeQueries\01_LampShadeQueries.csproj" />
+    <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BloggingManagement.Configuration\BloggingManagement.Configuration.csproj" />
     <ProjectReference Include="..\CommentManagement.Configuration\CommentManagement.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />

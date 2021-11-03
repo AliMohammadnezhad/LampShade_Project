@@ -16,7 +16,6 @@ F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.0\CommentManagement.Application.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.0\ref\CommentManagement.Application.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.0\CommentManagement.Application.pdb
-F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.0\CommentManagement.Application.csproj.CopyComplete
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\BloggingManagement.Application.Contract.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\BloggingManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.dll
