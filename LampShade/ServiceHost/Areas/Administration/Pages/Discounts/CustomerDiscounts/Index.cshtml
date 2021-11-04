@@ -1,4 +1,5 @@
 ﻿@page
+@using DiscountManagement.Configuration.Permission
 @model Areas.Administration.Pages.Discounts.CustomerDiscounts.IndexModel
 @{
 }
@@ -12,14 +13,14 @@
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">تعریف تخفیف مشتری</a>
+            <a permission="@DiscountPermission.DefineCustomerDiscount"  class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">تعریف تخفیف مشتری</a>
         </p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default"permission="@DiscountPermission.SearchCustomerDiscount"  >
             <div class="panel-heading">
                 <h3 class="panel-title">جستجو در تخفیفات مشتریان</h3>
             </div>
@@ -49,7 +50,7 @@
 
 <div class="row" id="ProductCategoriesDiv">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@DiscountPermission.SearchCustomerDiscount" >
             <div class="panel-heading">
                 <h3 class="panel-title">لیست تخفیفات مشتریان (@Model.CustomerDiscounts.Count)</h3>
             </div>
@@ -81,7 +82,7 @@
                                         <td>@item.Reason</td>
                                         <td>@item.CreationDate</td>
                                         <td>
-                                            <a class="btn btn-warning waves-effect waves-light m-b-5"
+                                            <a permission="@DiscountPermission.EditCustomerDiscount"  class="btn btn-warning waves-effect waves-light m-b-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
@@ -98,8 +99,8 @@
 </div>
 
 @section Scripts {
-    <script src="~/adminTheme/assets/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/adminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/adminTheme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminTheme/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {

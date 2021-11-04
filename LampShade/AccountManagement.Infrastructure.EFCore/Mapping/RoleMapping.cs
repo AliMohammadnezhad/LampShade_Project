@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AccountManagement.Infrastructure.EFCore.Mapping
 {
-   public class RoleMapping:IEntityTypeConfiguration<Role>
+    public class RoleMapping : IEntityTypeConfiguration<Role>
     {
         public void Configure(EntityTypeBuilder<Role> builder)
         {
@@ -15,7 +15,18 @@ namespace AccountManagement.Infrastructure.EFCore.Mapping
 
             builder.HasMany(x => x.Accounts)
                 .WithOne(x => x.Role)
-                .HasForeignKey(x=>x.RoleId);
+                .HasForeignKey(x => x.RoleId);
+
+            builder.OwnsMany(x => x.Permissions, navigationBuilder =>
+            {
+                navigationBuilder.ToTable("Permissions");
+                navigationBuilder.HasKey(x => x.Id);
+                navigationBuilder.WithOwner(x => x.Role);
+                navigationBuilder.Property(x => x.Name).HasMaxLength(100);
+            });
+
+
+
         }
     }
 }

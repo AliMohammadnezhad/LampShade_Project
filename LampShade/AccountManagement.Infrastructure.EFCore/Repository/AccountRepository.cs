@@ -74,7 +74,8 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 RoleId = x.RoleId,
                 Username = x.Username,
                 Id = x.Id,
-                FullName = x.FullName
+                FullName = x.FullName,
+                PicturePath = x.ProfilePhoto
             }).FirstOrDefault(x => x.Username == username);
         }
     }

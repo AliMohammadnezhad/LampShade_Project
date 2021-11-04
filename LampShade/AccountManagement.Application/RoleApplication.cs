@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using _0_Framework.Application;
 using _0_FrameWork.Application;
 using AccountManagement.Application.Contract.Role;
@@ -22,7 +21,7 @@ namespace AccountManagement.Application
             if (_roleRepository.Exists(x => x.Name == command.Name))
                 return operationResult.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var role = new Role(command.Name);
+            var role = new Role(command.Name,new List<Permission>());
             _roleRepository.Create(role);
             _roleRepository.SaveChange();
             return operationResult.Succeed();
@@ -36,8 +35,9 @@ namespace AccountManagement.Application
                 return operationResult.Failed(ApplicationMessages.RecordNotFound);
             if (_roleRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operationResult.Failed(ApplicationMessages.DuplicatedRecord);
-
-            role.Edit(command.Name);
+            var permission = new List<Permission>();
+            command.Permissions.ForEach(x=>permission.Add(new Permission(x)));
+            role.Edit(command.Name, permission);
             _roleRepository.SaveChange();
             return operationResult.Succeed();
         }

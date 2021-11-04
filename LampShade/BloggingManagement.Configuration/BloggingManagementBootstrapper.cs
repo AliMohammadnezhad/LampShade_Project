@@ -1,9 +1,11 @@
-﻿using _01_LampShadeQueries.Contracts.Article;
+﻿using _0_FrameWork.Infrastructure;
+using _01_LampShadeQueries.Contracts.Article;
 using _01_LampShadeQueries.Contracts.ArticleCategory;
 using _01_LampShadeQueries.Queries;
 using BloggingManagement.Application;
 using BloggingManagement.Application.Contract.Article;
 using BloggingManagement.Application.Contract.ArticleCategory;
+using BloggingManagement.Configuration.Permissions;
 using BloggingManagement.Domain.ArticleAgg;
 using BloggingManagement.Domain.ArticleCategoryAgg;
 using BloggingManagement.Infrastructure.EFCore;
@@ -26,6 +28,7 @@ namespace BloggingManagement.Configuration
             service.AddTransient<IArticleQuery, ArticleQuery>();
             service.AddTransient<IArticleCategoryQuery, ArticleCategoryQuery>();
 
+            service.AddTransient<IPermissionExposer, BloggingPermissionExposer>();
             service.AddDbContext<BloggingContext>(x => x.UseSqlServer(connectionString));
         }
     }

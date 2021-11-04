@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using _0_FrameWork.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductCategory;
+using ShopManagement.Configuration.Permissions;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.Products
 {
@@ -22,12 +24,14 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             _productCategoryApplication = productCategoryApplication;
         }
 
+        [NeedsPermission(ShopPermissions.ListProducts)]
         public void OnGet(ProductSearchModel searchModel)
         {
             ProductCategories = new SelectList(_productCategoryApplication.GetProductCategories(), "Id", "Name");
             Products = _productApplication.Search(searchModel);
         }
 
+        [NeedsPermission(ShopPermissions.CreateProduct)]
         public IActionResult OnGetCreate()
         {
             var commend = new CreateProduct
@@ -37,6 +41,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             return Partial("Create", commend);
         }
 
+        [NeedsPermission(ShopPermissions.CreateProduct)]
         public JsonResult OnPostCreate(CreateProduct command)
         {
             var operationResult = _productApplication.Create(command);
@@ -44,6 +49,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             return new JsonResult(operationResult);
         }
 
+        [NeedsPermission(ShopPermissions.EditProduct)]
         public IActionResult OnGetEdit(long id)
         {
             var product = _productApplication.GetDetails(id);
@@ -51,6 +57,8 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Products
             return Partial("Edit", product);
         }
 
+
+        [NeedsPermission(ShopPermissions.EditProduct)]
         public JsonResult OnPostEdit(EditProduct command)
         {
             var operationResult = _productApplication.Edit(command);

@@ -1,11 +1,12 @@
 ﻿@page
+@using CommentManagement.Configuration.Permission
 @model ServiceHost.Areas.Administration.Pages.Comments.ArticlesComment.IndexModel
 @{
 }
 
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@CommentPermissions.SearchComment" >
             <div class="panel-heading">
                 <h3 class="panel-title">جستجو در بین دیدگاه مقالات</h3>
             </div>
@@ -39,7 +40,7 @@
 
 <div class="row" id="ProductCategoriesDiv">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@CommentPermissions.SearchComment">
             <div class="panel-heading">
                 <h3 class="panel-title">لیست دیدگاه ها</h3>
             </div>
@@ -82,12 +83,12 @@
                                         <td>
                                             @if (item.IsConfirmed)
                                             {
-                                                <button onclick="Request('NotInStock','@Url.Page("./Index","UnConfirm",new {id = item.CommentId})')" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">غیرفعال سازی</button>
+                                                <button permission="@CommentPermissions.UnConfirmComment" onclick="Request('NotInStock','@Url.Page("./Index","UnConfirm",new {id = item.CommentId})')" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">غیرفعال سازی</button>
 
                                             }
                                             else
                                             {
-                                                <button onclick="Request('NotInStock','@Url.Page("./Index","Confirm",new {id = item.CommentId})')" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">فعال سازی</button>
+                                                <button permission="@CommentPermissions.ConfirmComment" onclick="Request('NotInStock','@Url.Page("./Index","Confirm",new {id = item.CommentId})')" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">فعال سازی</button>
 
                                             }
                                         </td>

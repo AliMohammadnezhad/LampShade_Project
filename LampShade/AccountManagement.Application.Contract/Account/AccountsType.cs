@@ -2,6 +2,8 @@
 {
     public class AccountsType
     {
-        public const int DefaultRegisterUserType = 2;
+        public const int SystemUser = 2;
+        public const int Administrator = 1;
+        public const int ContentManager = 5;
     }
 }

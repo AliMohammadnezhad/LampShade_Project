@@ -19,7 +19,7 @@
                                         <span asp-validation-for="Command.Name" class="error"></span>
                                     </div>
                                 </div>
-                                @*<div class="col-md-6">
+                                <div class="col-md-6">
                                     <label class="control-label col-md-3">انتخاب دسترسی ها</label>
                                     <div class="col-md-12">
                                         <select asp-for="Command.Permissions" asp-items="Model.Permissions" class="multi-select" multiple="multiple" id="my_multi_select3">
@@ -27,7 +27,7 @@
                                         </select>
                                     </div>
                                     <input type="hidden" asp-for="Command.Id" value="@Model.Command.Id"/>
-                                </div>*@
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
                             <a asp-page="./Index" class="btn btn-dark waves-effect waves-light m-b-5">بازگشت</a>
@@ -41,13 +41,15 @@
 
 @section Style
 {
-    <link href="~/AdminTheme/assets/jquery-multi-select/multi-select.css" rel="stylesheet" type="text/css"/>
+    <link href="~/AdminTheme/assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css"/>
 }
 
 @section Scripts
 {
-    <script type="text/javascript" src="~/AdminTheme/assets/jquery-multi-select/jquery.multi-select.js"></script>
-    <script type="text/javascript" src="~/AdminTheme/assets/jquery-multi-select/jquery.quicksearch.js"></script>
+
+
+    <script type="text/javascript" src="~/AdminTheme/assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="~/AdminTheme/assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
 
     <script>
         jQuery(document).ready(function() {

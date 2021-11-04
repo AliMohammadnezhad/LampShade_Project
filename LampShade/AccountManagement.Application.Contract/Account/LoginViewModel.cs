@@ -8,6 +8,7 @@
         public string Password { get; set; }
         public long RoleId { get; set; }
         public string Mobile { get; set; }
+        public string PicturePath { get; set; }
 
 
     }

@@ -1,5 +1,6 @@
 ﻿@page
 
+@using InventoryManagement.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Inventory.IndexModel
 @{
 }
@@ -13,14 +14,14 @@
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
+            <a permission="@InventoryPermissions.CreateInventory" class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
         </p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@InventoryPermissions.SearchInventory">
             <div class="panel-heading">
                 <h3 class="panel-title">جستجو در انبار</h3>
             </div>
@@ -43,7 +44,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@InventoryPermissions.SearchInventory">
             <div class="panel-heading">
                 <h3 class="panel-title">لیست انبار (@Model.Inventory.Count)</h3>
             </div>
@@ -71,19 +72,19 @@
                                     <td>@item.CurrentCount</td>
                                     <td>@item.CreationDate</td>
                                     <td>
-                                        <a  class="btn btn-warning waves-effect waves-light m-b-5"
+                                        <a permission="@InventoryPermissions.EditInventory" class="btn btn-warning waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Edit", new {id = item.Id})">
                                             <i class="fa fa-edit"></i> ویرایش
                                         </a>
-                                        <a class="btn btn-success waves-effect waves-light m-b-5"
+                                        <a permission="@InventoryPermissions.Increase" class="btn btn-success waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Increase", new {id = item.Id})">
                                             <i class="fa fa-plus"></i> افزایش موجودی
                                         </a>
-                                        <a  class="btn btn-danger waves-effect waves-light m-b-5"
+                                        <a permission="@InventoryPermissions.Reduce" class="btn btn-danger waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Reduce", new {id = item.Id})">
                                             <i class="fa fa-minus"></i> کاهش موجودی
                                         </a>
-                                        <a  class="btn btn-primary waves-effect waves-light m-b-5"
+                                        <a permission="@InventoryPermissions.OperationLog" class="btn btn-primary waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Log", new {id = item.Id})"
                                            onclick="$('.modal-dialog').css('width', '60%')">
                                             <i class="fa fa-recycle"></i> مشاهده گردنش انبار
@@ -101,8 +102,8 @@
 </div>
 
 @section Scripts {
-    <script src="~/adminTheme/assets/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/adminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/adminTheme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminTheme/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {

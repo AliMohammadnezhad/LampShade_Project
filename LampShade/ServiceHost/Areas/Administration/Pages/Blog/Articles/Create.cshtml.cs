@@ -1,6 +1,8 @@
 
+using _0_FrameWork.Infrastructure;
 using BloggingManagement.Application.Contract.Article;
 using BloggingManagement.Application.Contract.ArticleCategory;
+using BloggingManagement.Configuration.Permissions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -20,13 +22,13 @@ namespace ServiceHost.Areas.Administration.Pages.Blog.Articles
             _articleApplication = articleApplication;
             _articleCategoryApplication = articleCategoryApplication;
         }
-
+        [NeedsPermission(BloggingPermissions.CreateArticle)]
         public void OnGet()
         {
             ArticleCategories = new SelectList(_articleCategoryApplication.GetArticleCategories(), "Id", "Name");
             
         }
-
+        [NeedsPermission(BloggingPermissions.CreateArticle)]
         public IActionResult OnPost(CreateArticle command)
         {
             var result = _articleApplication.Create(command);

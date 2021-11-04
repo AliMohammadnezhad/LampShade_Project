@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _0_Framework.Application;
 using _0_FrameWork.Application;
 using AccountManagement.Application.Contract.Account;
+using AccountManagement.Application.Contract.Role;
 using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.RoleAgg;
 
 namespace AccountManagement.Application
 {
@@ -12,12 +15,15 @@ namespace AccountManagement.Application
         private readonly IFileUploader _fileUploader;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IAuthHelper _authHelper;
-        public AccountApplication(IAccountRepository accountRepository, IFileUploader fileUploader, IPasswordHasher passwordHasher, IAuthHelper authHelper)
+        private readonly IRoleRepository _roleRepository;
+
+        public AccountApplication(IAccountRepository accountRepository, IFileUploader fileUploader, IPasswordHasher passwordHasher, IAuthHelper authHelper, IRoleRepository roleRepository)
         {
             _accountRepository = accountRepository;
             _fileUploader = fileUploader;
             _passwordHasher = passwordHasher;
             _authHelper = authHelper;
+            _roleRepository = roleRepository;
         }
 
         public OperationResult Create(CreateAccount command)
@@ -81,11 +87,13 @@ namespace AccountManagement.Application
 
             var passwordVerified = _passwordHasher.Check(account.Password, command.Password).Verified;
 
+            var permission = _roleRepository.Get(account.Id).Permissions.Select(x => x.Code).ToList();
             if (!passwordVerified)
                 return operationResult.Failed(ApplicationMessages.WrongUserPass);
             var authModel = new AuthViewModel(account.Id, account.RoleId, account.FullName, account.Username,
-                account.Mobile);
+                account.Mobile,account.PicturePath,permission);
             _authHelper.Signin(authModel);
+
             return operationResult.Succeed();
         }
 

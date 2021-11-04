@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using _0_FrameWork.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductPicture;
+using ShopManagement.Configuration.Permissions;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
 {
@@ -21,12 +23,14 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
             _productApplication = productApplication;
             }
 
+        [NeedsPermission(ShopPermissions.SearchProductPicture)]
         public void OnGet(ProductPictureSearchModel searchModel)
         {
             Products= new SelectList(_productApplication.GetProducts(), "Id", "Name");
             ProductsPictures = _productPictureApplication.Search(searchModel);
         }
 
+        [NeedsPermission(ShopPermissions.CreateProductPicture)]
         public IActionResult OnGetCreate()
         {
             var commend = new CreateProductPicture
@@ -36,6 +40,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
             return Partial("Create", commend);
         }
 
+        [NeedsPermission(ShopPermissions.CreateProductPicture)]
         public JsonResult OnPostCreate(CreateProductPicture command)
         {
             var operationResult = _productPictureApplication.Create(command);
@@ -43,6 +48,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
             return new JsonResult(operationResult);
         }
 
+        [NeedsPermission(ShopPermissions.EditProductPicture)]
         public IActionResult OnGetEdit(long id)
         {
             var product = _productPictureApplication.GetDetails(id);
@@ -50,17 +56,21 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
             return Partial("Edit", product);
         }
 
+        [NeedsPermission(ShopPermissions.EditProductPicture)]
         public JsonResult OnPostEdit(EditProductPicture command)
         {
             var operationResult = _productPictureApplication.Edit(command);
             return new JsonResult(operationResult);
         }
 
+        [NeedsPermission(ShopPermissions.RestoreProductPicture)]
         public JsonResult OnGetRestore(long id)
         {
             var isInStock = _productPictureApplication.Restore(id);
             return isInStock.IsSucceed ? new JsonResult(isInStock.Succeed()) : new JsonResult(isInStock);
         }
+
+        [NeedsPermission(ShopPermissions.RestoreProductPicture)]
 
         public JsonResult OnGetRemove(long id)
         {

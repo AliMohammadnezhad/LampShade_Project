@@ -1,4 +1,5 @@
 ﻿@page
+@using BloggingManagement.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Blog.ArticleCategories.IndexModel
 @{
 }
@@ -12,14 +13,14 @@
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد گروه مقاله جدید</a>
+            <a permission="@BloggingPermissions.CreateArticleCategory" class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد گروه مقاله جدید</a>
         </p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@BloggingPermissions.SearchArticleCategory">
             <div class="panel-heading">
                 <h3 class="panel-title">جستجو در گروه مقالات</h3>
             </div>
@@ -39,7 +40,7 @@
 
 <div class="row" id="ProductCategoriesDiv">
     <div class="col-md-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default" permission="@BloggingPermissions.SearchArticleCategory">
             <div class="panel-heading">
                 <h3 class="panel-title">لیست گروه مقالات</h3>
             </div>
@@ -73,7 +74,7 @@
                                         <td>@item.ArticleCount</td>
                                         <td>@item.CreationDate</td>
                                         <td>
-                                            <a class="btn btn-warning pull-right m-rl-5"
+                                            <a permission="@BloggingPermissions.EditArticleCategory" class="btn btn-warning pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>

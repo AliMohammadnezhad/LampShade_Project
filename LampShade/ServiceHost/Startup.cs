@@ -1,5 +1,8 @@
 using _0_Framework.Application;
 using _0_FrameWork.Application;
+using _0_FrameWork.Domain.Permissions;
+using _0_FrameWork.Infrastructure;
+using AccountManagement.Application.Contract.Account;
 using AccountManagement.Configuration;
 using BloggingManagement.Configuration;
 using CommentManagement.Configuration;
@@ -39,6 +42,7 @@ namespace ServiceHost
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddSingleton<IPasswordHasher,PasswordHasher>();
             services.AddTransient<IAuthHelper,AuthHelper>();
+            services.AddTransient<IPermissionExposer,_MenuPagePermissionExposer>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -54,7 +58,32 @@ namespace ServiceHost
                     o.AccessDeniedPath = new PathString("/AccessDenied");
                 });
 
-            services.AddRazorPages();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminArea",builder=>
+                    builder.RequireRole((AccountsType.Administrator).ToString(),(AccountsType.ContentManager).ToString()));
+
+                options.AddPolicy("Shop", builder =>
+                    builder.RequireRole((AccountsType.Administrator).ToString()));
+
+                options.AddPolicy("Discount", builder =>
+                    builder.RequireRole((AccountsType.Administrator).ToString()));
+
+                options.AddPolicy("Account", builder =>
+                    builder.RequireRole((AccountsType.Administrator).ToString()));
+
+            });
+
+            services.AddRazorPages()
+                .AddMvcOptions(options=> options.Filters.Add<SecurityPageFilter>())
+                .AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AuthorizeAreaFolder("Administration", "/", "AdminArea");
+                options.Conventions.AuthorizeAreaFolder("Administration", "/Shop", "Shop");
+                options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
+                options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
+            });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

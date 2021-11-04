@@ -1,24 +1,27 @@
-﻿<div class="left side-menu">
+﻿@using _0_Framework.Application
+@using _0_FrameWork.Domain.Permissions
+@inject IAuthHelper _authHelper;
+@{
+    var userInfo = _authHelper.CurrentAccountInfo();
+}
+<div class="left side-menu">
     <div class="sidebar-inner slimscrollleft">
         <div class="user-box">
             <div class="user-img">
-                <img src="~/AdminTheme/assets/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
-                <div class="user-status offline">
+
+                <img src="@(string.IsNullOrWhiteSpace(userInfo.PicturePath)?"/AdminTheme/assets/images/users/avatar-1.jpg":$"/UploadedFile/Pictures/{userInfo.PicturePath}")" alt="user-img" title="@userInfo.Fullname" class="img-circle img-thumbnail img-responsive">
+                <div class="user-status online">
                     <i class="zmdi zmdi-dot-circle"></i>
                 </div>
             </div>
             <h5>
-                <a href="#">علی یدالهی</a>
+                <a href="#">@userInfo.Fullname</a>
             </h5>
             <ul class="list-inline">
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-settings"></i>
-                    </a>
-                </li>
+
 
                 <li>
-                    <a href="#" class="text-custom">
+                    <a asp-page="/Account" asp-page-handler="Logout" class="text-custom">
                         <i class="zmdi zmdi-power"></i>
                     </a>
                 </li>
@@ -27,90 +30,92 @@
         <div id="sidebar-menu">
             <ul>
                 <li class="text-muted menu-title">دسته بندی ها</li>
-                <li>
+                <li permission="@_MenuPermissions.DashBoard">
                     <a asp-page="/Index">
-                        <i class="zmdi zmdi-calendar"></i><span> داشبورد </span>
+                        <i  class="zmdi zmdi-calendar"></i><span> داشبورد </span>
                     </a>
                 </li>
-                <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span> فروشگاه </span> <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a asp-page="/Shop/Slides/Index"> اسلایدر</a>
-                        </li>
-                        <li>
-                            <a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a>
-                        </li>
-                        <li>
-                            <a asp-page="/Shop/Products/Index">محصولات</a>
-                        </li>
-                        <li>
-                            <a asp-page="/Shop/ProductPictures/Index">تصاویر محصولات</a>
-                        </li>
+             
+                    <li class="has_sub" permission="@_MenuPermissions.Shop">
+                        <a href="javascript:void(0);" class="waves-effect" >
+                            <i class="zmdi zmdi-invert-colors"></i> <span> فروشگاه </span> <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li permission="@_MenuPermissions.Slider">
+                                <a asp-page="/Shop/Slides/Index"> اسلایدر</a>
+                            </li>
+                            <li permission="@_MenuPermissions.ProductCategories">
+                                <a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a>
+                            </li>
+                            <li permission="@_MenuPermissions.Products">
+                                <a asp-page="/Shop/Products/Index">محصولات</a>
+                            </li>
+                            <li permission="@_MenuPermissions.ProductPictures">
+                                <a asp-page="/Shop/ProductPictures/Index">تصاویر محصولات</a>
+                            </li>
 
-                    </ul>
-                </li>
-                <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span> مدیریت کاربران </span> <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a asp-page="/Accounts/Account/Index"> مدیریت کاربران</a>
-                        </li>
-                        <li>
-                            <a asp-page="/Accounts/Role/Index"> مدیریت سطوح دسترسی</a>
-                        </li>
-                    </ul>
-                </li>
-     
-                <li>
-                    <a asp-page="/Inventory/Index">
-                        <i class="fa fa-shopping-bag"></i><span> سیستم انبارداری </span>
-                    </a>
-                </li>
-           
-                <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect">
-                        <i class="zmdi zmdi-invert-colors"></i> <span> بخش تخفیفات </span> <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a asp-page="/Discounts/CustomerDiscounts/Index"> تخفیفات مشتریان</a>
-                            <a asp-page="/Discounts/ColleagueDiscounts/Index"> تخفیفات همکاران</a>
-                        </li>
-       
+                        </ul>
+                    </li>
+                    <li class="has_sub" permission="@_MenuPermissions.Account">
+                        <a href="javascript:void(0);" class="waves-effect">
+                            <i class="zmdi zmdi-invert-colors"></i> <span> مدیریت کاربران </span> <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a asp-page="/Accounts/Account/Index" permission="@_MenuPermissions.UserManagement"> مدیریت کاربران</a>
+                            </li>
+                            <li>
+                                <a asp-page="/Accounts/Role/Index" permission="@_MenuPermissions.RolesPermission"> مدیریت سطوح دسترسی</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li permission="@_MenuPermissions.Inventory">
+                        <a asp-page="/Inventory/Index" >
+                            <i class="fa fa-shopping-bag"></i><span> سیستم انبارداری </span>
+                        </a>
+                    </li>
+                    <li class="has_sub" permission="@_MenuPermissions.Discount">
+                        <a href="javascript:void(0);" class="waves-effect">
+                            <i class="zmdi zmdi-invert-colors"></i> <span> بخش تخفیفات </span> <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a asp-page="/Discounts/CustomerDiscounts/Index" permission="@_MenuPermissions.CustomerDiscounts"> تخفیفات مشتریان</a>
+                                <a asp-page="/Discounts/ColleagueDiscounts/Index" permission="@_MenuPermissions.ColleagueDiscounts"> تخفیفات همکاران</a>
+                            </li>
 
-                    </ul>
-                </li>
-                <li class="has_sub">
+
+                        </ul>
+                    </li>
+                
+
+                <li class="has_sub" permission="@_MenuPermissions.Blog">
                     <a href="javascript:void(0);" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span> بخش مقالات </span> <span class="menu-arrow"></span>
                     </a>
                     <ul class="list-unstyled">
                         <li>
-                            <a asp-page="/Blog/ArticleCategories/Index"> گروه مقالات</a>
-                            <a asp-page="/Blog/Articles/Index"> مقالات</a>
+                            <a asp-page="/Blog/ArticleCategories/Index" permission="@_MenuPermissions.ArticleCategory"> گروه مقالات</a>
+                            <a asp-page="/Blog/Articles/Index" permission="@_MenuPermissions.Article"> مقالات</a>
                         </li>
-       
+
 
                     </ul>
                 </li>
-                <li class="has_sub">
+                <li class="has_sub" permission="@_MenuPermissions.Comment">
                     <a href="javascript:void(0);" class="waves-effect">
                         <i class="zmdi zmdi-invert-colors"></i> <span> مدیریت نظرات </span> <span class="menu-arrow"></span>
                     </a>
                     <ul class="list-unstyled">
                         <li>
-                            <a asp-page="/Comments/ArticlesComment/Index"> نظرات وبلاگ</a>
-                            <a asp-page="/Comments/ProductsComment/Index"> نظرات فروشگاه</a>
+                            <a asp-page="/Comments/ArticlesComment/Index" permission="@_MenuPermissions.ArticleComment"> نظرات وبلاگ</a>
+                            <a asp-page="/Comments/ProductsComment/Index" permission="@_MenuPermissions.ShopComment"> نظرات فروشگاه</a>
                         </li>
-       
+
 
                     </ul>
                 </li>
+
 
             </ul>
             <div class="clearfix"></div>

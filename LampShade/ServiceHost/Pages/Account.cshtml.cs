@@ -43,7 +43,7 @@ namespace ServiceHost.Pages
                 Mobile = command.Mobile,
                 FullName = command.FullName,
                 Password = command.Password,
-                RoleId = AccountsType.DefaultRegisterUserType
+                RoleId = AccountsType.SystemUser
             };
 
             var operationResult = _accountApplication.Create(account);
