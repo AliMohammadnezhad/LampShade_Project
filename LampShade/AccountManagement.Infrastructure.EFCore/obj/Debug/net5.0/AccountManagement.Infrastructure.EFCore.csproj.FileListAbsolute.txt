@@ -19,3 +19,4 @@ F:\New Shop Project\Code\LampShade\AccountManagement.Infrastructure.EFCore\obj\D
 F:\New Shop Project\Code\LampShade\AccountManagement.Infrastructure.EFCore\obj\Debug\net5.0\ref\AccountManagement.Infrastructure.EFCore.dll
 F:\New Shop Project\Code\LampShade\AccountManagement.Infrastructure.EFCore\obj\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\AccountManagement.Infrastructure.EFCore\obj\Debug\net5.0\AccountManagement.Infrastructure.EFCore.genruntimeconfig.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Infrastructure.EFCore\obj\Debug\net5.0\AccountManagement.Infrastructure.EFCore.csproj.CopyComplete

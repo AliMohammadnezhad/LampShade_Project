@@ -18,3 +18,4 @@ F:\New Shop Project\Code\LampShade\InventoryManagement.Application\obj\Debug\net
 F:\New Shop Project\Code\LampShade\InventoryManagement.Application\obj\Debug\net5.0\InventoryManagement.Application.pdb
 F:\New Shop Project\Code\LampShade\InventoryManagement.Application\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 F:\New Shop Project\Code\LampShade\InventoryManagement.Application\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Application\obj\Debug\net5.0\InventoryManagement.Application.csproj.CopyComplete

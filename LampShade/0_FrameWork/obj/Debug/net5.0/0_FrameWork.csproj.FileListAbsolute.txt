@@ -9,3 +9,4 @@ F:\New Shop Project\Code\LampShade\0_FrameWork\obj\Debug\net5.0\0_FrameWork.cspr
 F:\New Shop Project\Code\LampShade\0_FrameWork\obj\Debug\net5.0\0_FrameWork.dll
 F:\New Shop Project\Code\LampShade\0_FrameWork\obj\Debug\net5.0\ref\0_FrameWork.dll
 F:\New Shop Project\Code\LampShade\0_FrameWork\obj\Debug\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\0_FrameWork\obj\Debug\net5.0\0_FrameWork.csproj.AssemblyReference.cache

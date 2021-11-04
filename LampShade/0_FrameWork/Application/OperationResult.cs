@@ -1,4 +1,6 @@
-﻿namespace _0_FrameWork.Application
+﻿using System;
+
+namespace _0_FrameWork.Application
 {
     public class OperationResult
     {
@@ -23,5 +25,7 @@
             Message = message;
             return this;
         }
+
+
     }
 }

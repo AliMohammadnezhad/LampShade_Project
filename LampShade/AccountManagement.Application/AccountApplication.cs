@@ -11,11 +11,13 @@ namespace AccountManagement.Application
         private readonly IAccountRepository _accountRepository;
         private readonly IFileUploader _fileUploader;
         private readonly IPasswordHasher _passwordHasher;
-        public AccountApplication(IAccountRepository accountRepository, IFileUploader fileUploader, IPasswordHasher passwordHasher)
+        private readonly IAuthHelper _authHelper;
+        public AccountApplication(IAccountRepository accountRepository, IFileUploader fileUploader, IPasswordHasher passwordHasher, IAuthHelper authHelper)
         {
             _accountRepository = accountRepository;
             _fileUploader = fileUploader;
             _passwordHasher = passwordHasher;
+            _authHelper = authHelper;
         }
 
         public OperationResult Create(CreateAccount command)
@@ -67,6 +69,30 @@ namespace AccountManagement.Application
             var password = _passwordHasher.Hash(command.Password);
             account.ChangePassword(password);
             _accountRepository.SaveChange();
+            return operationResult.Succeed();
+        }
+
+        public OperationResult Login(LoginViewModel command)
+        {
+            var operationResult = new OperationResult();
+            var account = _accountRepository.GetBy(command.Username);
+            if (account == null)
+                return operationResult.Failed(ApplicationMessages.UserNotFound);
+
+            var passwordVerified = _passwordHasher.Check(account.Password, command.Password).Verified;
+
+            if (!passwordVerified)
+                return operationResult.Failed(ApplicationMessages.WrongUserPass);
+            var authModel = new AuthViewModel(account.Id, account.RoleId, account.FullName, account.Username,
+                account.Mobile);
+            _authHelper.Signin(authModel);
+            return operationResult.Succeed();
+        }
+
+        public OperationResult Logout()
+        {
+            var operationResult = new OperationResult();
+            _authHelper.SignOut();
             return operationResult.Succeed();
         }
 

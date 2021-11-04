@@ -259,3 +259,11 @@ F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\AccountManagemen
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\AccountManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\ChangePassword.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Create.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Edit.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Index.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Create.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Edit.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Index.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs

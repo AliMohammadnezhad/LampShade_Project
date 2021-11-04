@@ -4,6 +4,7 @@ using _0_Framework.Application;
 using _0_FrameWork.Infrastructure;
 using AccountManagement.Application.Contract.Account;
 using AccountManagement.Domain.AccountAgg;
+using Microsoft.EntityFrameworkCore;
 
 namespace AccountManagement.Infrastructure.EFCore.Repository
 {
@@ -19,6 +20,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
         public List<AccountViewModel> Search(AccountSearchModel searchModel)
         {
             return _context.Accounts
+                .Include(x=>x.Role)
                 .Where(x=>x.FullName.Contains(searchModel.FullName) 
                           || x.Mobile.Contains(searchModel.Mobile) 
                           || x.Username.Contains(searchModel.Username) 
@@ -29,7 +31,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 Id = x.Id,
                 Mobile = x.Mobile,
                 ProfilePhoto = x.ProfilePhoto,
-                Role = "مدیر سیستم",
+                Role = x.Role.Name,
                 Username = x.Username,
                 CreationDate = x.CreationDate.ToFarsi()
             }).OrderByDescending(x => x.Id).ToList();
@@ -38,13 +40,14 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
         public List<AccountViewModel> Search()
         {
             return _context.Accounts
+                .Include(x=>x.Role)
                 .Select(x => new AccountViewModel
                 {
                     FullName = x.FullName,
                     Id = x.Id,
                     Mobile = x.Mobile,
                     ProfilePhoto = x.ProfilePhoto,
-                    Role = "مدیر سیستم",
+                    Role = x.Role.Name,
                     Username = x.Username,
                     CreationDate = x.CreationDate.ToFarsi()
                 }).OrderByDescending(x => x.Id).ToList();
@@ -60,6 +63,19 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 RoleId = x.RoleId,
                 Username = x.Username
             }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public LoginViewModel GetBy(string username)
+        {
+            return _context.Accounts.Select(x => new LoginViewModel
+            {
+                Mobile = x.Mobile,
+                Password = x.Password,
+                RoleId = x.RoleId,
+                Username = x.Username,
+                Id = x.Id,
+                FullName = x.FullName
+            }).FirstOrDefault(x => x.Username == username);
         }
     }
 }

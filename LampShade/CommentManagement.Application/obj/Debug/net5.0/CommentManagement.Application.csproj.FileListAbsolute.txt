@@ -30,3 +30,4 @@ F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\ShopManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\CommentManagement.Application\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.pdb
+F:\New Shop Project\Code\LampShade\CommentManagement.Application\obj\Debug\net5.0\CommentManagement.Application.csproj.CopyComplete

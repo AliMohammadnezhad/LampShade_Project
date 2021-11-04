@@ -26,3 +26,4 @@ F:\New Shop Project\Code\LampShade\DiscountManagement.Configuration\obj\Debug\ne
 F:\New Shop Project\Code\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.dll
 F:\New Shop Project\Code\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\ref\DiscountManagement.Configuration.dll
 F:\New Shop Project\Code\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.csproj.CopyComplete

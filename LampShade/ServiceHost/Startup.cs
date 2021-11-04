@@ -5,8 +5,10 @@ using BloggingManagement.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,8 @@ namespace ServiceHost
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("LampShadeDb");
+            services.AddHttpContextAccessor();
+
             ShopManagementBootstrapper.Configure(services, connectionString);
             DiscountManagementBootstrapper.Configure(services,connectionString);
             InventoryManagementBootstrapper.Configure(services,connectionString);
@@ -34,6 +38,22 @@ namespace ServiceHost
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddSingleton<IPasswordHasher,PasswordHasher>();
+            services.AddTransient<IAuthHelper,AuthHelper>();
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.Lax;
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+                {
+                    o.LoginPath = new PathString("/Account");
+                    o.LogoutPath = new PathString("/Account");
+                    o.AccessDeniedPath = new PathString("/AccessDenied");
+                });
+
             services.AddRazorPages();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -48,6 +68,8 @@ namespace ServiceHost
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
+            app.UseCookiePolicy();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
