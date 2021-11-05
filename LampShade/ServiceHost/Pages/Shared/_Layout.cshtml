@@ -41,6 +41,15 @@
 
 <script src="~/Theme/assets/js/vendors.js"></script>
 <script src="~/Theme/assets/js/active.js"></script>
+<script src="~/Theme/assets/js/jquery-3.6.0.js"></script>
+<script src="~/Theme/assets/js/plugins.js"></script>
+<script src="~/Theme/assets/js/custom.js"></script>
+<script>
+    $(document).ready(function() {
+        updateCart();
+    });
+
+</script>
 @await RenderSectionAsync("Script",false)
 
 </body>

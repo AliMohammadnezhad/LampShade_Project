@@ -30,6 +30,8 @@ namespace ServiceHost.Pages
             Categories = _articleCategory.GetCategories();
             Category = _articleCategory.GetCategoryBy(CategorySlug)?.Name;
             Articles = _articleQuery.GetArticles(CategorySlug);
+            Response.Cookies.Append("CookieName", "value");
+
         }
     }
 }

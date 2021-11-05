@@ -44,11 +44,7 @@ namespace ServiceHost
             services.AddTransient<IAuthHelper,AuthHelper>();
             services.AddTransient<IPermissionExposer,_MenuPagePermissionExposer>();
 
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.Lax;
-            });
+       
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
@@ -57,6 +53,7 @@ namespace ServiceHost
                     o.LogoutPath = new PathString("/Account");
                     o.AccessDeniedPath = new PathString("/AccessDenied");
                 });
+
 
 
             services.AddAuthorization(options =>

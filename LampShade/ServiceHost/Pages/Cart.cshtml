@@ -1,0 +1,116 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.CartModel
+@{
+}
+
+<div class="breadcrumb-area section-space--half">
+    <div class="container wide">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-wrapper breadcrumb-bg">
+                    <div class="breadcrumb-content">
+                        <h1 class="breadcrumb-content__title">سبد خرید</h1>
+                        <ul class="breadcrumb-content__page-map h4">
+                            <li>
+                                <a asp-page="./Index">صفحه اصلی</a>
+                            </li>
+                            <li>
+                                <a class="active">سبد خرید</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-wrapper">
+                    <div class="page-content-wrapper">
+                        @if (Model.CartItems != null && Model.CartItems.Count > 0)
+                        {
+                            <form action="#">
+                                <div class="cart-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="pro-thumbnail">تصویر محصول</th>
+                                                <th class="pro-title">نام محصول</th>
+                                                <th class="pro-price">قیمت واحد</th>
+                                                <th class="pro-quantity">تعداد</th>
+                                                <th class="pro-subtotal">جمع کل</th>
+                                                <th class="pro-remove">حذف از سبد خرید</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.CartItems)
+                                            {
+                                                <tr>
+                                                    <td class="pro-thumbnail">
+                                                        <a>
+                                                            <img src="/UploadedFile/Pictures/@item.Picture" class="img-fluid" alt="Product">
+                                                        </a>
+                                                    </td>
+                                                    <td class="pro-title">
+                                                        <a>@item.Name</a>
+                                                    </td>
+                                                    <td class="pro-price">
+                                                        <span>@item.Price تومان</span>
+                                                    </td>
+                                                    <td class="pro-quantity">
+                                                        <div class="quantity-selection">
+                                                            <input type="number" value="@item.Count" min="1" onchange="changeCartItemCount('@item.Id','TotoalPrice-@item.Id',this.value)">
+                                                            @if (!item.InStock)
+                                                            {
+                                                                <div class="alert alert-danger mt-2">
+                                                                    <strong> مقدار درخواستی شما در انبار وجود ندارد </strong> 
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </td>
+                                                    <td class="pro-subtotal" id="TotoalPrice-@item.Id">
+                                                        <span> @item.TotalPrice.ToMoney()تومان</span>
+                                                    </td>
+                                                    <td class="pro-remove">
+                                                        <a asp-page="./Cart" asp-page-handler="RemoveFromCart" asp-route-id="@item.Id">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </a>
+                                                    </td>
+                                         
+                                                </tr>
+
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-lg-6 col-12 d-flex">
+                                    <div class="cart-summary">
+                                        <div class="cart-summary-button">
+                                            <a class="btn btn-outline-success" asp-page-handler="GotoCheckOut">تکمیل فرایند خرید</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning text-center h4">
+                                <strong>کاربر گرامی سبد خرید شما خالی می باشد</strong>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

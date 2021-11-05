@@ -267,3 +267,8 @@ F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admi
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Edit.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Index.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Cart.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
