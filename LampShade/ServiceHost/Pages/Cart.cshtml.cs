@@ -29,7 +29,7 @@ namespace ServiceHost.Pages
                 return;
 
             var item = serializer.Deserialize<List<CartItem>>(cartCookie);
-            item.ForEach(x=>x.TotalPrice = (x.UnitPrice * x.Count));
+            item.ForEach(x=>x.CalculateTotalPrice());
 
             CartItems = _productQuery.CheckCartItemInventoryStatus(item);
 

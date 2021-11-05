@@ -40,7 +40,7 @@ namespace _0_FrameWork.Domain.Permissions
                     {
                         new PermissionDto(_MenuPermissions.Discount, "مديريت تخفيفات"),
                         new PermissionDto(_MenuPermissions.CustomerDiscounts, " تخفيفات مشتريان"),
-                        new PermissionDto(_MenuPermissions.CustomerDiscounts, " تخفيفات همكاران"),
+                        new PermissionDto(_MenuPermissions.ColleagueDiscounts, " تخفيفات همكاران"),
 
                     }
                 },

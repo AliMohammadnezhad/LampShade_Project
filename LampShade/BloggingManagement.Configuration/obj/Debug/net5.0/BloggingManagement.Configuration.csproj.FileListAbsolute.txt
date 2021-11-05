@@ -47,3 +47,9 @@ F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\ne
 F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\ShopManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\obj\Debug\net5.0\BloggingManagement.Configuration.csproj.CopyComplete
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\BloggingManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

@@ -272,3 +272,4 @@ F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\CheckOut.cshtml.g.cs

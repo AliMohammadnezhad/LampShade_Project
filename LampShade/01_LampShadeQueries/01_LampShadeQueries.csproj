@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\0_FrameWork\0_FrameWork.csproj" />
+    <ProjectReference Include="..\AccountManagement.Domain\AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\AccountManagement.Infrastructure.EFCore\AccountManagement.Infrastructure.EFCore.csproj" />
     <ProjectReference Include="..\BloggingManagement.Infrastructure.EFCore\BloggingManagement.Infrastructure.EFCore.csproj" />
     <ProjectReference Include="..\CommentManagement.Domain\CommentManagement.Domain.csproj" />
     <ProjectReference Include="..\CommentManagement.Infrastructure.EfCore\CommentManagement.Infrastructure.EfCore.csproj" />
