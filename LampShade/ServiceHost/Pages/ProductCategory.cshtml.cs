@@ -9,6 +9,7 @@ namespace ServiceHost.Pages
         public ProductCategoryQueryModel CategoryQueryModel;
         private readonly IProductCategoryQuery _productCategory;
 
+
         public ProductCategoryModel(IProductCategoryQuery productCategory)
         {
             _productCategory = productCategory;

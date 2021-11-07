@@ -25,4 +25,10 @@ F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\obj\
 F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\obj\Debug\net5.0\ref\InventoryManagement.Infrastructure.EfCore.dll
 F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\obj\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.pdb
 F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\obj\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.genruntimeconfig.cache
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
+F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
 F:\New Shop Project\Code\LampShade\InvenrotyManagment.Infrastructure.EfCore\obj\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.csproj.CopyComplete

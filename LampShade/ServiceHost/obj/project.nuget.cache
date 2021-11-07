@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XjorB0ofdN2f5WHR2ETs335D/o4oaJqQWjoHMhp/rkA8PwzRnoY4jpkI5YhI6G8fgmfJwlOGeuudcqXr8zWfdA==",
+  "dgSpecHash": "TsevxLw5l0eHnqS36BNh5H5IlLfm8DezhZTPMxfVEAnlbjcb3mYzJCeXI2SvLkYQl4Wkm98TffDx4CQ0RKJw7w==",
   "success": true,
   "projectFilePath": "F:\\New Shop Project\\Code\\LampShade\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,7 @@
     "C:\\Users\\alimo\\.nuget\\packages\\nancy\\2.0.0\\nancy.2.0.0.nupkg.sha512",
     "C:\\Users\\alimo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\alimo\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\alimo\\.nuget\\packages\\restsharp\\106.13.0\\restsharp.106.13.0.nupkg.sha512",
     "C:\\Users\\alimo\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alimo\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alimo\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

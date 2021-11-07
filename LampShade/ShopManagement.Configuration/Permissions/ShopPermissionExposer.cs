@@ -56,7 +56,18 @@ namespace ShopManagement.Configuration.Permissions
                         new PermissionDto(ShopPermissions.ListSlide,"لیست  اسلاید"),
                     }
 
-                }
+                },
+                {
+
+                    "سفارشات", new List<PermissionDto>()
+                    {
+                        new PermissionDto(ShopPermissions.ShowOrderItems,"لیست آیتم های فاکتور"),
+                        new PermissionDto(ShopPermissions.CancelOrder,"کنسل کردن فاکتور"),
+                        new PermissionDto(ShopPermissions.ConfirmOrder,"تایید فاکتور"),
+                        new PermissionDto(ShopPermissions.SearchOrders,"جست و جو فاکتور"),
+                    }
+
+                },
             };
         }
     }

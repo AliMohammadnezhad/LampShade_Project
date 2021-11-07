@@ -8,6 +8,8 @@ namespace ShopManagement.Application.Contracts.Order
         public double TotalAmount { get; set; }
         public int DiscountRate { get; set; }
         public double CartForPayAmount { get; set; }
+        public long PaymentMethod { get; set; }
+
         public List<CartItem> CartItems { get; set; }
 
         public Cart()
@@ -20,6 +22,12 @@ namespace ShopManagement.Application.Contracts.Order
             TotalAmount += item.TotalPrice;
             CartForPayAmount = TotalAmount - DiscountAmount;
             CartItems.Add(item);
+        }
+
+
+        public void SetPaymentMethod(long PaymentId)
+        {
+            PaymentMethod = PaymentId;
         }
     }
 }

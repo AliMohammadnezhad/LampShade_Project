@@ -69,11 +69,16 @@
                             </li>
                         </ul>
                     </li>
-                    <li permission="@_MenuPermissions.Inventory">
-                        <a asp-page="/Inventory/Index" >
-                            <i class="fa fa-shopping-bag"></i><span> سیستم انبارداری </span>
-                        </a>
-                    </li>
+                <li permission="@_MenuPermissions.Inventory">
+                    <a asp-page="/Inventory/Index" >
+                        <i class="fa fa-shopping-bag"></i><span> سیستم انبارداری </span>
+                    </a>
+                </li>
+                <li permission="@_MenuPermissions.Order">
+                    <a asp-page="/orders/Index" >
+                        <i class="fa fa-shopping-bag"></i><span> سیستم سفارشات </span>
+                    </a>
+                </li>
                     <li class="has_sub" permission="@_MenuPermissions.Discount">
                         <a href="javascript:void(0);" class="waves-effect">
                             <i class="zmdi zmdi-invert-colors"></i> <span> بخش تخفیفات </span> <span class="menu-arrow"></span>

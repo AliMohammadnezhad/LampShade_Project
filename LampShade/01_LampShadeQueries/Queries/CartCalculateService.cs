@@ -72,6 +72,8 @@ namespace _01_LampShadeQueries.Queries
             
             return result;
         }
+
+
     }
 
     public class DiscountModel

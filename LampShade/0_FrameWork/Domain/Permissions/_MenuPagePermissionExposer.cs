@@ -69,6 +69,13 @@ namespace _0_FrameWork.Domain.Permissions
                         new PermissionDto(_MenuPermissions.Inventory, "مديريت انبار"),
 
                     }
+                } ,
+                {
+                    "سيستم سفارشات", new List<PermissionDto>()
+                    {
+                        new PermissionDto(_MenuPermissions.Order, "مديريت سفارشات"),
+
+                    }
                 }
             };
         }

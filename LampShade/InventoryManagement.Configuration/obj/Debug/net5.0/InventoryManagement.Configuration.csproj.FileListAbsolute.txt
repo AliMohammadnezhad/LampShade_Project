@@ -27,3 +27,9 @@ F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\obj\Debug\n
 F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.dll
 F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.pdb
 F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\obj\Debug\net5.0\InventoryManagement.Configuration.csproj.CopyComplete
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\InventoryManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

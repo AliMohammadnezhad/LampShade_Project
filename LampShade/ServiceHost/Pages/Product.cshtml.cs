@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using _01_LampShadeQueries.Contracts.Comment;
 using _01_LampShadeQueries.Contracts.Product;
 using CommentManagement.Application.Contract.Comment;
@@ -17,6 +18,7 @@ namespace ServiceHost.Pages
         {
             _productQuery = productQuery;
             _commentApplication = commentApplication;
+            Product = new ProductQueryModel();
         }
 
         public void OnGet(string id)

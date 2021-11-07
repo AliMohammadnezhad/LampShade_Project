@@ -26,3 +26,9 @@ F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\obj\
 F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\obj\Debug\net5.0\DiscountManagement.infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\obj\Debug\net5.0\DiscountManagement.infrastructure.EFCore.genruntimeconfig.cache
 F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\obj\Debug\net5.0\DiscountManagement.infrastructure.EFCore.csproj.CopyComplete
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

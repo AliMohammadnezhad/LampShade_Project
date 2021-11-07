@@ -149,9 +149,17 @@
               "target": "Package",
               "version": "[5.0.11, )"
             },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.13.0, )"
             }
           },
           "imports": [
@@ -1104,6 +1112,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Domain\\AccountManagement.Domain.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Domain\\AccountManagement.Domain.csproj"
+              },
+              "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Infrastructure.EFCore\\AccountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Infrastructure.EFCore\\AccountManagement.Infrastructure.EFCore.csproj"
+              },
               "F:\\New Shop Project\\Code\\LampShade\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
               },
@@ -1318,6 +1332,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\01_LampShadeQueries\\01_LampShadeQueries.csproj"
+              },
               "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
               },
@@ -1525,6 +1542,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Infrastructure.EFCore\\AccountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "F:\\New Shop Project\\Code\\LampShade\\AccountManagement.Infrastructure.EFCore\\AccountManagement.Infrastructure.EFCore.csproj"
+              },
               "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {
                 "projectPath": "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Domain\\ShopManagement.Domain.csproj"
               }

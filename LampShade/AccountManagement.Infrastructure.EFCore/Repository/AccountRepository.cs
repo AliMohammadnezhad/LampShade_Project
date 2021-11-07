@@ -78,5 +78,14 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 PicturePath = x.ProfilePhoto
             }).FirstOrDefault(x => x.Username == username);
         }
+
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _context.Accounts.Select(x => new AccountViewModel
+            {
+                FullName = x.FullName,
+                Id = x.Id
+            }).ToList();
+        }
     }
 }

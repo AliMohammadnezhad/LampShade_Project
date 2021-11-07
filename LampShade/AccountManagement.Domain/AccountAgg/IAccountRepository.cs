@@ -10,5 +10,6 @@ namespace AccountManagement.Domain.AccountAgg
         List<AccountViewModel> Search();
         EditAccount GetDetails(long id);
         LoginViewModel GetBy(string username);
+        List<AccountViewModel> GetAccounts();
     }
 }

@@ -28,6 +28,7 @@
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.Configuration\InventoryManagement.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
+    <ProjectReference Include="..\ShopManagement.Infrastructture.InventoryAcl\ShopManagement.Infrastructure.InventoryAcl.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +53,8 @@
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Create.cshtml" />
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Edit.cshtml" />
     <None Include="Areas\Administration\Pages\Discounts\CustomerDiscounts\Index.cshtml" />
+    <None Include="Areas\Administration\Pages\Orders\Index.cshtml" />
+    <None Include="Areas\Administration\Pages\Orders\Items.cshtml" />
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.bootstrap.min.js" />
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.html5.min.js" />
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\buttons.print.min.js" />

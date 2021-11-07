@@ -60,9 +60,17 @@
               "target": "Package",
               "version": "[5.0.11, )"
             },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.13.0, )"
             }
           },
           "imports": [

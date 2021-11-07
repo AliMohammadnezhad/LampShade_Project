@@ -14,5 +14,11 @@ namespace _01_LampShadeQueries.Contracts.ProductCategory
         public string PictureTitle { get; set; }
         public string Slug { get; set; }
         public List<ProductQueryModel> Products { get; set; }
+
+        public ProductCategoryQueryModel()
+        {
+            Products = new List<ProductQueryModel>();
+        }
+
     }
 }

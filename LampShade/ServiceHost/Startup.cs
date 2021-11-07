@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using _0_FrameWork.Application;
+using _0_FrameWork.Application.ZarinPal;
 using _0_FrameWork.Domain.Permissions;
 using _0_FrameWork.Infrastructure;
 using AccountManagement.Application.Contract.Account;
@@ -16,6 +17,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
+using ShopManagement.Domain.Service;
+using ShopManagement.Infrastructure.InventoryAcl;
 
 namespace ServiceHost
 {
@@ -39,10 +42,12 @@ namespace ServiceHost
             BloggingManagementBootstrapper.Configure(services,connectionString);
             AccountManagementBootstrapper.Configure(services,connectionString);
 
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
-            services.AddSingleton<IPasswordHasher,PasswordHasher>();
             services.AddTransient<IAuthHelper,AuthHelper>();
             services.AddTransient<IPermissionExposer,_MenuPagePermissionExposer>();
+            services.AddTransient<IZarinPalFactory,ZarinPalFactory>();
+            services.AddTransient<IShopInventoryAcl,ShopInventoryAcl>();
 
        
 

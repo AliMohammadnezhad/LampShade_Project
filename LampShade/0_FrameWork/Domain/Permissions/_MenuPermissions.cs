@@ -35,5 +35,8 @@
         //Inventory
         public const int Inventory = 270;
 
+        //order
+        public const int Order = 280;
+
     }
 }

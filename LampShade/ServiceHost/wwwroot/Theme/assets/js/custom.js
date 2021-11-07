@@ -36,7 +36,7 @@ function updateCart() {
 
     cartItemsWrapper.html('');
 
-    if (products != null || products != undefined) {
+    if (products != undefined || products != null) {
         products = JSON.parse(products);
         $("#cart_items_count").text(products.length);
         const cartButtonsWrapper = $("#cart-Buttons");
@@ -171,3 +171,4 @@ function changeCartItemCount(id, totalId, count) {
         }
     });
 }
+

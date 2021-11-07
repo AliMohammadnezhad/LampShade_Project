@@ -1,5 +1,6 @@
 ﻿@page
 @using _0_Framework.Application
+@using ShopManagement.Application.Contracts.Order
 @model ServiceHost.Pages.CheckOutModel
 @{
 }
@@ -32,7 +33,7 @@
             <div class="col-lg-12">
                 <div class="page-wrapper">
                     <div class="page-content-wrapper">
-                        <form action="#">
+                        <form method="post">
                             <div class="cart-table table-responsive">
                                 <table class="table">
                                     <thead>
@@ -86,23 +87,42 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </form>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-12 d-flex">
-                                <div class="cart-summary">
-                                    <div class="cart-summary-wrap">
-                                        <h4>خلاصه وضعیت فاکتور</h4>
-                                        <p>مبلغ نهایی <span>@Model.CheckOutCart.TotalAmount.ToMoney() تومان</span></p>
-                                        <p>مبلغ تخفیف <span>@Model.CheckOutCart.DiscountAmount.ToMoney() تومان</span></p>
-                                        <h2>مبلغ قابل پرداخت <span>@Model.CheckOutCart.CartForPayAmount.ToMoney() تومان</span></h2>
+                            <div class="row ">
+                                <div class="col-lg-6 col-12 d-flex">
+                                    <div class="checkout-payment-method">
+                                        <h4>نحوه پرداخت</h4>
+                                        @foreach (var method in PaymentMethod.GetList())
+                                        {
+                                            <div class="single-method">
+                                                <input type="radio" id="payment_@method.Id" name="paymentMethod" value="@method.Id" @(PaymentMethod.GetList().First().Id == method.Id ? "checked" : "")>
+                                                <label for="payment_@method.Id">@method.Name</label>
+                                                <p data-method="@method.Id" style="display:@(PaymentMethod.GetList().First().Id == method.Id ? "block" : "none")">@method.Description</p>
+                                            </div>
+                                        }
                                     </div>
-                                    <div class="cart-summary-button">
-                                        <button class="checkout-btn">پرداخت</button>
+                                </div>
+                                <div class="col-lg-6 col-12 d-flex">
+                                    <div class="cart-summary">
+                                        <div class="cart-summary-wrap">
+                                            <h4>خلاصه وضعیت فاکتور</h4>
+                                            <p>مبلغ نهایی <span>@Model.CheckOutCart.TotalAmount.ToMoney() تومان</span></p>
+                                            <p>مبلغ تخفیف <span>@Model.CheckOutCart.DiscountAmount.ToMoney() تومان</span></p>
+                                            <h2>مبلغ قابل پرداخت <span>@Model.CheckOutCart.CartForPayAmount.ToMoney() تومان</span></h2>
+                                        </div>
+                                    
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row text-center">
+                                <div class="col-12 text-center">
+                                  <button type="submit" asp-page-handler="Pay" class="btn btn-success">ثبت سفارش و پرداخت</button>
+
+                                </div>
+                            </div>
+                        </form>
+
+
+
                     </div>
                 </div>
             </div>

@@ -1246,6 +1246,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "RestSharp/106.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -3061,7 +3070,9 @@
           "Microsoft.AspNetCore.Http.Features": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
-          "Newtonsoft.Json": "10.0.1"
+          "Nancy": "2.0.0",
+          "Newtonsoft.Json": "10.0.1",
+          "RestSharp": "106.13.0"
         },
         "compile": {
           "bin/placeholder/0_FrameWork.dll": {}
@@ -3428,6 +3439,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
@@ -3444,6 +3457,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "01_LampShadeQueries": "1.0.0",
           "ShopManagement.Application.Contracts": "1.0.0",
           "ShopManagement.Domain": "1.0.0"
         },
@@ -3503,6 +3517,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
           "ShopManagement.Domain": "1.0.0"
@@ -3512,6 +3527,20 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "ShopManagement.Infrastructure.InventoryAcl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Application.Contract": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Infrastructure.InventoryAcl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Infrastructure.InventoryAcl.dll": {}
         }
       }
     }
@@ -5405,6 +5434,22 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "RestSharp/106.13.0": {
+      "sha512": "vwUdmmtC5vtePeNfBWnFcixBF2KjUeVv3ss4ZFzCIkOf7NB7W/9qX8JNZD9DOrz2yGk4AJW8k9znwgPZhnoiNg==",
+      "type": "package",
+      "path": "restsharp/106.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.13.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -10318,6 +10363,11 @@
       "type": "project",
       "path": "../ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj"
+    },
+    "ShopManagement.Infrastructure.InventoryAcl/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Infrastructture.InventoryAcl/ShopManagement.Infrastructure.InventoryAcl.csproj",
+      "msbuildProject": "../ShopManagement.Infrastructture.InventoryAcl/ShopManagement.Infrastructure.InventoryAcl.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10331,7 +10381,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "Nancy >= 2.0.0",
-      "ShopManagement.Configuration >= 1.0.0"
+      "ShopManagement.Configuration >= 1.0.0",
+      "ShopManagement.Infrastructure.InventoryAcl >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10386,6 +10437,9 @@
             },
             "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
               "projectPath": "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"
+            },
+            "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Infrastructture.InventoryAcl\\ShopManagement.Infrastructure.InventoryAcl.csproj": {
+              "projectPath": "F:\\New Shop Project\\Code\\LampShade\\ShopManagement.Infrastructture.InventoryAcl\\ShopManagement.Infrastructure.InventoryAcl.csproj"
             }
           }
         }

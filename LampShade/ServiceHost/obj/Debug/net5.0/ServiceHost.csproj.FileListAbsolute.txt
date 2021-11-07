@@ -273,3 +273,9 @@ F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extens
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\CheckOut.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\RestSharp.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\FinalCheckOut.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Orders\Index.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Orders\Items.cshtml.g.cs
