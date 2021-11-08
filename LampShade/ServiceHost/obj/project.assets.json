@@ -3585,7 +3585,9 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+          "ShopManagement.Infrastructure.AccountAcl": "1.0.0",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0",
+          "ShopManagement.Infrastructure.InventoryAcl": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ShopManagement.Configuration.dll": {}
@@ -3606,6 +3608,20 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Domain.dll": {}
+        }
+      },
+      "ShopManagement.Infrastructure.AccountAcl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Infrastructure.AccountAcl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Infrastructure.AccountAcl.dll": {}
         }
       },
       "ShopManagement.Infrastructure.EFCore/1.0.0": {
@@ -10522,6 +10538,11 @@
       "type": "project",
       "path": "../ShopManagement.Domain/ShopManagement.Domain.csproj",
       "msbuildProject": "../ShopManagement.Domain/ShopManagement.Domain.csproj"
+    },
+    "ShopManagement.Infrastructure.AccountAcl/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Infrastructure.AccountAcl/ShopManagement.Infrastructure.AccountAcl.csproj",
+      "msbuildProject": "../ShopManagement.Infrastructure.AccountAcl/ShopManagement.Infrastructure.AccountAcl.csproj"
     },
     "ShopManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",

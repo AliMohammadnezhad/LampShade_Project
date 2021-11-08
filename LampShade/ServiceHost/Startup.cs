@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using _0_FrameWork.Application;
+using _0_FrameWork.Application.Sms;
 using _0_FrameWork.Application.ZarinPal;
 using _0_FrameWork.Domain.Permissions;
 using _0_FrameWork.Infrastructure;
@@ -49,7 +50,7 @@ namespace ServiceHost
             services.AddTransient<IAuthHelper,AuthHelper>();
             services.AddTransient<IPermissionExposer,_MenuPagePermissionExposer>();
             services.AddTransient<IZarinPalFactory,ZarinPalFactory>();
-            services.AddTransient<IShopInventoryAcl,ShopInventoryAcl>();
+            services.AddTransient<ISmsSender,SmsSender>();
 
        
 

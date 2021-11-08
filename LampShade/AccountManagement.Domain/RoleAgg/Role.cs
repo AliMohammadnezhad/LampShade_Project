@@ -19,6 +19,8 @@ namespace AccountManagement.Domain.RoleAgg
         {
             Name = name;
             CreationDate = DateTime.Now;
+            Permissions = permissions;
+            Accounts = new List<Account>();
         }
 
         public void Edit(string name,List<Permission> permissions)

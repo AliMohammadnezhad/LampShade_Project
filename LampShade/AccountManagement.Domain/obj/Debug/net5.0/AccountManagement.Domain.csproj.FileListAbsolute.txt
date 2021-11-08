@@ -14,3 +14,4 @@ F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Debug\net5.0\Acc
 F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Debug\net5.0\ref\AccountManagement.Domain.dll
 F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.csproj.CopyComplete

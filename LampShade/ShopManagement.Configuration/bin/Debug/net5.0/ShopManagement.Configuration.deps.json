@@ -12,7 +12,9 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+          "ShopManagement.Infrastructure.AccountAcl": "1.0.0",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0",
+          "ShopManagement.Infrastructure.InventoryAcl": "1.0.0"
         },
         "runtime": {
           "ShopManagement.Configuration.dll": {}
@@ -1930,6 +1932,15 @@
           "ShopManagement.Domain.dll": {}
         }
       },
+      "ShopManagement.Infrastructure.AccountAcl/1.0.0": {
+        "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ShopManagement.Infrastructure.AccountAcl.dll": {}
+        }
+      },
       "ShopManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
           "AccountManagement.Infrastructure.EFCore": "1.0.0",
@@ -1939,6 +1950,15 @@
         },
         "runtime": {
           "ShopManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "ShopManagement.Infrastructure.InventoryAcl/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Application.Contract": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ShopManagement.Infrastructure.InventoryAcl.dll": {}
         }
       }
     }
@@ -3148,7 +3168,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ShopManagement.Infrastructure.AccountAcl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ShopManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShopManagement.Infrastructure.InventoryAcl/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

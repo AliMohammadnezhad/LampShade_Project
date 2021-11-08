@@ -67,7 +67,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
         public LoginViewModel GetBy(string username)
         {
-            return _context.Accounts.Select(x => new LoginViewModel
+            var account = _context.Accounts.Select(x => new LoginViewModel
             {
                 Mobile = x.Mobile,
                 Password = x.Password,
@@ -77,6 +77,10 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 FullName = x.FullName,
                 PicturePath = x.ProfilePhoto
             }).FirstOrDefault(x => x.Username == username);
+
+
+
+            return account;
         }
 
         public List<AccountViewModel> GetAccounts()

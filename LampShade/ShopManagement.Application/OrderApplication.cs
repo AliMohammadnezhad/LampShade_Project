@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
+using _0_FrameWork.Application.Sms;
 using Microsoft.Extensions.Configuration;
 using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Domain.OrderAgg;
@@ -13,11 +14,15 @@ namespace ShopManagement.Application
         private readonly IShopInventoryAcl _shopInventory;
         private readonly IOrderRepository _orderRepository;
         private readonly IConfiguration _configuration;
-        public OrderApplication(IOrderRepository orderRepository,  IConfiguration configuration, IShopInventoryAcl shopInventory)
+        private readonly IShopAccountAcl _accountAcl;
+        private readonly ISmsSender _sender;
+        public OrderApplication(IOrderRepository orderRepository,  IConfiguration configuration, IShopInventoryAcl shopInventory, IShopAccountAcl accountAcl, ISmsSender sender)
         {
             _orderRepository = orderRepository;
             _configuration = configuration;
             _shopInventory = shopInventory;
+            _accountAcl = accountAcl;
+            _sender = sender;
         }
 
 
@@ -46,6 +51,9 @@ namespace ShopManagement.Application
             order.SetIssueTrackingNo(issueTrackingNo);
             if (!_shopInventory.ReduceFromInventory(order.Items)) return null;
             _orderRepository.SaveChange();
+            var (fullName, mobile) = _accountAcl.GetAccountForSendSmsBy(order.AccountId);
+            var message = $"{fullName}گرامی سفارش شما با شماره پیگیری {issueTrackingNo} ثبت و درحال پیگیری می باشد باتشکر از شما ";
+            _sender.SendSms(message,mobile);
             return issueTrackingNo;
 
         }

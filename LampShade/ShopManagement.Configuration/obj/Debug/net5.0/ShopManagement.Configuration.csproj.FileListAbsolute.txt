@@ -53,3 +53,7 @@ F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0
 F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.csproj.CopyComplete
+F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.AccountAcl.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.AccountAcl.pdb

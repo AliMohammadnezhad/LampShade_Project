@@ -48,3 +48,4 @@ F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\AccountM
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\AccountManagement.Domain.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\01_LampShadeQueries\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\01_LampShadeQueries\obj\Debug\net5.0\01_LampShadeQueries.csproj.CopyComplete
