@@ -143,24 +143,25 @@ function changeCartItemCount(id, totalId, count) {
 
 
     const settings = {
-        "url": "https://localhost:5001/api/inventory",
+        "url": "https://localhost:5001/api/Inventory",
         "method": "POST",
         "timeout": 0,
         "headers": {
             "Content-Type": "application/json"
         },
-        "data": JSON.stringify({ "productId": id, "count": count })
+        "data": JSON.stringify({
+            "Count": count,
+            "ProductID": id
+        }),
     };
 
     $.ajax(settings).done(function (data) {
-        if (data.isStock == false) {
-            const warningsDiv = $('#productStockWarnings');
+        if (data.isInStock == false) {
+            const warningsDiv = $('#checkStatusContainer');
             if ($(`#${id}`).length == 0) {
                 warningsDiv.append(`
-                    <div class="alert alert-warning" id="${id}">
-                        <i class="fa fa-warning"></i> کالای
-                        <strong>${data.productName}</strong>
-                        در انبار کمتر از تعداد درخواستی موجود است.
+                    <div class="alert alert-danger mt-2" id="${id}">
+                       <strong> مقدار درخواستی شما در انبار وجود ندارد </strong>
                     </div>
                 `);
             }

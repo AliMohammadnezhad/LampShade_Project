@@ -279,3 +279,5 @@ F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.I
 F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Orders\Index.cshtml.g.cs
 F:\New Shop Project\Code\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Orders\Items.cshtml.g.cs
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Presentation.Api.dll
+F:\New Shop Project\Code\LampShade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Presentation.Api.pdb

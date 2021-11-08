@@ -67,12 +67,14 @@
                                                     <td class="pro-quantity">
                                                         <div class="quantity-selection">
                                                             <input type="number" value="@item.Count" min="1" onchange="changeCartItemCount('@item.Id','TotoalPrice-@item.Id',this.value)">
-                                                            @if (!item.InStock)
-                                                            {
-                                                                <div class="alert alert-danger mt-2">
-                                                                    <strong> مقدار درخواستی شما در انبار وجود ندارد </strong> 
-                                                                </div>
-                                                            }
+                                                            <div id="checkStatusContainer">
+                                                                @if (!item.InStock)
+                                                                {
+                                                                    <div class="alert alert-danger mt-2" id="@item.Id">
+                                                                        <strong> مقدار درخواستی شما در انبار وجود ندارد </strong> 
+                                                                    </div>
+                                                                }
+                                                            </div>
                                                         </div>
                                                     </td>
                                                     <td class="pro-subtotal" id="TotoalPrice-@item.Id">
