@@ -1,0 +1,98 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Areas.Panel.Pages.OrderTrackingModel
+@{
+    ViewData["Title"] = "پیگیری سفارش";
+}
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>پیگیری سفارش</span>
+
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row">
+            <form class="form-inline" method="get">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label class="sr-only">شماره پیگیری تراکنش</label>
+                    <input type="text" class="form-control" name="issueNumber" placeholder="شماره تراکنش">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">رهگیری</button>
+            </form>
+        </div>
+        @if (Model.Command != null)
+        {
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">پرداخت کننده</th>
+                            <th scope="col">کل مبلغ قابل پرداخت</th>
+                            <th scope="col">مبلغ تخفیف</th>
+                            <th scope="col">مبلغ پرداخت شده</th>
+                            <th scope="col">روش پرداخت</th>
+                            <th scope="col">شماره پیگیری</th>
+                            <th scope="col">تاریخ ثبت شفارس</th>
+                            <th scope="col">وضعیت</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">@Model.Command.OrderId</th>
+                            <td>@Model.Command.AccountName</td>
+                            <td>@Model.Command.TotalAmount.ToMoney()</td>
+                            <td>@Model.Command.DiscountAmount.ToMoney()</td>
+                            <td>@Model.Command.PayAmount.ToMoney()</td>
+                            <td>@Model.Command.PaymentMethod</td>
+                            <td>@Model.Command.IssueTrackingNo</td>
+                            <td>@Model.Command.DateTime</td>
+                            @if (Model.Command.IsPaid)
+                            {
+                                <td class="text-success">
+                                    پرداخت شده
+                                </td>
+                            }
+                            else if (Model.Command.IsCanceled)
+                            {
+                                <td class="text-danger">
+                                    کنسل شده
+                                </td>
+                            }
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row mt-5">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">نام محصول</th>
+                            <th scope="col">مبلغ محصول</th>
+                            <th scope="col">درصد تخفیف</th>
+                            <th scope="col">تعداد</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Command.OrderItems)
+                        {
+                            <tr>
+                                <th scope="row">@item.OrderId</th>
+                                <td>@item.ProductName</td>
+                                <td>@item.UnitPrice.ToMoney()</td>
+                                <td>@item.DiscountRate</td>
+                                <td>@item.Count</td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

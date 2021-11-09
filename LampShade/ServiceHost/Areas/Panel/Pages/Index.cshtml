@@ -1,0 +1,63 @@
+﻿@page
+@model ServiceHost.Areas.Panel.Pages.IndexModel
+@{
+    ViewData["Title"] = "داشبورد";
+
+}
+
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>اطلاعات مربوط به کاربر: @Model.User.FullName</span>
+        <span class="badge badge-success">@Model.User.Role</span>
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row">
+
+            <div class="col-12 col-lg-4 mt-4">
+                <div class="content-section">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        نام کاربری :
+                    </span>
+                    <label>@Model.User.UserName</label>
+                </div>
+            </div>
+
+    
+
+            <div class="col-12 col-lg-4 mt-4">
+                <div class="content-section">
+                    <span>
+                        <i class="fa fa-mobile"></i>
+                        شماره تماس : @Model.User.Mobile
+                    </span>
+                    <label></label>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-lg-4 mt-4">
+                <div class="content-section">
+                    <span>
+                        <i class="fa fa-tv"></i>
+                        تاریخ ثبت نام :
+                    </span>
+                    <label>@Model.User.CreationDate</label>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@section Script{
+    <script src="~/AdminTheme/assets/js/jquery.min.js"></script>
+    <script src="~/AdminTheme/assets/js/jquery.validate.min.js"></script>
+    <script src="~/AdminTheme/assets/js/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@section Style{
+}

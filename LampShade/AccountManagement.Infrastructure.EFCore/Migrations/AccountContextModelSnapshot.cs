@@ -62,6 +62,50 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("AccountManagement.Domain.AddressAgg.Address", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("AccountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullAddress")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)");
+
+                    b.Property<int>("ZipCode")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId")
+                        .IsUnique();
+
+                    b.ToTable("Addresses");
+                });
+
             modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
                 {
                     b.Property<long>("Id")
@@ -93,6 +137,17 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("AccountManagement.Domain.AddressAgg.Address", b =>
+                {
+                    b.HasOne("AccountManagement.Domain.AccountAgg.Account", "Account")
+                        .WithOne("Address")
+                        .HasForeignKey("AccountManagement.Domain.AddressAgg.Address", "AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
             modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
                 {
                     b.OwnsMany("AccountManagement.Domain.RoleAgg.Permission", "Permissions", b1 =>
@@ -106,7 +161,8 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                                 .HasColumnType("int");
 
                             b1.Property<string>("Name")
-                                .HasColumnType("nvarchar(max)");
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
 
                             b1.Property<long>("RoleId")
                                 .HasColumnType("bigint");
@@ -124,6 +180,11 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         });
 
                     b.Navigation("Permissions");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.Account", b =>
+                {
+                    b.Navigation("Address");
                 });
 
             modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>

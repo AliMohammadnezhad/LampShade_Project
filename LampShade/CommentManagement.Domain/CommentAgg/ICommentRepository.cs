@@ -10,5 +10,7 @@ namespace CommentManagement.Domain.CommentAgg
         List<CommentViewModel> SearchProducts(CommentSearchModel searchModel);
         List<CommentViewModel> SearchArticles();
         List<CommentViewModel> SearchArticles(CommentSearchModel searchModel);
+        List<CommentViewModel> GetLatestComment();
+        double TotalComment();
     }
 }

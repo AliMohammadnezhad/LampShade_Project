@@ -12,4 +12,3 @@ F:\New Shop Project\Code\LampShade\BloggingManagement.Application.Contract\obj\D
 F:\New Shop Project\Code\LampShade\BloggingManagement.Application.Contract\obj\Debug\net5.0\BloggingManagement.Application.Contract.dll
 F:\New Shop Project\Code\LampShade\BloggingManagement.Application.Contract\obj\Debug\net5.0\ref\BloggingManagement.Application.Contract.dll
 F:\New Shop Project\Code\LampShade\BloggingManagement.Application.Contract\obj\Debug\net5.0\BloggingManagement.Application.Contract.pdb
-F:\New Shop Project\Code\LampShade\BloggingManagement.Application.Contract\obj\Debug\net5.0\BloggingManagement.Application.Contract.csproj.CopyComplete

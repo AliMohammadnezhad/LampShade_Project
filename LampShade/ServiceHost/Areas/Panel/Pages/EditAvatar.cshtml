@@ -1,0 +1,60 @@
+﻿@page
+@model ServiceHost.Areas.Panel.Pages.EditAvatarModel
+@{
+    Layout = "Shared/_AccountLayout";
+    ViewData["Title"] = "ویرایش تصویر کاربری";
+}
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>
+            ویرایش تصویر پروفایل کاربری
+
+        </span>
+        @if (Model.Message != null)
+        {
+            <span class="alert alert-primary" role="alert">
+                @Model.Message
+            </span>
+        }
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row text-center">
+            <form method="post" class="w-100" enctype="multipart/form-data">
+
+
+                <div class="form-legal-item">
+                    <div class="avatar-upload col-md-8">
+                        <div class="avatar-edit">
+                            <input asp-for="Command.Picture" type='file' id="imageUpload" value="/UploadedFile/Pictures/@Model.Command.PicturePath"  accept=".png, .jpg, .jpeg" />
+                            <label for="imageUpload"></label>
+                        </div>
+                        <div class="avatar-preview">
+                            <div id="imagePreview" style="background-image: url('/UploadedFile/Pictures/@Model.Command.PicturePath'); ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="Command.Picture"></span>
+
+
+
+
+                <input type="hidden" asp-for="Command.AccountId" />
+                <button type="submit" class="btn btn-primary"> ویرایش</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+@section Script
+{
+    <script src="~/Theme/assets/js/UploadAvatar.js"></script>
+}
+
+@section Style
+{
+    <link href="~/Theme/assets/css/UploadAvatar.css" rel="stylesheet" />
+}

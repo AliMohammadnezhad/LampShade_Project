@@ -1,4 +1,5 @@
 ﻿using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.AddressAgg;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -20,6 +21,8 @@ namespace AccountManagement.Infrastructure.EFCore.Mapping
             builder.HasOne(x => x.Role)
                 .WithMany(x => x.Accounts)
                 .HasForeignKey(x => x.RoleId);
+
+
         }
     }
 }

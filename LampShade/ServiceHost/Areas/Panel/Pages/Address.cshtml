@@ -1,0 +1,62 @@
+﻿@page
+@model ServiceHost.Areas.Panel.Pages.AddressModel
+@{
+    ViewData["Title"] = "ویرایش آدرس";
+}
+
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>ثبت و ویرایش آدرس</span>
+        @if (Model.Message != null)
+        {
+            <span class="alert alert-primary" role="alert">
+                @Model.Message
+            </span>
+        }
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row">
+            <div class="alert alert-warning w-75">
+                <strong>توجه</strong> محصول خریداری شده به آدرس که در این سیستم ثبت شده است ارسال خواهد شد لطفا در وارد کردن آن دقت کافی را داشته باشد.
+            </div>
+            <form method="post" class="w-100">
+                <div class="form-row">
+                    <div class="col-3">
+                        <label asp-for="Command.Country">كشور</label>
+                        <input asp-for="Command.Country" type="text" class="form-control" placeholder="کشور">
+                        <span asp-validation-for="Command.Country"></span>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Command.State">استان</label>
+                        <input asp-for="Command.State" type="text" class="form-control" placeholder="استان">
+                        <span asp-validation-for="Command.State"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Command.City">شهر</label>
+                        <input asp-for="Command.City" type="text" class="form-control" placeholder="شهر">
+                        <span asp-validation-for="Command.City"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Command.ZipCode"> كد پستي</label>
+                        <input asp-for="Command.ZipCode" type="text" class="form-control" placeholder="کدپستی">
+                        <span asp-validation-for="Command.ZipCode"></span>
+
+                    </div>
+                </div>
+   
+                <div class="form-group">
+                    <label asp-for="Command.FullAddress" >آدرس کامل</label>
+                    <textarea asp-for="Command.FullAddress" class="form-control" rows="3" placeholder="آدرس کامل"></textarea>
+                    <span asp-validation-for="Command.FullAddress"></span>
+
+                </div>
+                <input type="hidden" asp-for="Command.AccountId" value="@Model.AccountId"/>
+                <button class="btn btn-primary" type="submit">ثبت / ویرایش</button>
+            </form>
+
+        </div>
+    </div>
+</div>

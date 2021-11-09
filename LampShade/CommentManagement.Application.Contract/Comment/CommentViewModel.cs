@@ -3,6 +3,7 @@
     public class CommentViewModel
     {
         public long CommentId { get; set; }
+        public int CommentType{ get; set; }
         public long OwnerRecordId { get; set; }
         public string CreateDate { get; set; }
         public string Name { get; set; }

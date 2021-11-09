@@ -83,5 +83,10 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Name = x.Name
             }).ToList();
         }
+
+        public double GetAllProductCount()
+        {
+            return _context.Products.Count();
+        }
     }
 }

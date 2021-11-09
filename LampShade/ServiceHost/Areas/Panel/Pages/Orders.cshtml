@@ -1,0 +1,117 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Areas.Panel.Pages.OrdersModel
+@{
+    ViewData["Title"] = "سفارشات من";
+}
+
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>سفارش های انجام شده</span>
+
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">پرداخت کننده</th>
+                        <th scope="col">کل مبلغ قابل پرداخت</th>
+                        <th scope="col">مبلغ تخفیف</th>
+                        <th scope="col">مبلغ پرداخت شده</th>
+                        <th scope="col">روش پرداخت</th>
+                        <th scope="col">شماره پیگیری</th>
+                        <th scope="col">تاریخ ثبت شفارس</th>
+                        <th scope="col">وضعیت</th>
+                        <th scope="col">آیتم ها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <tr>
+                            <th scope="row">@order.OrderId</th>
+                            <td>@order.AccountName</td>
+                            <td>@order.TotalAmount.ToMoney()</td>
+                            <td>@order.DiscountAmount.ToMoney()</td>
+                            <td>@order.PayAmount.ToMoney()</td>
+                            <td>@order.PaymentMethod</td>
+                            <td>@order.IssueTrackingNo</td>
+                            <td>@order.DateTime</td>
+                            @if (order.IsPaid)
+                            {
+                                <td class="text-success">
+                                    پرداخت شده
+                                </td>
+                            }
+                            else if (order.IsCanceled)
+                            {
+                                <td class="text-danger">
+                                    کنسل شده
+                                </td>
+                            }
+                            <td>
+                                <button type="button" class="btn btn-primary" id="OrderItems" data-toggle="modal" onclick="ShowItem(@order.OrderId)" data-action='@Url.Page("./Orders", "Items")'>
+                                    مشاهده آیتم ها
+                                </button>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">محصولات مربوط به این سفارش</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="DataContent">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">خروج</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script
+{
+    <script>
+
+        function ShowItem(id) {
+            const url = document.querySelector('#OrderItems').dataset.action;
+            $.ajax({
+                type: 'Get',
+                url: url,
+                data: { "id": id },
+              
+               
+
+                success: function(data) {
+                    console.log(data);
+                    $('#DataContent').html(data);
+                    $('#myModal').modal('show');
+                },
+                error: function(data) {
+                    console.log(data);
+                    
+                }
+            });
+        }
+    </script>
+}

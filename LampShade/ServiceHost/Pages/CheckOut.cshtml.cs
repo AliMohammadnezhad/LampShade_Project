@@ -6,6 +6,7 @@ using _0_Framework.Application;
 using _0_FrameWork.Application.ZarinPal;
 using _01_LampShadeQueries.Contracts.Product;
 using _01_LampShadeQueries.Contracts.ShopOrder;
+using AccountManagement.Application.Contract.Address;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,6 +17,7 @@ namespace ServiceHost.Pages
 {
     public class CheckOutModel : PageModel
     {
+
         public Cart CheckOutCart;
         private const string CookieName = "cart-items";
         private readonly ICartCalculateService _calculateService;
@@ -33,6 +35,7 @@ namespace ServiceHost.Pages
             _productQuery = productQuery;
             _orderApplication = orderApplication;
             _zarinPalFactory = zarinPalFactory;
+
         }
 
         public IActionResult OnGet()
@@ -43,6 +46,8 @@ namespace ServiceHost.Pages
                 return RedirectToPage("/Index");
             if (!_authHelper.IsAuthenticated())
                 return RedirectToPage("/Account");
+
+
             var item = serializer.Deserialize<List<CartItem>>(cartCookie);
             item.ForEach(x => x.CalculateTotalPrice());
 
@@ -59,6 +64,7 @@ namespace ServiceHost.Pages
             var result = _productQuery.CheckCartItemInventoryStatus(cart.CartItems);
             if (result.Any(x => !x.InStock))
                 return Redirect("/Cart");
+
             var currentUserId = _authHelper.CurrentAccountId();
             var orderId = _orderApplication.PlaceOrder(cart, currentUserId);
             var accountInfo = _authHelper.CurrentAccountInfo();

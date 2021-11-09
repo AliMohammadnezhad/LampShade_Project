@@ -10,7 +10,6 @@ using BloggingManagement.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Configuration;
-using InventoryManagement.Infrastructure.EfCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,8 +19,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceHost.Controller;
 using ShopManagement.Configuration;
-using ShopManagement.Domain.Service;
-using ShopManagement.Infrastructure.InventoryAcl;
 
 namespace ServiceHost
 {
@@ -78,6 +75,7 @@ namespace ServiceHost
                 options.AddPolicy("Account", builder =>
                     builder.RequireRole((AccountsType.Administrator).ToString()));
 
+
             });
 
             services.AddRazorPages()
@@ -88,6 +86,7 @@ namespace ServiceHost
                 options.Conventions.AuthorizeAreaFolder("Administration", "/Shop", "Shop");
                 options.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
                 options.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
+                options.Conventions.AuthorizeAreaFolder("Panel", "/");
             }).AddApplicationPart(typeof(InventoryController).Assembly);
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

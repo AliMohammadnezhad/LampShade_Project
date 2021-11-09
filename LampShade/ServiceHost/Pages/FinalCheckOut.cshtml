@@ -11,7 +11,7 @@
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <div class="breadcrumb-content">
                         <h1 class="breadcrumb-content__title">نتیجه پرداخت</h1>
-                        <ul class="breadcrumb-content__page-map h4">
+                        <ul class="breadcrumb-content__page-map ">
                             <li>
                                 <a asp-page="./Index">صفحه اصلی</a>
                             </li>
@@ -41,16 +41,16 @@
                                 {
                                     <div class="alert alert-success text-center" role="alert">
                                         <h1 class="alert-heading">پرداخت با موفیت انجام شد</h1>
-                                        <h3>سفارش شما ثبت و در حال پیگیری میباشد ! با تشکر از اعتماد شما </h3>
+                                        <h5>سفارش شما ثبت و در حال پیگیری میباشد ! با تشکر از اعتماد شما </h5>
                                         <hr>
-                                        <h4 class="mb-0">کد پیگیری شما : @Model.Payment.IssueTrackingNo مي باشد</h4>
+                                        <p class="mb-0">کد پیگیری شما : @Model.Payment.IssueTrackingNo مي باشد</p>
                                     </div>
                                 }
                                 else
                                 {
                                     <div class="alert alert-success text-center" role="alert">
                                         <h1 class="alert-heading">ثبت سفارش به صورت نقدی با موفقیت انجام پذیرفت</h1>
-                                        <h3>با این روش پس از تایید سفارش از طرف شما کارشناسان ما با شما تماس گرفته و پس ازپیگیری های انجام شده سفارش شما ثبت و ارسال خواهد شد  </h3>
+                                        <h5>با این روش پس از تایید سفارش از طرف شما کارشناسان ما با شما تماس گرفته و پس ازپیگیری های انجام شده سفارش شما ثبت و ارسال خواهد شد  </h5>
                                         <hr>
                                     </div>
                                 }
@@ -59,7 +59,7 @@
                             {
                                 <div class="alert alert-warning text-center" role="alert">
                                     <h2 class="alert-heading">پرداخت وجه با شكست مواجه شده است</h2>
-                                    <h4>در صورت كسر مبلغ از حساب شما حداكثر تا 24 ساعت آينده عودت خواهد داده شد .</h4>
+                                    <h5>در صورت كسر مبلغ از حساب شما حداكثر تا 24 ساعت آينده عودت خواهد داده شد .</h5>
                                     <hr>
                                 </div>
                             }
@@ -68,7 +68,7 @@
                         {
                             <div class="alert alert-primary text-center" role="alert">
                                 <h2 class="alert-heading">کاربرگرامی !</h2>
-                                <h4>پرداختی برای شما ثبت نشده است</h4>
+                                <h5>پرداختی برای شما ثبت نشده است</h5>
                                 <hr>
                             </div>
                         }

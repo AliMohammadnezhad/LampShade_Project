@@ -1,7 +1,9 @@
 ﻿using AccountManagement.Application;
 using AccountManagement.Application.Contract.Account;
+using AccountManagement.Application.Contract.Address;
 using AccountManagement.Application.Contract.Role;
 using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.AddressAgg;
 using AccountManagement.Domain.RoleAgg;
 using AccountManagement.Infrastructure.EFCore;
 using AccountManagement.Infrastructure.EFCore.Repository;
@@ -19,6 +21,9 @@ namespace AccountManagement.Configuration
 
             services.AddTransient<IRoleApplication, RoleApplication>();
             services.AddTransient<IRoleRepository, RoleRepository>();
+
+            services.AddTransient<IAddressApplication, AddressApplication>();
+            services.AddTransient<IAddressRepository, AddressRepository>();
 
             services.AddDbContext<AccountContext>(options => options.UseSqlServer(connectionString));
         }

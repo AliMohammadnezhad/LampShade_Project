@@ -11,7 +11,7 @@
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <div class="breadcrumb-content">
                         <h1 class="breadcrumb-content__title">@Model.Product.Name</h1>
-                        <ul class="breadcrumb-content__page-map h4">
+                        <ul class="breadcrumb-content__page-map">
                             <li>
                                 <a asp-page="./Index">صفحه اصلی</a>
                             </li>
@@ -157,7 +157,7 @@
                                             }
                                         </p>
 
-                                        <p class="product-description h5">
+                                        <p class="product-description ">
                                             @Model.Product.ShortDescription
                                         </p>
 
@@ -270,7 +270,7 @@
                                                                 </div>
                                                                 <div class="col-12 form-group">
                                                                     <label >متن دیدگاه</label>
-                                                                    <textarea class="input-text-size" name="CommentText" id="your-review" placeholder="Write a review"></textarea>
+                                                                    <textarea class="input-text-size" name="CommentText" id="your-review" placeholder="متن پیام"></textarea>
                                                                 </div>
                                                                 <input hidden="hidden" name="ProductSlug" value="@Model.Product.Slug" />
                                                                 <input hidden="hidden" name="OwnerRecordId" value="@Model.Product.Id" />

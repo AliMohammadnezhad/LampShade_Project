@@ -13,6 +13,13 @@ namespace AccountManagement.Application.Contract.Account
         List<AccountViewModel> Search(AccountSearchModel searchModel);
         EditAccount GetDetails(long id);
         List<AccountViewModel> GetAccounts();
+        PanelAccountViewModel GetAccountBy(long id);
+        UserEditAccount GetDetailEditAccount(long id);
+        UserEditAvatar GetAvatar(long id);
+        OperationResult UserEditAccount(UserEditAccount command);
+        OperationResult UserEditAvatar(UserEditAvatar command);
+        OperationResult UserEditPassword(UserEditPassword command);
+
 
     }
 }

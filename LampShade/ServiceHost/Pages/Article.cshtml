@@ -11,7 +11,7 @@
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <div class="breadcrumb-content">
                         <h1 class="breadcrumb-content__title">@Model.Article.Title</h1>
-                        <ul class="breadcrumb-content__page-map h5">
+                        <ul class="breadcrumb-content__page-map">
                             <li>
                                 <a asp-page="./Index">صفحه اصلی</a>
                             </li>
@@ -51,7 +51,7 @@
                                                 <img src="~/UploadedFile/Pictures/@Model.Article.Picture" class="img-fluid" alt="@Model.Article.PictureAlt">
                                             </div>
                                         </div>
-                                        <div class="post-content">
+                                        <div class="post-content" id="ArticleContent">
                                             <blockquote>
                                                 <p class="h6">
                                                     @Model.Article.ShortDescription
@@ -59,7 +59,7 @@
                                             </blockquote>
 
                                             <p class="h6">
-                                                @Model.Article.Description
+                                                @Html.Raw(@Model.Article.Description)
                                             </p>
 
                                         </div>
@@ -201,16 +201,13 @@
                                             <!--=======  End of comment form  =======-->
                                         </div>
 
-                                        <!--=======  End of comment form container  =======-->
 
                                     </div>
-
-
-                                    <!--=====  End of Comment section  ======-->
                                 </div>
-                                <!--=======  End of blog page content  =======-->
                             </div>
                             <div class="col-lg-3 order-2 order-lg-2">
+
+
                                 <div class="page-sidebar-wrapper">
                                     <div class="single-sidebar-widget">
                                         <h4 class="single-sidebar-widget__title">دسته بندی ها</h4>
@@ -240,14 +237,14 @@
                                             {
                                                 <div class="single-block d-flex">
                                                     <div class="image">
-                                                        <a href="blog-post-image-format.html">
+                                                        <a asp-page="/Article" asp-route-id="@item.Slug">
                                                             <img src="~/UploadedFile/Pictures/@item.Picture"
                                                                  class="img-fluid" alt="@item.PictureAlt">
                                                         </a>
                                                     </div>
                                                     <div class="content">
                                                         <p>
-                                                            <a href="blog-post-image-format.html">
+                                                            <a asp-page="/Article" asp-route-id="@item.Slug">
                                                                 @item.Title
                                                             </a> <span>@item.StableDate</span>
                                                         </p>
@@ -278,3 +275,4 @@
         </div>
     </div>
 </div>
+

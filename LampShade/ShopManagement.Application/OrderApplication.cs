@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_FrameWork.Application.Sms;
@@ -75,11 +76,52 @@ namespace ShopManagement.Application
             return _orderRepository.GetItemsBy(id);
         }
 
+        public List<OrderViewModel> GateLatestOrders()
+        {
+            return _orderRepository.GetLatestOrders();
+        }
+
         public void Cancel(long id)
         {
             var order = _orderRepository.Get(id);
             order.Cancel();
             _orderRepository.SaveChange();
+        }
+
+        public (double DiscountSales, double Sales) CalculateOrdersSales()
+        {
+            return _orderRepository.CalculateOrdersSales();
+        }
+
+        public List<SalesInMothViewModel> GetSalesInMoth()
+        {
+            var salesInMoths = new List<SalesInMothViewModel>();
+            var orders = _orderRepository.GetSalesInMoth();
+            var months = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+         
+            foreach (var month in months)
+            {
+                var item = new SalesInMothViewModel
+                {
+                    Count = orders.Count(x => x.CreationDateTime.GetFarsiMoth() == month),
+                    PayAmount = orders.Where(x => x.CreationDateTime.GetFarsiMoth() == month).Sum(x => x.PayAmount)
+                    
+                };
+                salesInMoths.Add(item);
+             
+            }
+
+            return salesInMoths;
+        }
+
+        public double GetAllOrdersCount()
+        {
+            return _orderRepository.GetAllOrderCount();
+        }
+
+        public OrderViewModel GetOrderBy(long accountId, string issueTrackingNumber)
+        {
+            return _orderRepository.GetOrderBy(accountId, issueTrackingNumber);
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model dynamic
+
+<div class="breadcrumb-area section-space--half">
+    <div class="container wide">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-wrapper breadcrumb-bg">
+                    <div class="breadcrumb-content">
+                        @if (ViewBag.avatar == null)
+                        {
+                            <img src="~/Theme/assets/img/img_avatar.png" alt="Avatar" class="avatar">
+                        }
+                        else
+                        {
+                            <img src="~/UploadedFile/Pictures/@ViewBag.avatar" alt="Avatar" class="avatar">
+
+
+                        }
+                        <li class="mt-2">
+                            @ViewBag.FullName گرامی خوش آمدید
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

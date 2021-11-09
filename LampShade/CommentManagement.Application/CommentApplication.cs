@@ -64,5 +64,14 @@ namespace CommentManagement.Application
             return operationResult.Succeed();
         }
 
+        public List<CommentViewModel> GetLatestComment()
+        {
+            return _commentRepository.GetLatestComment();
+        }
+
+        public double TotalComment()
+        {
+            return _commentRepository.TotalComment();
+        }
     }
 }

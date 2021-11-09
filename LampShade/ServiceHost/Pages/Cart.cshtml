@@ -12,7 +12,7 @@
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <div class="breadcrumb-content">
                         <h1 class="breadcrumb-content__title">سبد خرید</h1>
-                        <ul class="breadcrumb-content__page-map h4">
+                        <ul class="breadcrumb-content__page-map ">
                             <li>
                                 <a asp-page="./Index">صفحه اصلی</a>
                             </li>
@@ -33,6 +33,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-wrapper">
+                   
+                       @if (Model.HasAddress)
+                       {
+                           <div class="alert alert-danger" role="alert">
+                               کاربرگرامی جهت ادامه خرید می باید در بخش پنل کاربری آدرس خود را تکمیل نمایید <a asp-area="Panel" asp-page="Address" class="alert-link">تکمیل آدرس</a>
+                           </div>
+                       }
+                    
                     <div class="page-content-wrapper">
                         @if (Model.CartItems != null && Model.CartItems.Count > 0)
                         {
@@ -40,55 +48,55 @@
                                 <div class="cart-table table-responsive">
                                     <table class="table">
                                         <thead>
-                                            <tr>
-                                                <th class="pro-thumbnail">تصویر محصول</th>
-                                                <th class="pro-title">نام محصول</th>
-                                                <th class="pro-price">قیمت واحد</th>
-                                                <th class="pro-quantity">تعداد</th>
-                                                <th class="pro-subtotal">جمع کل</th>
-                                                <th class="pro-remove">حذف از سبد خرید</th>
-                                            </tr>
+                                        <tr>
+                                            <th class="pro-thumbnail">تصویر محصول</th>
+                                            <th class="pro-title">نام محصول</th>
+                                            <th class="pro-price">قیمت واحد</th>
+                                            <th class="pro-quantity">تعداد</th>
+                                            <th class="pro-subtotal">جمع کل</th>
+                                            <th class="pro-remove">حذف از سبد خرید</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach (var item in Model.CartItems)
-                                            {
-                                                <tr>
-                                                    <td class="pro-thumbnail">
-                                                        <a>
-                                                            <img src="/UploadedFile/Pictures/@item.Picture" class="img-fluid" alt="Product">
-                                                        </a>
-                                                    </td>
-                                                    <td class="pro-title">
-                                                        <a>@item.Name</a>
-                                                    </td>
-                                                    <td class="pro-price">
-                                                        <span>@item.Price تومان</span>
-                                                    </td>
-                                                    <td class="pro-quantity">
-                                                        <div class="quantity-selection">
-                                                            <input type="number" value="@item.Count" min="1" onchange="changeCartItemCount('@item.Id','TotoalPrice-@item.Id',this.value)">
-                                                            <div id="checkStatusContainer">
-                                                                @if (!item.InStock)
-                                                                {
-                                                                    <div class="alert alert-danger mt-2" id="@item.Id">
-                                                                        <strong> مقدار درخواستی شما در انبار وجود ندارد </strong> 
-                                                                    </div>
-                                                                }
-                                                            </div>
+                                        @foreach (var item in Model.CartItems)
+                                        {
+                                            <tr>
+                                                <td class="pro-thumbnail">
+                                                    <a>
+                                                        <img src="/UploadedFile/Pictures/@item.Picture" class="img-fluid" alt="Product">
+                                                    </a>
+                                                </td>
+                                                <td class="pro-title">
+                                                    <a>@item.Name</a>
+                                                </td>
+                                                <td class="pro-price">
+                                                    <span>@item.Price تومان</span>
+                                                </td>
+                                                <td class="pro-quantity">
+                                                    <div class="quantity-selection">
+                                                        <input type="number" value="@item.Count" min="1" onchange="changeCartItemCount('@item.Id', 'TotoalPrice-@item.Id', this.value)">
+                                                        <div id="checkStatusContainer">
+                                                            @if (!item.InStock)
+                                                            {
+                                                                <div class="alert alert-danger mt-2" id="@item.Id">
+                                                                    <strong> مقدار درخواستی شما در انبار وجود ندارد </strong>
+                                                                </div>
+                                                            }
                                                         </div>
-                                                    </td>
-                                                    <td class="pro-subtotal" id="TotoalPrice-@item.Id">
-                                                        <span> @item.TotalPrice.ToMoney()تومان</span>
-                                                    </td>
-                                                    <td class="pro-remove">
-                                                        <a asp-page="./Cart" asp-page-handler="RemoveFromCart" asp-route-id="@item.Id">
-                                                            <i class="fa fa-trash-o"></i>
-                                                        </a>
-                                                    </td>
-                                         
-                                                </tr>
+                                                    </div>
+                                                </td>
+                                                <td class="pro-subtotal" id="TotoalPrice-@item.Id">
+                                                    <span> @item.TotalPrice.ToMoney()تومان</span>
+                                                </td>
+                                                <td class="pro-remove">
+                                                    <a asp-page="./Cart" asp-page-handler="RemoveFromCart" asp-route-id="@item.Id">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </a>
+                                                </td>
 
-                                            }
+                                            </tr>
+
+                                        }
                                         </tbody>
                                     </table>
                                 </div>

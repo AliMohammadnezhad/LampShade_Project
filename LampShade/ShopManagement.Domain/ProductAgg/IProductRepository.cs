@@ -11,6 +11,6 @@ namespace ShopManagement.Domain.ProductAgg
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         List<ProductViewModel> Search();
         List<ProductViewModel> GetProducts();
-
+        double GetAllProductCount();
     }
 }

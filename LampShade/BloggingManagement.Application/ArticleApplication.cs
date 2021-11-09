@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _0_Framework.Application;
 using _0_FrameWork.Application;
 using BloggingManagement.Application.Contract.Article;
@@ -29,6 +30,10 @@ namespace BloggingManagement.Application
             var slug = command.Slug.Slugify();
             var path = $"ArticleCategoryPictures/{command.CategorySlug}/{slug}";
             var picturePath = _fileUploader.UploadFile(command.Picture, path);
+
+            if (string.IsNullOrWhiteSpace(command.PublishDate))
+                command.PublishDate = DateTime.Now.ToFarsi();
+
             var article = new Article(command.Title, command.ShortDescription, command.Description, picturePath,
                 command.PictureAlt, command.PictureTitle
                 , command.PublishDate.ToGeorgianDateTime(), command.Slug, command.KeyWords, command.MetaDescription,

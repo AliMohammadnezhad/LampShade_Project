@@ -19,4 +19,3 @@ F:\New Shop Project\Code\LampShade\BloggingManagement.Infrastructure.EFCore\obj\
 F:\New Shop Project\Code\LampShade\BloggingManagement.Infrastructure.EFCore\obj\Debug\net5.0\ref\BloggingManagement.Infrastructure.EFCore.dll
 F:\New Shop Project\Code\LampShade\BloggingManagement.Infrastructure.EFCore\obj\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\BloggingManagement.Infrastructure.EFCore\obj\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.genruntimeconfig.cache
-F:\New Shop Project\Code\LampShade\BloggingManagement.Infrastructure.EFCore\obj\Debug\net5.0\BloggingManagement.Infrastructure.EFCore.csproj.CopyComplete

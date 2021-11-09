@@ -11,5 +11,8 @@ namespace AccountManagement.Domain.AccountAgg
         EditAccount GetDetails(long id);
         LoginViewModel GetBy(string username);
         List<AccountViewModel> GetAccounts();
+        PanelAccountViewModel GetAccountBy(long id);
+        UserEditAvatar GetAvatar(long id);
+
     }
 }

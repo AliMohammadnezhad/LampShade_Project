@@ -96,5 +96,39 @@ namespace CommentManagement.Infrastructure.EfCore.Repository
             comments.ForEach(comment => comment.OwnerRecordName = articles.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Title);
             return comments;
         }
+
+        public List<CommentViewModel> GetLatestComment()
+        {
+            var products = _shopContext.Products.Select(x => new { x.Name, x.Id }).ToList();
+            var articles = _bloggingContext.Articles.Select(x => new { x.Title, x.Id }).ToList();
+            var comments = _context.Comments.Select(x => new CommentViewModel
+            {
+                Name = x.Name,
+                CommentId = x.Id,
+                CreateDate = x.CreationDate.ToFarsi(),
+                IsConfirmed = x.IsConfirmed,
+                OwnerRecordId = x.OwnerRecordId,
+                CommentType = x.Type
+            }).OrderByDescending(x => x.CommentId).Take(10).ToList();
+
+            foreach (var comment in comments)
+            {
+                if (comment.CommentType == CommentsType.Product)
+                {
+                    comment.OwnerRecordName = products.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Name;
+                }
+                else
+                {
+                    comment.OwnerRecordName = articles.FirstOrDefault(x => x.Id == comment.OwnerRecordId)?.Title;
+                }
+            }
+
+            return comments;
+        }
+
+        public double TotalComment()
+        {
+            return _context.Comments.Count();
+        }
     }
 }

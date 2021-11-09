@@ -1,0 +1,30 @@
+﻿@using _0_Framework.Application
+@model IEnumerable<ShopManagement.Application.Contracts.Order.OrderItemViewModel>
+
+<div class="row">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">نام محصول</th>
+                <th scope="col">مبلغ محصول</th>
+                <th scope="col">درصد تخفیف</th>
+                <th scope="col">تعداد</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.OrderId</th>
+                    <td>@item.ProductName</td>
+                    <td>@item.UnitPrice.ToMoney()</td>
+                    <td>@item.DiscountRate</td>
+                    <td>@item.Count</td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

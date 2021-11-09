@@ -9,5 +9,7 @@ namespace CommentManagement.Application.Contract.Comment
         List<CommentViewModel> Search(CommentSearchModel searchModel);
         OperationResult Confirm(long id);
         OperationResult UnConfirm(long id);
+        List<CommentViewModel> GetLatestComment();
+        double TotalComment();
     }
 }

@@ -24,9 +24,6 @@ namespace AccountManagement.Infrastructure.EFCore.Mapping
                 navigationBuilder.WithOwner(x => x.Role);
                 navigationBuilder.Property(x => x.Name).HasMaxLength(100);
             });
-
-
-
         }
     }
 }

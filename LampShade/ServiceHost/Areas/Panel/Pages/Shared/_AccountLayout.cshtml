@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>پنل کاربری|@ViewData["Title"]</title>
+
+    <link href="~/Theme/assets/css/vendors.css" rel="stylesheet">
+    <link href="~/Theme/assets/css/style.css" rel="stylesheet">
+    <link href="~/Theme/assets/css/Custom.css" rel="stylesheet">
+    @await RenderSectionAsync("Style",false)
+</head>
+
+<body>
+
+    @await Component.InvokeAsync("Menu");
+@await Component.InvokeAsync("UserInfo");
+<div class="page-content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-wrapper">
+                        <div class="page-content-wrapper">
+                            <div class="row">
+                                <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" dir="rtl">
+                                    <div class="collapse navbar-collapse justify-content-center" id="navb">
+                                        <ul class="navbar-nav mx-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./Index" dideo-checked="true">داشبورد کاربری</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./EditAccount" dideo-checked="true">تغییر اطلاعات حساب کاربری</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./EditAvatar" dideo-checked="true">تغییر تصویر پروفایل</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./ChangePassword" dideo-checked="true">تغییر رمز عبور</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./Address" dideo-checked="true">ثبت /ویرایش آدرس</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./OrderTracking" dideo-checked="true">پیگیری تراکنش</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="./Orders" dideo-checked="true">سفارشات انجام شده</a>
+                                            </li>
+                                          
+                                            <li class="nav-item">
+                                                <a class="nav-link" asp-page="/Account" asp-page-handler="Logout" dideo-checked="true">خروج</a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+
+                                </nav>
+                            </div>
+                            <div class="row">
+                                @RenderBody()
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("FooterArea");
+    <div class="search-overlay" id="search-overlay">
+        <a href="javascript:void(0)" class="close-search-overlay" id="close-search-overlay">
+            <i class="ion-ios-close-empty"></i>
+        </a>
+        <div class="search-form">
+            <form asp-page="/Search" method="get">
+                <input type="search" name="p" placeholder="جست و جو در فروشگاه">
+                <button type="submit">
+                    <i class="ion-android-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="scroll-top">
+        <span>برگشت به بالا</span><i class="ion-chevron-right"></i><i class="ion-chevron-right"></i>
+
+    </div>
+
+    <script src="~/Theme/assets/js/vendors.js"></script>
+    <script src="~/Theme/assets/js/active.js"></script>
+    <script src="~/Theme/assets/js/jquery-3.6.0.js"></script>
+    <script src="~/Theme/assets/js/plugins.js"></script>
+    <script src="~/Theme/assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            updateCart();
+        });
+
+    </script>
+    <script src="~/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Script", false)
+</body>
+
+</html>

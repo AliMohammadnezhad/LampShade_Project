@@ -78,5 +78,9 @@ namespace ShopManagement.Application
             return _productRepository.GetProducts();
         }
 
+        public double GetAllProductsCount()
+        {
+            return _productRepository.GetAllProductCount();
+        }
     }
 }

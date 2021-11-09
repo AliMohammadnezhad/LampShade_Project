@@ -91,5 +91,30 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 Id = x.Id
             }).ToList();
         }
+
+        public PanelAccountViewModel GetAccountBy(long id)
+        {
+            return _context.Accounts.Select(x => new PanelAccountViewModel
+            {
+                CreationDate = x.CreationDate.ToFarsi(),
+                FullName = x.FullName,
+                Mobile = x.Mobile,
+                RoleId = x.RoleId,
+                ProfilePhoto = x.ProfilePhoto,
+                AccountId = x.Id,
+                UserName = x.Username
+            }).FirstOrDefault(x => x.AccountId == id);
+        }
+
+        public UserEditAvatar GetAvatar(long id)
+        {
+            return _context.Accounts.Select(x => new UserEditAvatar
+            {
+                AccountId = x.Id,
+                PicturePath = x.ProfilePhoto
+            }).FirstOrDefault(x => x.AccountId == id);
+        }
+
+
     }
 }

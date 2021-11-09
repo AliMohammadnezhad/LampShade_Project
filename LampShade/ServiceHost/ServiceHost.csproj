@@ -71,6 +71,14 @@
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\pdfmake.min.js" />
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\responsive.bootstrap.min.js" />
     <None Include="wwwroot\AdminTheme\assets\plugins\datatables\vfs_fonts.js" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-Black.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-Bold.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-ExtraBold.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-light.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-Medium.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-Regular.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-SemiBold.woff2" />
+    <None Include="wwwroot\Theme\assets\fonts\PELAK\WOFF2\PelakFA-Thin.woff2" />
   </ItemGroup>
 
 </Project>

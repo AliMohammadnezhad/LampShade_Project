@@ -1,0 +1,42 @@
+﻿@page
+@model ServiceHost.Areas.Panel.Pages.EditAccountModel
+@{
+    Layout = "Shared/_AccountLayout";
+    ViewData["Title"] = "ویرایش اطلاعات کاربری";
+}
+<div class="box-shadow mb-4 mt-lg-0 border-rad-10 w-100">
+    <div class="card-title p-4 border-bottom">
+        <i class="fa fa-user"></i>
+        <span>ویرایش اطلاعات کاربری</span>
+        @if (Model.Message != null)
+        {
+            <span class="alert alert-primary" role="alert">
+                @Model.Message
+            </span>
+        }
+    </div>
+    <div class="card-body p-4 pt-0">
+        <div class="row">
+            <form method="post" class="w-100" >
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Command.FullName">نام و نام خانوادگی</label>
+                        <input asp-for="Command.FullName" class="form-control" placeholder="ایمیل">
+                        <span asp-validation-for="Command.FullName"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Command.Mobile">شماره مویابل</label>
+                        <input asp-for="Command.Mobile" class="form-control" placeholder="شماره موبایل">
+                        <span asp-validation-for="Command.Mobile"></span>
+
+                    </div>
+                </div>
+                <input type="hidden" asp-for="Command.AccountId"/>
+                <button type="submit" class="btn btn-primary"> ویرایش</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
