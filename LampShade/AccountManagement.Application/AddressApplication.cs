@@ -50,5 +50,13 @@ namespace AccountManagement.Application
         {
             return _addressRepository.Exists(x => x.AccountId == accountId);
         }
+
+        public string GetAddressByUser(long id)
+        {
+            var address = _addressRepository.GetAddressByUser(id);
+            var totalAddress =
+                $"{address.Country}--{address.State} --{address.City}--{address.FullAddress}--{address.ZipCode}";
+            return totalAddress;
+        }
     }
 }

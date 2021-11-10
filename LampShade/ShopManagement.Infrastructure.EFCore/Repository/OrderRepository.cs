@@ -215,5 +215,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return order;
 
         }
+
+        public OrderViewModel GetOrderAddressByOrder(long id)
+        {
+            return _shopContext.Orders.Select(x => new OrderViewModel
+            {
+                OrderAddress = x.Address,
+                OrderId = x.Id
+            }).FirstOrDefault(x => x.OrderId == id);
+        }
     }
 }

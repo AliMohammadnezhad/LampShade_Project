@@ -102,6 +102,10 @@
                                                 </a>
                                             }
                                             <a permission="@ShopPermissions.ShowOrderItems" class="btn btn-primary pull-right m-rl-5"
+                                               href="#showmodal=@Url.Page("./Index", "Address", new {id = item.OrderId})">
+                                                <i class="fa fa-id-card"></i> محل ارسال
+                                            </a>
+                                            <a permission="@ShopPermissions.ShowOrderItems" class="btn btn-primary pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index", "Items", new {id = item.OrderId})">
                                                 <i class="fa fa-id-card"></i> آیتم ها
                                             </a>

@@ -28,5 +28,10 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 ZipCode = x.ZipCode
             }).FirstOrDefault(x => x.AccountId == accountId);
         }
+
+        public Address GetAddressByUser(long id)
+        {
+            return _context.Addresses.FirstOrDefault(x => x.AccountId == id);
+        }
     }
 }

@@ -50,5 +50,13 @@ namespace ServiceHost.Areas.Administration.Pages.Orders
             var items = _orderApplication.GetOrderItemsBy(id);
             return Partial("Items", items);
         }
+
+        public IActionResult OnGetAddress(long id)
+        {
+            var address = _orderApplication.GetOrderAddressByOrder(id).OrderAddress;
+            return Partial("Address", address);
+
+        }
+
     }
 }

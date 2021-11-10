@@ -17,6 +17,7 @@ namespace ShopManagement.Application.Contracts.Order
         public string AccountName { get; set; }
         public string DateTime { get; set; }
         public string PaymentMethod { get; set; }
+        public string OrderAddress { get; set; }
         public List<OrderItemViewModel> OrderItems { get; set; }
 
     }

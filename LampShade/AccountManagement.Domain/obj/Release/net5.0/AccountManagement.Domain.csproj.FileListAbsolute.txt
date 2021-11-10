@@ -1,0 +1,16 @@
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\AccountManagement.Domain.deps.json
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\ref\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\AccountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\bin\Release\net5.0\AccountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\ref\AccountManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\AccountManagement.Domain\obj\Release\net5.0\AccountManagement.Domain.pdb

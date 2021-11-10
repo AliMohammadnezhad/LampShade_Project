@@ -16,6 +16,8 @@ namespace ShopManagement.Domain.OrderAgg
         List<SalesInMothViewModel> GetSalesInMoth();
         double GetAllOrderCount();
         OrderViewModel GetOrderBy(long accountId, string issueTrackingNumber);
+        OrderViewModel GetOrderAddressByOrder(long id);
+
 
     }
 }

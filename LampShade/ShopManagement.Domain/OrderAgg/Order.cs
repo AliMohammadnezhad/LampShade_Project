@@ -15,10 +15,11 @@ namespace ShopManagement.Domain.OrderAgg
         public bool IsPaid { get; private set; }
         public bool IsCanceled { get; private set; }
         public string IssueTrackingNo { get; private set; }
+        public string Address { get; private set; }
         public long RefId { get; private set; }
         public List<OrderItem> Items { get;  set; }
 
-        public Order(long accountId,long paymentMethod, double totalAmount, double discountAmount, double payAmount)
+        public Order(long accountId,long paymentMethod, double totalAmount, double discountAmount, double payAmount,string address)
         {
             AccountId = accountId;
             TotalAmount = totalAmount;
@@ -29,6 +30,7 @@ namespace ShopManagement.Domain.OrderAgg
             RefId = 0;
             CreationDate = DateTime.Now;
             PaymentMethod = paymentMethod;
+            Address = address;
             Items = new List<OrderItem>();
         }
 

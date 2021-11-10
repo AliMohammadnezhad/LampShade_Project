@@ -29,6 +29,10 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("AccountId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("Address")
+                        .HasMaxLength(1200)
+                        .HasColumnType("nvarchar(1200)");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 

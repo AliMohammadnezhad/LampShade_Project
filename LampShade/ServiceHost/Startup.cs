@@ -36,20 +36,20 @@ namespace ServiceHost
             services.AddHttpContextAccessor();
 
             ShopManagementBootstrapper.Configure(services, connectionString);
-            DiscountManagementBootstrapper.Configure(services,connectionString);
-            InventoryManagementBootstrapper.Configure(services,connectionString);
-            CommentManagementBootstrapper.Configure(services,connectionString);
-            BloggingManagementBootstrapper.Configure(services,connectionString);
-            AccountManagementBootstrapper.Configure(services,connectionString);
+            DiscountManagementBootstrapper.Configure(services, connectionString);
+            InventoryManagementBootstrapper.Configure(services, connectionString);
+            CommentManagementBootstrapper.Configure(services, connectionString);
+            BloggingManagementBootstrapper.Configure(services, connectionString);
+            AccountManagementBootstrapper.Configure(services, connectionString);
 
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
-            services.AddTransient<IAuthHelper,AuthHelper>();
-            services.AddTransient<IPermissionExposer,_MenuPagePermissionExposer>();
-            services.AddTransient<IZarinPalFactory,ZarinPalFactory>();
-            services.AddTransient<ISmsSender,SmsSender>();
+            services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IPermissionExposer, _MenuPagePermissionExposer>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
+            services.AddTransient<ISmsSender, SmsSender>();
 
-       
+
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
@@ -63,8 +63,8 @@ namespace ServiceHost
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("AdminArea",builder=>
-                    builder.RequireRole((AccountsType.Administrator).ToString(),(AccountsType.ContentManager).ToString()));
+                options.AddPolicy("AdminArea", builder =>
+                     builder.RequireRole((AccountsType.Administrator).ToString(), (AccountsType.ContentManager).ToString()));
 
                 options.AddPolicy("Shop", builder =>
                     builder.RequireRole((AccountsType.Administrator).ToString()));
@@ -79,7 +79,7 @@ namespace ServiceHost
             });
 
             services.AddRazorPages()
-                .AddMvcOptions(options=> options.Filters.Add<SecurityPageFilter>())
+                .AddMvcOptions(options => options.Filters.Add<SecurityPageFilter>())
                 .AddRazorPagesOptions(options =>
             {
                 options.Conventions.AuthorizeAreaFolder("Administration", "/", "AdminArea");
@@ -94,11 +94,11 @@ namespace ServiceHost
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
             else
             {
                 app.UseExceptionHandler("/Error");
-                app.UseHsts();
             }
 
             app.UseAuthentication();
@@ -115,6 +115,8 @@ namespace ServiceHost
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }

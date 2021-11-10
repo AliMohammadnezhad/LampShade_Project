@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_FrameWork.Application.Sms;
+using AccountManagement.Application.Contract.Address;
 using Microsoft.Extensions.Configuration;
 using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Domain.OrderAgg;
@@ -12,24 +13,28 @@ namespace ShopManagement.Application
 {
     public class OrderApplication:IOrderApplication
     {
+        private readonly ISmsSender _sender;
+        private readonly IShopAccountAcl _accountAcl;
+        private readonly IConfiguration _configuration;
         private readonly IShopInventoryAcl _shopInventory;
         private readonly IOrderRepository _orderRepository;
-        private readonly IConfiguration _configuration;
-        private readonly IShopAccountAcl _accountAcl;
-        private readonly ISmsSender _sender;
-        public OrderApplication(IOrderRepository orderRepository,  IConfiguration configuration, IShopInventoryAcl shopInventory, IShopAccountAcl accountAcl, ISmsSender sender)
+        private readonly IAddressApplication _addressApplication;
+
+        public OrderApplication(IOrderRepository orderRepository,  IConfiguration configuration, IShopInventoryAcl shopInventory, IShopAccountAcl accountAcl, ISmsSender sender, IAddressApplication addressApplication)
         {
             _orderRepository = orderRepository;
             _configuration = configuration;
             _shopInventory = shopInventory;
             _accountAcl = accountAcl;
             _sender = sender;
+            _addressApplication = addressApplication;
         }
 
 
         public long PlaceOrder(Cart cart,long userId)
         {
-            var order = new Order(userId, cart.PaymentMethod,cart.TotalAmount, cart.DiscountAmount, cart.CartForPayAmount);
+            var address = _addressApplication.GetAddressByUser(userId);
+            var order = new Order(userId, cart.PaymentMethod,cart.TotalAmount, cart.DiscountAmount, cart.CartForPayAmount,address);
 
             foreach (var orderItem in cart.CartItems.Select(cartItem =>
                 new OrderItem(cartItem.Id, cartItem.Count, cartItem.UnitPrice,cartItem.DiscountRate.Value)))
@@ -122,6 +127,11 @@ namespace ShopManagement.Application
         public OrderViewModel GetOrderBy(long accountId, string issueTrackingNumber)
         {
             return _orderRepository.GetOrderBy(accountId, issueTrackingNumber);
+        }
+
+        public OrderViewModel GetOrderAddressByOrder(long id)
+        {
+            return _orderRepository.GetOrderAddressByOrder(id);
         }
     }
 }

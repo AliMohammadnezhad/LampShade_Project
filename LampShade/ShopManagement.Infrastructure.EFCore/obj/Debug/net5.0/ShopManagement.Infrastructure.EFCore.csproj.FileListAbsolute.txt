@@ -25,3 +25,4 @@ F:\New Shop Project\Code\LampShade\ShopManagement.Infrastructure.EFCore\bin\Debu
 F:\New Shop Project\Code\LampShade\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 F:\New Shop Project\Code\LampShade\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
 F:\New Shop Project\Code\LampShade\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csproj.CopyComplete

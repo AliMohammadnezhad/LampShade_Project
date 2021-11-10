@@ -14,10 +14,10 @@ namespace ServiceHost.Pages
 {
     public class CartModel : PageModel
     {
-        public List<CartItem> CartItems;
-        public bool HasAddress { get; set; } = true;
-        private const string CookieName = "cart-items";
 
+
+        public List<CartItem> CartItems;
+        private const string CookieName = "cart-items";
         private readonly IAuthHelper _authHelper;
         private readonly IProductQuery _productQuery;
         private readonly IAddressApplication _addressApplication;
@@ -78,15 +78,15 @@ namespace ServiceHost.Pages
             if(CartItems.Any(x=>!x.InStock))
                 return RedirectToPage("/Cart");
 
-            if (!_addressApplication.UserHasAddress(_authHelper.CurrentAccountId()))
-            {
-                HasAddress = false;
-                return RedirectToPage("/Cart");
+            if (!_authHelper.IsAuthenticated())
+                return RedirectToPage("./Account");
 
-            }
+            if (_addressApplication.UserHasAddress(_authHelper.CurrentAccountId())) return RedirectToPage("/CheckOut");
+
+         
+            return LocalRedirect("/Panel/Address");
 
 
-            return RedirectToPage("/CheckOut");
         }
     }
 }

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\New Shop Project\EposiFinal</_PublishTargetUrl>
+    <History>True|2021-11-10T12:48:44.8240285Z;True|2021-11-10T16:02:05.0697192+03:30;True|2021-11-10T14:03:21.0487618+03:30;</History>
+  </PropertyGroup>
+</Project>

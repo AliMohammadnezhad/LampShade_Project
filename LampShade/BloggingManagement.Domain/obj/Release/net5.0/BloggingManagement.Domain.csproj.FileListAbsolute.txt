@@ -1,0 +1,16 @@
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\BloggingManagement.Domain.deps.json
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\ref\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\BloggingManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\BloggingManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\bin\Release\net5.0\BloggingManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\ref\BloggingManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\BloggingManagement.Domain\obj\Release\net5.0\BloggingManagement.Domain.pdb

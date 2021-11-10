@@ -1,0 +1,16 @@
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ShopManagement.Domain.deps.json
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ShopManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ref\ShopManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ShopManagement.Domain.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ShopManagement.Application.Contracts.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\bin\Release\net5.0\ShopManagement.Application.Contracts.pdb
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ref\ShopManagement.Domain.dll
+F:\New Shop Project\Code\LampShade\ShopManagement.Domain\obj\Release\net5.0\ShopManagement.Domain.pdb

@@ -1,0 +1,201 @@
+/*! X-editable - v1.5.1 
+* In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
+* http://github.com/vitalets/x-editable
+* Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
+.editableform {
+    margin-bottom: 0; /* overwrites bootstrap margin */
+}
+
+.editableform .control-group {
+    line-height: 20px; /* overwriting bootstrap line-height. See #133 */
+    margin-bottom: 0; /* overwrites bootstrap margin */
+    white-space: nowrap; /* prevent wrapping buttons on new line */
+}
+
+/* 
+  BS3 width:1005 for inputs breaks editable form in popup 
+  See: https://github.com/vitalets/x-editable/issues/393
+*/
+
+.editableform .form-control { width: auto; }
+
+.editable-buttons {
+    display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
+    *display: inline;
+    margin-left: 7px;
+    vertical-align: top;
+    /* inline-block emulation for IE7*/
+    zoom: 1;
+}
+
+.editable-buttons.editable-buttons-bottom {
+    display: block;
+    margin-left: 0;
+    margin-top: 7px;
+}
+
+.editable-input {
+    display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
+    *display: inline;
+    vertical-align: top;
+    white-space: normal; /* reset white-space decalred in parent*/
+    width: auto; /* bootstrap-responsive has width: 100% that breakes layout */
+    /* display-inline emulation for IE7*/
+    zoom: 1;
+}
+
+.editable-buttons .editable-cancel { margin-left: 7px; }
+
+/*for jquery-ui buttons need set height to look more pretty*/
+
+.editable-buttons button.ui-button-icon-only {
+    height: 24px;
+    width: 30px;
+}
+
+.editableform-loading {
+    background: url('../img/loading.gif') center center no-repeat;
+    height: 25px;
+    min-width: 25px;
+    width: auto;
+}
+
+.editable-inline .editableform-loading { background-position: left 5px; }
+
+.editable-error-block {
+    margin: 5px 0 0 0;
+    max-width: 300px;
+    white-space: normal;
+    width: auto;
+}
+
+/*add padding for jquery ui*/
+
+.editable-error-block.ui-state-error { padding: 3px; }
+
+.editable-error { color: red; }
+
+/* ---- For specific types ---- */
+
+.editableform .editable-date {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* move datepicker icon to center of add-on button. See https://github.com/vitalets/x-editable/issues/183 */
+
+.editable-inline .add-on .icon-th {
+    margin-left: 1px;
+    margin-top: 3px;
+}
+
+
+/* checklist vertical alignment */
+
+.editable-checklist label input[type="checkbox"],
+.editable-checklist label span {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.editable-checklist label { white-space: nowrap; }
+
+/* set exact width of textarea to fit buttons toolbar */
+
+.editable-wysihtml5 {
+    height: 250px;
+    width: 566px;
+}
+
+/* clear button shown as link in date inputs */
+
+.editable-clear {
+    clear: both;
+    font-size: 0.9em;
+    text-align: right;
+    text-decoration: none;
+}
+
+/* IOS-style clear button for text inputs */
+
+.editable-clear-x {
+    background: url('../img/clear.png') center center no-repeat;
+    display: block;
+    height: 13px;
+    margin-top: -6px;
+    opacity: 0.6;
+    position: absolute;
+    right: 6px;
+   
+    top: 50%;
+    width: 13px;
+    z-index: 100;   
+}
+
+.editable-clear-x:hover { opacity: 1; }
+
+.editable-pre-wrapped { white-space: pre-wrap; }
+
+.editable-container.editable-popup {
+    max-width: none !important; /* without this rule poshytip/tooltip does not stretch */
+}
+
+.editable-container.popover {
+    width: auto; /* without this rule popover does not stretch */
+}
+
+.editable-container.editable-inline {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    width: auto;
+    /* inline-block emulation for IE7*/
+    zoom: 1;
+}
+
+.editable-container.ui-widget {
+    font-size: inherit; /* jqueryui widget font 1.1em too big, overwrite it */
+    z-index: 9990; /* should be less than select2 dropdown z-index to close dropdown first when click */
+}
+
+.editable-click,
+a.editable-click,
+a.editable-click:hover {
+    border-bottom: dashed 1px #0088cc;
+    text-decoration: none;
+}
+
+.editable-click.editable-disabled,
+a.editable-click.editable-disabled,
+a.editable-click.editable-disabled:hover {
+    border-bottom: none;
+    color: #585858;
+    cursor: default;
+}
+
+.editable-empty, .editable-empty:hover, .editable-empty:focus {
+    color: #DD1144;
+    font-style: italic;
+    /* border-bottom: none; */
+    text-decoration: none;
+}
+
+.editable-unsaved { font-weight: bold; }
+
+.editable-unsaved:after { /*    content: '*'*/ }
+
+.editable-bg-transition {
+    -moz-transition: background-color 1400ms ease-out;
+    -ms-transition: background-color 1400ms ease-out;
+    -o-transition: background-color 1400ms ease-out;
+    -webkit-transition: background-color 1400ms ease-out;
+    transition: background-color 1400ms ease-out;
+}
+
+/*see https://github.com/vitalets/x-editable/issues/139 */
+
+.form-horizontal .editable {
+    display: inline-block;
+    padding-top: 5px;
+}

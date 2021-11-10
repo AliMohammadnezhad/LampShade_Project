@@ -1,0 +1,16 @@
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\DiscountManagement.Application.Contract.deps.json
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\DiscountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\ref\DiscountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\DiscountManagement.Application.Contract.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\0_FrameWork.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\ShopManagement.Application.Contracts.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\0_FrameWork.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\bin\Release\net5.0\ShopManagement.Application.Contracts.pdb
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.csproj.AssemblyReference.cache
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.AssemblyInfoInputs.cache
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.AssemblyInfo.cs
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\ref\DiscountManagement.Application.Contract.dll
+F:\New Shop Project\Code\LampShade\DiscountManagement.Application.Contract\obj\Release\net5.0\DiscountManagement.Application.Contract.pdb

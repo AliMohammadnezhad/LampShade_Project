@@ -6,5 +6,6 @@ namespace AccountManagement.Domain.AddressAgg
     public interface IAddressRepository:IRepository<long,Address>
     {
         EditAddress GetDetail(long accountId);
+        Address GetAddressByUser(long id);
     }
 }

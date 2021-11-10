@@ -8,5 +8,7 @@ namespace AccountManagement.Application.Contract.Address
         OperationResult Edit(EditAddress command);
         EditAddress GetDetail(long accountId);
         bool UserHasAddress(long accountId);
+
+        string GetAddressByUser(long id);
     }
 }
